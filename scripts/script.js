@@ -52,3 +52,7 @@ function filterCourses(type) {
 
 // Initialize with all courses
 filterCourses("all");
+
+
+
+
