@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Course Home Page for WDD231">
+    <meta name="author" content="Your Name">
+    <title>Course Home Page</title>
+    <link rel="stylesheet" href="styles/chambre.css"> <!-- Le chemin vers le CSS -->
+    <script src="scripts/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Course Home Page</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chamber.html">Chamber</a></li>
+                <li><a href="https://github.com/yourusername" target="_blank">GitHub Profile</a></li>
+                <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Web and Computer Programming Courses</h2>
+            <div id="course-list">
+                <!-- JavaScript will dynamically insert course information here -->
+            </div>
+        </section>
+
+        <section>
+            <h2>About This Course</h2>
+            <p>This course focuses on building web development skills using HTML, CSS, and JavaScript.</p>
+        </section>
+
+        <section>
+            <h2>Course Filter</h2>
+            <button onclick="filterCourses('all')">All Courses</button>
+            <button onclick="filterCourses('wdd')">WDD Courses</button>
+            <button onclick="filterCourses('cse')">CSE Courses</button>
+            <p>Total Credits: <span id="total-credits">0</span></p>
+        </section>
+    </main>
+
+    <footer>
+        <p id="copyright"></p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
