@@ -85,3 +85,32 @@ footer {
 footer p {
     margin-bottom: 10px;
 }
+
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover; /* Assure que l'image garde ses proportions sans se déformer */
+}
+
+/* Spécifique aux images de cours */
+.course-image {
+    border: 2px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.course-image:hover {
+    transform: scale(1.05); /* Agrandit l'image au survol */
+}
+
+/* Image de la section "About This Course" */
+.about-image {
+    border-radius: 1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    height: 250px;
+    width: 3000px;
+}
