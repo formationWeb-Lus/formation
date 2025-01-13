@@ -6,26 +6,32 @@
     <meta name="description" content="Course Home Page for WDD231">
     <meta name="author" content="Your Name">
     <title>Course Home Page</title>
+    <link rel="icon" href="images/favicon.icon.png" type="image/x-icon">
     <link rel="stylesheet" href="styles/chambre.css"> <!-- Le chemin vers le CSS -->
     <script src="scripts/script.js" defer></script>
+    
 </head>
 <body>
     <header>
         <h1>Course Home Page</h1>
         <nav>
-            <ul>
+            <ul id="menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="chamber.html">Chamber</a></li>
                 <li><a href="https://github.com/yourusername" target="_blank">GitHub Profile</a></li>
                 <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
             </ul>
+            <!-- Menu hamburger -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <span>&#9776;</span>
+            </div>
         </nav>
     </header>
 
     <main>
         <section>
             <h2>Web and Computer Programming Courses</h2>
-            <div id="course-list">
+            <div id="course-list" class="grid-layout">
                 <!-- Exemple d'un cours avec une image -->
                 <div class="course-item">
                     <img src="images/imgc1.jpg" alt="Course 1 Image" class="course-image">
@@ -68,5 +74,13 @@
             <a href="https://www.tiktok.com" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a>
         </div>
     </footer>
+
+    <script>
+        // Fonction pour afficher/masquer le menu hamburger sur mobile
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            menu.classList.toggle("active");
+        }
+    </script>
 </body>
 </html>
