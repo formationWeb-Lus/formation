@@ -5,9 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Course Home Page for WDD231">
     <meta name="author" content="Your Name">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Course Home Page - WDD231">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.mysite.com/images/imgc1.jpg">
+    <meta property="og:url" content="https://www.mysite.com/index.html">
+    
     <title>Course Home Page</title>
     <link rel="icon" href="images/favicon.icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="styles/chambre.css"> <!-- Le chemin vers le CSS -->
+    <link rel="stylesheet" href="styles/chambre.css"> <!-- The path to the CSS file -->
     <script src="scripts/script.js" defer></script>
     
 </head>
@@ -21,7 +28,7 @@
                 <li><a href="https://github.com/yourusername" target="_blank">GitHub Profile</a></li>
                 <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
             </ul>
-            <!-- Menu hamburger -->
+            <!-- Hamburger menu -->
             <div class="hamburger" onclick="toggleMenu()">
                 <span>&#9776;</span>
             </div>
@@ -32,7 +39,7 @@
         <section>
             <h2>Web and Computer Programming Courses</h2>
             <div id="course-list" class="grid-layout">
-                <!-- Exemple d'un cours avec une image -->
+                <!-- Example of a course with an image -->
                 <div class="course-item">
                     <img src="images/imgc1.jpg" alt="Course 1 Image" class="course-image">
                     <h3>Course 1: HTML & CSS Basics</h3>
@@ -43,7 +50,7 @@
                     <h3>Course 2: JavaScript Fundamentals</h3>
                     <p>Learn JavaScript fundamentals to add interactivity to your web pages.</p>
                 </div>
-                <!-- Ajoutez d'autres cours ici -->
+                <!-- Add more courses here -->
             </div>
         </section>
 
@@ -66,7 +73,7 @@
         <p id="copyright">© 2025 Your Name</p>
         <p id="lastModified"></p>
         
-        <!-- Ajout des liens vers les réseaux sociaux avec des icônes -->
+        <!-- Add social media links with icons -->
         <div>
             <a href="https://www.facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
             <a href="https://www.linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
@@ -76,7 +83,7 @@
     </footer>
 
     <script>
-        // Fonction pour afficher/masquer le menu hamburger sur mobile
+        // Function to toggle the hamburger menu on mobile
         function toggleMenu() {
             const menu = document.getElementById("menu");
             menu.classList.toggle("active");
