@@ -114,3 +114,25 @@ img {
     height: 250px;
     width: 3000px;
 }
+
+
+#directory {
+    padding-bottom: 50px; /* Ajustez la valeur en fonction de l'espace que vous souhaitez */
+}
+
+/* Ajouter de l'espace en bas des cartes de membres */
+.member-card:last-child {
+    margin-bottom: 20px; /* Ajustez cette valeur selon l'espace que vous souhaitez */
+}
+
+/* Augmenter l'espacement entre les éléments dans la grille */
+#members-container.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px; /* Augmenter l'espacement entre les éléments de la grille */
+}
+
+/* S'assurer que le pied de page a un peu de séparation avec le contenu */
+footer {
+    margin-top: 20px;
+}
