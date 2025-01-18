@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chamber of Commerce Directory">
+    <meta name="author" content="Votre Nom">
+    
+    <!-- Facebook Meta Tags -->
+    <meta property="og:title" content="Chamber of Commerce Directory">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:url" content="https://votre-site-web.com">
+    
+    <title>Chamber of Commerce Directory</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles/chanber.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Chamber of Commerce Directory</h1>
+        <nav>
+            <ul>
+                <li><a href="directory.html">Accueil</a></li>
+                <li><a href="other-page.html">Autre Page</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="toggle-view">
+            <button id="grid-view">Vue Grille</button>
+            <button id="list-view">Vue Liste</button>
+        </div>
+        <div id="members-container" class="grid-view">
+            <!-- Les membres seront chargés ici par JavaScript -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> - Chamber of Commerce Directory</p>
+        <p id="last-modified">Last Modified: </p>
+        <p>Développé par Votre Nom - WDD 231</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts/script.js" defer></script>
+</body>
+</html>
