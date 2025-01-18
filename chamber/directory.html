@@ -1,55 +1,63 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Chamber of Commerce Directory">
-    <meta name="author" content="Votre Nom">
+    <meta name="description" content="Directory of members of the [City/Region] Chamber of Commerce">
+    <meta name="author" content="[Your Name]">
     
-    <!-- Facebook Meta Tags -->
-    <meta property="og:title" content="Chamber of Commerce Directory">
+    <!-- Open Graph Meta Tags for Facebook -->
+    <meta property="og:title" content="Chamber of Commerce [City/Region] - Member Directory">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="images/og-image.jpg">
-    <meta property="og:url" content="https://jiressepu.github.io/wdd231/chamber/directory.html">
+    <meta property="og:image" content="images/thumbnail.jpg">
+    <meta property="og:url" content="https://your-website.com/directory.html">
     
-    <title>Chamber of Commerce Directory</title>
-    
+    <title>Member Directory | [City/Region] Chamber of Commerce</title>
+
     <!-- Favicon -->
-    <link rel="icon" href="images/favicon.ico.png">
-    
-    <!-- Main CSS -->
+    <link rel="icon" href="images/favicon.ico.png" type="image/x-icon">
+
+    <!-- Link to CSS stylesheet -->
     <link rel="stylesheet" href="styles/chanber.css">
-    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Normalizing styles -->
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!-- JavaScript for fetching and displaying members -->
+   
 </head>
+
 <body>
 
+    <!-- Header section -->
     <header>
-        <h1>Chamber of Commerce Directory</h1>
+        <h1>Member Directory</h1>
         <nav>
             <ul>
-                <li><a href="directory.html">Accueil</a></li>
-                <li><a href="other-page.html">Autre Page</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Main content section -->
     <main>
-        <div id="toggle-view">
-            <button id="grid-view">Vue Grille</button>
-            <button id="list-view">Vue Liste</button>
-        </div>
-        <div id="members-container" class="grid-view">
-            <!-- Les membres seront chargés ici par JavaScript -->
-        </div>
+        <section id="directory">
+            <button id="toggleView">Switch to List View</button>
+            <div id="members-container" class="grid-view">
+                <!-- Members will be displayed here by JavaScript -->
+            </div>
+        </section>
     </main>
 
+    <!-- Footer section -->
     <footer>
-        <p>&copy; <span id="current-year"></span> - Chamber of Commerce Directory</p>
-        <p id="last-modified">Last Modified: </p>
-        <p>Développé par Votre Nom - WDD 231</p>
+        <p>&copy; <span id="current-year"></span> Chamber of Commerce [City/Region]. Last modified: <span id="last-modified"></span></p>
     </footer>
 
-    <!-- Scripts -->
-    <script src="scripts/script.js" defer></script>
 </body>
+<script src="scripts/script.js" defer></script>
+
 </html>
