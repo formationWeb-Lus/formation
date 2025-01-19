@@ -12,7 +12,7 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="images/thumbnail.jpg">
     <meta property="og:url" content="https://your-website.com/directory.html">
-    
+
     <title>Member Directory | [City/Region] Chamber of Commerce</title>
 
     <!-- Favicon -->
@@ -21,23 +21,23 @@
     <!-- Link to CSS stylesheet -->
     <link rel="stylesheet" href="styles/chanber.css">
 
-    <!-- Normalizing styles -->
-    <link rel="stylesheet" href="css/normalize.css">
-
-    <!-- JavaScript for fetching and displaying members -->
-   
 </head>
 
 <body>
 
     <!-- Header section -->
     <header>
-        <h1>Member Directory</h1>
+        <div class="logo">
+            <img src="images/logo.png" alt="Timbuktu Chamber of Commerce Logo">
+        </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#membership">Membership</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#directory">Business Directory</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
         </nav>
     </header>
@@ -54,10 +54,57 @@
 
     <!-- Footer section -->
     <footer>
-        <p>&copy; <span id="current-year"></span> Chamber of Commerce [City/Region]. Last modified: <span id="last-modified"></span></p>
+        <div class="footer-container">
+            <!-- Welcome Section -->
+            <section id="home">
+                <h2>Welcome to the Timbuktu Chamber of Commerce</h2>
+                
+            </section>
+
+            <!-- Membership Section -->
+            <section id="membership">
+                <h2>Become a Member</h2>
+                
+                <a href="membership-application.html">Apply Now</a>
+            </section>
+
+            <!-- Events Section -->
+            <section id="events">
+                <h2>Upcoming Events</h2>
+            
+                <a href="events-calendar.html">View Calendar</a>
+            </section>
+
+            <!-- Directory Section -->
+            <section id="directory">
+                <h2>Business Directory</h2>
+            
+                <a href="directory.html">Browse the Directory</a>
+            </section>
+
+            <!-- Resources Section -->
+            <section id="resources">
+                <h2>Business Resources</h2>
+            
+                <a href="resources.html">View Resources</a>
+            </section>
+        </div>
+
+        <!-- Footer Bottom Information -->
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> Chamber of Commerce [City/Region]. Last modified: <span id="last-modified"></span></p>
+            
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="#privacy-policy">Privacy Policy</a></li>
+                    <li><a href="#terms-of-service">Terms of Service</a></li>
+                </ul>
+            </nav>
+        </div>
     </footer>
 
+    <!-- JavaScript for dynamic content -->
+    <script src="scripts/chamber.js" defer></script>
 </body>
-<script src="scripts/script.js" defer></script>
 
-</html>
+</html> 
