@@ -30,5 +30,6 @@ document.getElementById('toggleView').addEventListener('click', () => {
 document.getElementById('current-year').textContent = new Date().getFullYear();
 document.getElementById('last-modified').textContent = document.lastModified;
 
-// Load members on page load
+document.getElementById('current-year').textContent = new Date().getFullYear();
+document.getElementById('last-modified').textContent = document.lastModified;
 loadMembers();

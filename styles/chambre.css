@@ -136,3 +136,94 @@ img {
 footer {
     margin-top: 20px;
 }
+
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f4f4f4;
+    padding: 20px 0;
+    border-bottom: 2px solid #ddd;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img {
+    max-width: 150px; /* Adjust size of the logo */
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #007BFF;
+}
+
+/* Other styles for sections */
+section {
+    padding: 50px 20px;
+    margin: 20px 0;
+}
+
+section h1, section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #695c5c;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #110101;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #310505;
+    height: 50px;
+
+}
+
+footer ul li a:hover {
+    color: #1560af;
+}
