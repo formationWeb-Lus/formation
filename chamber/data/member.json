@@ -1,0 +1,59 @@
+[
+  {
+      "name": "KivuTech Corporation",
+      "address": "123 Avenue du Commerce, Kinshasa, DRC",
+      "phone": "+243 81 234 5678",
+      "website": "http://kivutech.cd",
+      "image": "kivutech.jpg",
+      "membershipLevel": 1
+  },
+  {
+      "name": "CongoExport Ltd.",
+      "address": "456 Boulevard Lumumba, Kinshasa, DRC",
+      "phone": "+243 82 345 6789",
+      "website": "http://congoexport.cd",
+      "image": "company1.png",
+      "membershipLevel": 2
+  },
+  {
+      "name": "Congo Bank",
+      "address": "789 Rue des Banques, Kinshasa, DRC",
+      "phone": "+243 89 654 3210",
+      "website": "http://congobank.cd",
+      "image": "congobank.jpg",
+      "membershipLevel": 3
+  },
+  {
+      "name": "Kasaï Transport",
+      "address": "101 Avenue de la Liberté, Lubumbashi, DRC",
+      "phone": "+243 81 432 8765",
+      "website": "http://kasaitransport.cd",
+      "image": "kasaitransport.jpg",
+      "membershipLevel": 2
+  },
+  {
+      "name": "Congo Solar Energy",
+      "address": "202 Rue de l'Energie, Goma, DRC",
+      "phone": "+243 70 345 6789",
+      "website": "http://congosolar.cd",
+      "image": "congosolar.jpg",
+      "membershipLevel": 1
+  },
+  {
+      "name": "Katanga Mines Ltd.",
+      "address": "303 Rue Industrielle, Lubumbashi, DRC",
+      "phone": "+243 81 567 8901",
+      "website": "http://katangamines.cd",
+      "image": "katangamines.jpg",
+      "membershipLevel": 3
+  },
+  {
+      "name": "Congo Forestry Ltd.",
+      "address": "404 Rue des Forêts, Kisangani, DRC",
+      "phone": "+243 84 123 4567",
+      "website": "http://congoforestry.cd",
+      "image": "congoforestry.jpg",
+      "membershipLevel": 2
+  }
+]
+

@@ -126,26 +126,58 @@ footer {
 
 
 
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure footer is at the bottom */
+}
 
+/* Main content section should take up most of the page */
+main {
+    flex: 1; /* Allow this section to take up available space */
+}
 
-.member {
+/* Footer container styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto; /* Ensure footer is always at the bottom */
+}
+
+/* Footer bottom styling */
+.footer-bottom {
+    background-color: #222;
+    padding: 10px 0;
+    font-size: 0.9rem;
+}
+
+/* Add spacing and clear any floated elements in the footer */
+.footer-container section {
     margin-bottom: 20px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 20px;
 }
 
-.member img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 10px;
+/* Ensure footer links look good */
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
 }
 
-.member h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+.footer-nav li {
+    display: inline;
+    margin-right: 15px;
 }
 
-.member p {
-    font-size: 1em;
-    margin-bottom: 5px;
+.footer-nav a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-nav a:hover {
+    color: white;
 }
