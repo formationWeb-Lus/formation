@@ -43,40 +43,44 @@
             <img src="images/hero1.png" alt="Image representing the Chamber of Commerce">
             <a href="join.html" class="cta-button">Join the Chamber of Commerce</a>
         </section>
-<section id="weather" class="weather">
-    <h2>Current Weather</h2>
-    <p id="current-weather">Loading...</p>
-    <h3>3-Day Forecast</h3>
-    <ul id="forecast"></ul>
-</section>
 
-<!-- Business Spotlights Section -->
-<section id="spotlights" class="spotlights">
-    <h2>Business Spotlights</h2>
-    <div id="spotlight1" class="spotlight"></div>
-    <div id="spotlight2" class="spotlight"></div>
-</section>
+        <!-- Weather Section -->
+        <section id="weather" class="weather">
+            <h2>Current Weather</h2>
+            <p id="current-weather">Loading...</p>
+            <h3>3-Day Forecast</h3>
+            <ul id="forecast"></ul>
+        </section>
 
-<!-- Link to JavaScript -->
-<script src="scripts/script.js" defer></script>
+        <!-- Business Spotlights Section -->
+        <section id="spotlights" class="spotlights">
+            <h2>Business Spotlights</h2>
+            <div id="spotlight1" class="spotlight"></div>
+            <div id="spotlight2" class="spotlight"></div>
+        </section>
+
+        <!-- Link to JavaScript -->
+        <script src="scripts/script.js" defer></script>
+
+        <!-- Events Section -->
         <section id="events" class="events">
             <h2>Upcoming Events</h2>
             <ul>
                 <li>
                     <figure>
-                        <img src="event1-image.jpg" alt="Event 1 Image">
+                        <img src="images/event1.png" alt="Event 1 Image">
                         <figcaption>Event 1 - Date: Details about Event 1</figcaption>
                     </figure>
                 </li>
                 <li>
                     <figure>
-                        <img src="event2-image.jpg" alt="Event 2 Image">
+                        <img src="images/event2.png" alt="Event 2 Image">
                         <figcaption>Event 2 - Date: Details about Event 2</figcaption>
                     </figure>
                 </li>
                 <li>
                     <figure>
-                        <img src="event3-image.jpg" alt="Event 3 Image">
+                        <img src="images/event3.png" alt="Event 3 Image">
                         <figcaption>Event 3 - Date: Details about Event 3</figcaption>
                     </figure>
                 </li>
@@ -97,7 +101,7 @@
         <!-- Footer top section -->
         <div class="footer-top">
             <section id="home-footer">
-                <h2>Welcome to kinshasa Chamber of Commerce</h2>
+                <h2>Welcome to Kinshasa Chamber of Commerce</h2>
             </section>
 
             <section id="membership-footer">
@@ -142,6 +146,40 @@
 
         // Update the last modified date dynamically
         document.getElementById('last-modified').textContent = document.lastModified;
+        
+        // Your OpenWeatherMap API Key
+        const apiKey = '854ab3f227ce58ad3d463a82f18aa6c3';
+        const city = 'London'; // Change the city if necessary
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=en`;
+
+        // Function to fetch and display weather data
+        async function getWeather() {
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+
+                // Check if the response is valid
+                if (data.cod === 200) {
+                    const weather = data.weather[0].description;
+                    const temperature = data.main.temp;
+                    const humidity = data.main.humidity;
+
+                    // Update the content of the page
+                    document.getElementById('current-weather').innerHTML = `
+                        Conditions: ${weather}<br>
+                        Temperature: ${temperature}°C<br>
+                        Humidity: ${humidity}%
+                    `;
+                } else {
+                    document.getElementById('current-weather').innerHTML = `Unable to fetch weather data.`;
+                }
+            } catch (error) {
+                document.getElementById('current-weather').innerHTML = `An error occurred: ${error}`;
+            }
+        }
+
+        // Call the function to display the weather
+        getWeather();
     </script>
 
 </body>
