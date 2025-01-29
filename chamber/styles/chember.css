@@ -159,3 +159,40 @@ footer {
     padding: 1rem;
     margin-top: 2rem;
 }
+
+
+* Style de base des cartes */
+.membership-cards .card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    transition: all 0.4s ease; /* Transition fluide pour toutes les propriétés */
+    opacity: 0; /* Initialement caché */
+    transform: translateY(20px); /* Décalage initial pour l'animation */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre initiale discrète */
+}
+
+/* Animation pour faire apparaître les cartes */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Position initiale */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Position finale après animation */
+    }
+}
+/* Application de l'animation fadeIn aux cartes */
+.membership-cards .card {
+    animation: fadeIn 0.8s ease-out forwards; /* Animation d'apparition douce */
+}
+
+/* Changer la couleur de fond et ajouter une ombre au survol de la souris */
+.membership-cards .card:hover {
+    background-color: #99c6ee; /* Couleur de fond lors du survol */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+    transform: scale(1.05); /* Agrandissement léger de la carte */
+}
