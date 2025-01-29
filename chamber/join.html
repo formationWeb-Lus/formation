@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chamber of Commerce Membership Application">
+    <meta name="author" content="[Your Name]">
+    
+    <title>Join the [City/Region] Chamber of Commerce</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico.png" type="image/x-icon">
+
+    <!-- Link to CSS stylesheet -->
+    <link rel="stylesheet" href="styles/chember.css">
+
+</head>
+
+<body>
+    <!-- Header section -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Timbuktu Chamber of Commerce Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#membership">Membership</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#directory">Business Directory</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content section -->
+    <main>
+        <section id="join-form">
+            <h2>Membership Application Form</h2>
+
+            <!-- Membership Application Form -->
+            <form action="thankyou.html" method="GET" id="join-form">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" required autocomplete="given-name">
+
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" required autocomplete="family-name">
+
+                <label for="org-title">Organization Title:</label>
+                <input type="text" id="org-title" name="org-title" required pattern="[A-Za-z\s\-]{7,}" title="Title must contain at least 7 alphabetic characters, spaces, or hyphens">
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@domain.com">
+
+                <label for="phone">Mobile Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="company-name">Company/Organization Name:</label>
+                <input type="text" id="company-name" name="company-name" required autocomplete="organization">
+
+                <label for="membership-level">Membership Level:</label>
+                <select id="membership-level" name="membership-level" required>
+                    <option value="NP">Non-Profit</option>
+                    <option value="bronze">Bronze</option>
+                    <option value="silver">Silver</option>
+                    <option value="gold">Gold</option>
+                </select>
+
+                <label for="description">Company Description:</label>
+                <textarea id="description" name="description"></textarea>
+
+                <input type="hidden" name="timestamp" id="timestamp">
+
+                <button type="submit">Submit Application</button>
+            </form>
+
+            <!-- Membership Levels Cards -->
+            <div class="membership-cards">
+                <div class="card" data-modal="np-benefits">
+                    <h3>Non-Profit Membership</h3>
+                    <a href="#">More Info</a>
+                </div>
+                <div class="card" data-modal="bronze-benefits">
+                    <h3>Bronze Membership</h3>
+                    <a href="#">More Info</a>
+                </div>
+                <div class="card" data-modal="silver-benefits">
+                    <h3>Silver Membership</h3>
+                    <a href="#">More Info</a>
+                </div>
+                <div class="card" data-modal="gold-benefits">
+                    <h3>Gold Membership</h3>
+                    <a href="#">More Info</a>
+                </div>
+            </div>
+        </section>
+        <script>
+            document.getElementById("join-form").addEventListener("submit", function(event) {
+                event.preventDefault(); // Empêche l'envoi par défaut du formulaire
+        
+                // Ici vous pouvez ajouter du code pour valider ou envoyer les données via AJAX si nécessaire
+        
+                // Redirection vers la page de remerciement
+                window.location.href = "thankyou.html";
+            });
+        </script>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; <span id="current-year"></span> Chamber of Commerce [City/Region]. Last modified: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+
+    <script src="scripts/jav.js" defer></script>
+
+</body>
+
+</html>
