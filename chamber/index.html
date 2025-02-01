@@ -15,6 +15,21 @@
     <!-- Link to CSS stylesheet -->
     <link rel="stylesheet" href="styles/shanber.css">
 
+    <!-- Example CSS for color contrast fix (should be in your shanber.css file) -->
+    <style>
+        body {
+            background-color: #FFFFFF; /* Light background */
+            color: #333333; /* Dark text for better contrast */
+        }
+
+        a {
+            color: #007BFF; /* Make links a clear blue */
+        }
+
+        a:hover {
+            color: #0056b3; /* Darker blue on hover for better visibility */
+        }
+    </style>
 </head>
 
 <body>
@@ -22,7 +37,7 @@
     <!-- Header Section -->
     <header>
         <div class="logo">
-            <img src="images/logo.png" alt="Chamber of Commerce Logo">
+            <img src="images/logo.png" alt="Chamber of Commerce Logo, representing our community">
         </div>
         <nav>
             <ul>
@@ -40,7 +55,8 @@
     <main>
         <!-- Hero Image with Call to Action -->
         <section id="hero" class="hero">
-            <img src="images/hero1.png" alt="Image representing the Chamber of Commerce">
+            <h2>Welcome to the Chamber of Commerce</h2> <!-- Added heading here -->
+            <img src="images/hero1.png" alt="Image representing the Chamber of Commerce, showing people collaborating">
             <a href="join.html" class="cta-button">Join the Chamber of Commerce</a>
         </section>
 
@@ -55,12 +71,15 @@
         <!-- Business Spotlights Section -->
         <section id="spotlights" class="spotlights">
             <h2>Business Spotlights</h2>
-            <div id="spotlight1" class="spotlight"></div>
-            <div id="spotlight2" class="spotlight"></div>
+            <div id="spotlight1" class="spotlight">
+                <h3>KivuTech Corporation</h3>
+                <p>Short description about the business.</p>
+            </div>
+            <div id="spotlight2" class="spotlight">
+                <h3>CongoExport Ltd </h3>
+                <p>Short description about the business.</p>
+            </div>
         </section>
-
-        <!-- Link to JavaScript -->
-        <script src="scripts/script.js" defer></script>
 
         <!-- Events Section -->
         <section id="events" class="events">
@@ -68,19 +87,19 @@
             <ul>
                 <li>
                     <figure>
-                        <img src="images/event1.png" alt="Event 1 Image">
+                        <img src="images/event1.png" alt="Event 1 poster, featuring guest speakers">
                         <figcaption>Event 1 - Date: Details about Event 1</figcaption>
                     </figure>
                 </li>
                 <li>
                     <figure>
-                        <img src="images/event2.png" alt="Event 2 Image">
+                        <img src="images/event2.png" alt="Event 2 poster, featuring workshop details">
                         <figcaption>Event 2 - Date: Details about Event 2</figcaption>
                     </figure>
                 </li>
                 <li>
                     <figure>
-                        <img src="images/event3.png" alt="Event 3 Image">
+                        <img src="images/event3.png" alt="Event 3 poster, featuring keynote speaker">
                         <figcaption>Event 3 - Date: Details about Event 3</figcaption>
                     </figure>
                 </li>
@@ -88,17 +107,10 @@
             <a href="events-calendar.html">View Full Calendar</a>
         </section>
 
-        <!-- Business Spotlights Section -->
-        <section id="spotlights" class="spotlights">
-            <h2>Business Spotlights</h2>
-            <div id="spotlight1" class="spotlight"></div>
-            <div id="spotlight2" class="spotlight"></div>
-        </section>
     </main>
 
     <!-- Footer Section -->
     <footer>
-        <!-- Footer top section -->
         <div class="footer-top">
             <section id="home-footer">
                 <h2>Welcome to Kinshasa Chamber of Commerce</h2>
@@ -125,7 +137,6 @@
             </section>
         </div>
 
-        <!-- Footer bottom section -->
         <div class="footer-bottom">
             <p>&copy; <span id="current-year"></span> Chamber of Commerce ki. Last modified: <span id="last-modified"></span></p>
             <nav class="footer-nav">
@@ -146,7 +157,7 @@
 
         // Update the last modified date dynamically
         document.getElementById('last-modified').textContent = document.lastModified;
-        
+
         // Your OpenWeatherMap API Key
         const apiKey = '854ab3f227ce58ad3d463a82f18aa6c3';
         const city = 'London'; // Change the city if necessary
@@ -158,7 +169,6 @@
                 const response = await fetch(url);
                 const data = await response.json();
 
-                // Check if the response is valid
                 if (data.cod === 200) {
                     const weather = data.weather[0].description;
                     const temperature = data.main.temp;
@@ -168,10 +178,26 @@
                     document.getElementById('current-weather').innerHTML = `
                         Conditions: ${weather}<br>
                         Temperature: ${temperature}°C<br>
-                        Humidity: ${humidity}%
+                        Humidity: ${humidity}%<br>
                     `;
+
+                    // Fetch and display 3-day forecast
+                    const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric&lang=en`;
+                    const forecastResponse = await fetch(forecastUrl);
+                    const forecastData = await forecastResponse.json();
+
+                    let forecastHtml = '';
+                    forecastData.list.slice(0, 3).forEach(forecast => {
+                        forecastHtml += `
+                            <li>
+                                ${new Date(forecast.dt_txt).toLocaleDateString()}: ${forecast.main.temp}°C, ${forecast.weather[0].description}
+                            </li>
+                        `;
+                    });
+                    document.getElementById('forecast').innerHTML = forecastHtml;
+
                 } else {
-                    document.getElementById('current-weather').innerHTML = `Unable to fetch weather data.`;
+                    document.getElementById('current-weather').innerHTML = 'Unable to fetch weather data.';
                 }
             } catch (error) {
                 document.getElementById('current-weather').innerHTML = `An error occurred: ${error}`;

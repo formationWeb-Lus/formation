@@ -35,7 +35,7 @@ nav ul {
 }
 
 nav a {
-    color: rgb(255, 255, 255);
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
     font-size: 25px;
@@ -44,6 +44,7 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
+    color: #FFD700; /* Jaune pour plus de contraste */
 }
 
 /* Section Hero */
@@ -82,11 +83,13 @@ nav a:hover {
     padding: 20px;
     background-color: #e6f2ff;
     text-align: center;
+    color: #003366; /* Texte foncé pour améliorer la lisibilité */
 }
 
 .weather h2 {
     font-size: 2rem;
     margin-bottom: 15px;
+    color: #003366; /* Couleur sombre pour le titre */
 }
 
 #current-weather {
@@ -108,14 +111,17 @@ nav a:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 100px;
+    color: #003366; /* Texte avec un meilleur contraste */
 }
 
 #forecast li h3 {
     font-size: 1.2rem;
+    color: #003366;
 }
 
 #forecast li p {
     font-size: 1rem;
+    color: #003366;
 }
 
 /* Section Événements */
@@ -127,11 +133,15 @@ nav a:hover {
 .events h2 {
     font-size: 2rem;
     margin-bottom: 15px;
+    color: #003366; /* Couleur sombre pour le titre */
 }
 
 .events ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .events ul li {
@@ -141,10 +151,13 @@ nav a:hover {
 .events a {
     color: #003366;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .events a:hover {
     text-decoration: underline;
+    background-color: #003366;
+    color: white;
 }
 
 /* Section Business Spotlights */
@@ -166,10 +179,12 @@ nav a:hover {
 .spotlight h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
+    color: #003366;
 }
 
 .spotlight p {
     font-size: 1rem;
+    color: #333;
 }
 
 /* Footer */
@@ -200,6 +215,7 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+    color: #FFD700; /* Jaune pour plus de contraste au survol */
 }
 
 .footer-bottom {
@@ -243,8 +259,6 @@ footer a:hover {
         bottom: 10px;
         background-color: rgb(250, 89, 143);
         text-align: center;
-        
-    
     }
 
     .spotlights {
@@ -252,7 +266,7 @@ footer a:hover {
     }
 
     .spotlight {
-        width: 10%;
+        width: 100%;
         margin-bottom: 20px;
     }
 
@@ -279,65 +293,20 @@ footer a:hover {
     }
 }
 
-
-
-#events {
-    font-family: Arial, sans-serif;
-    padding: 20px;
+/* Amélioration du contraste pour la section Météo */
+.weather {
+    color: #003366; /* Textes sombres pour une meilleure lisibilité */
 }
 
-#events h2 {
-    text-align: center;
-    margin-bottom: 20px;
+.weather h2 {
+    color: #003366; /* Assurez-vous que les titres sont visibles */
 }
 
-#events ul {
-    list-style-type: none; /* Enlève les puces des listes */
-    padding: 0;
-    display: flex; /* Utilisation de Flexbox pour la disposition horizontale */
-    justify-content: space-around; /* Espacement uniforme entre les éléments */
-    flex-wrap: wrap; /* Permet aux éléments de se déplacer à la ligne si nécessaire */
+#current-weather {
+    color: #003366; /* Le texte de la météo doit être bien lisible */
 }
 
-#events li {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centrer les éléments horizontalement */
-    margin: 10px;
-    text-align: center;
-}
-
-#events img {
-    width: 100%;
-    max-width: 300px; /* Limite la taille maximale de l'image */
-    height: auto;
-    margin-bottom: 10px; /* Espacement entre l'image et la légende */
-}
-
-#events a {
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-
-
-#membership-footer a,
-#events-footer a,
-#directory-footer a,
-#resources-footer a {
-    color: red; /* Change la couleur du texte en rouge */
-}
-
-#membership-footer a:hover,
-#events-footer a:hover,
-#directory-footer a:hover,
-#resources-footer a:hover {
-    color: darkred; /* Change la couleur du texte en rouge foncé au survol */
-}
+/* Section d'événements et liens */
 #events ul {
     list-style-type: none;
     padding: 0;
@@ -349,29 +318,28 @@ footer a:hover {
 }
 
 #events a:hover {
-    background-color: darkred; 
+    background-color: darkred;
     color: white;
 }
 
-
+/* Liens footer avec améliorations */
 #membership-footer a,
 #events-footer a,
 #directory-footer a,
 #resources-footer a {
-    color: rgb(26, 1, 1); 
-    background-color: #7fbee2; 
-    padding: 10px 15px; 
+    color: rgb(26, 1, 1);
+    background-color: #7fbee2;
+    padding: 10px 15px;
     border-radius: 5px;
-    text-decoration: none; 
-    display: inline-block; 
-    transition: background-color 0.3s ease, color 0.3s ease; 
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #membership-footer a:hover,
 #events-footer a:hover,
 #directory-footer a:hover,
 #resources-footer a:hover {
-    color: rgb(173, 14, 62); 
-    background-color: #00a2ff; 
-
+    color: rgb(173, 14, 62);
+    background-color: #00a2ff;
 }

@@ -1,55 +1,55 @@
 {
-    "businesses": [
+  "businesses": [
+    {
+      "companyName": "Business A",
+      "logo": "logo.png",
+      "phone": "123-456-7890",
+      "address": "123 Main Street, City, Country",
+      "website": "https://businessA.com",
+      "membershipLevel": "Gold"
+    },
+    {
+      "companyName": "Business B",
+      "logo": "logo.png",
+      "phone": "987-654-3210",
+      "address": "456 Elm Street, City, Country",
+      "website": "https://businessB.com",
+      "membershipLevel": "Silver"
+    },
+    {
+      "companyName": "Business C",
+      "logo": "logo.png",
+      "phone": "555-555-5555",
+      "address": "789 Oak Street, City, Country",
+      "website": "https://businessC.com",
+      "membershipLevel": "Gold"
+    }
+  ],
+  "current": {
+    "temp": 18.0,
+    "feels_like": 18.0,
+    "weather": [
       {
-        "companyName": "Business A",
-        "logo": "logo-a.png",
-        "phone": "123-456-7890",
-        "address": "123 Main Street, City, Country",
-        "website": "https://businessA.com",
-        "membershipLevel": "Gold"
-      },
-      {
-        "companyName": "Business B",
-        "logo": "logo-b.png",
-        "phone": "987-654-3210",
-        "address": "456 Elm Street, City, Country",
-        "website": "https://businessB.com",
-        "membershipLevel": "Silver"
-      },
-      {
-        "companyName": "Business C",
-        "logo": "logo-c.png",
-        "phone": "555-555-5555",
-        "address": "789 Oak Street, City, Country",
-        "website": "https://businessC.com",
-        "membershipLevel": "Gold"
+        "description": "light rain",
+        "icon": "10d"
       }
     ],
-    "current": {
-      "temp": 18.0,
-      "feels_like": 18.0,
+    "humidity": 97,
+    "pressure": 1013,
+    "wind_speed": 1.8,
+    "wind_deg": 300
+  },
+  "daily": [
+    {
+      "temp": {
+        "day": 22.0,
+        "night": 16.0
+      },
       "weather": [
         {
-          "description": "light rain",
-          "icon": "10d"
+          "description": "moderate rain"
         }
-      ],
-      "humidity": 97,
-      "pressure": 1013,
-      "wind_speed": 1.8,
-      "wind_deg": 300
-    },
-    "daily": [
-      {
-        "temp": {
-          "day": 22.0,
-          "night": 16.0
-        },
-        "weather": [
-          {
-            "description": "moderate rain"
-          }
-        ]
-      }
-    ]
-  }
+      ]
+    }
+  ]
+}
