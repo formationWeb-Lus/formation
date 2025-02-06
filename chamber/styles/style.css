@@ -260,3 +260,54 @@ button {
 button:hover {
     background-color: #333; /* Darker shade of black when hovering */
 }
+
+
+
+
+
+body {
+    background-color: #ffffff;  /* Blanc */
+    color: #333333;  /* Gris foncé */
+}
+
+h1, h2, h3 {
+    color: #000000;  /* Noir */
+}
+
+a {
+    color: #0066cc;  /* Bleu */
+}
+
+/* Par défaut, les liens sont en bleu clair, assurez-vous qu'il respecte le contraste */
+a:hover {
+    color: #0044cc;  /* Bleu foncé */
+}
+
+
+
+
+
+body {
+    background-color: #ffffff;  /* Blanc */
+    color: #333333;  /* Gris foncé */
+}
+
+h2 {
+    color: #1a1a1a;  /* Gris encore plus foncé pour les titres */
+}
+
+a {
+    color: #0056b3;  /* Un bleu plus foncé pour les liens */
+}
+
+
+
+
+button {
+    background-color: #007bff; /* Bleu */
+    color: #ffffff;  /* Blanc */
+}
+
+button:hover {
+    background-color: #0056b3; /* Un bleu plus foncé pour l'effet de survol */
+}
