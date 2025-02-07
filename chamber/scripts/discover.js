@@ -2,21 +2,24 @@ const lastVisit = localStorage.getItem('lastVisit');
 const currentVisit = new Date().getTime();
 localStorage.setItem('lastVisit', currentVisit);
 
-let message = 'Bienvenue ! N\'hésitez pas à nous contacter si vous avez des questions.';
-if (lastVisit) {
+let message = 'Welcome! Feel free to contact us if you have any questions.';
+
+// Check if it's the first visit or if the last visit was today
+if (!lastVisit) {
+    message = 'Welcome to our site! We hope you enjoy your time here.';
+} else {
     const daysBetween = Math.floor((currentVisit - lastVisit) / (1000 * 3600 * 24));
     if (daysBetween < 1) {
-        message = 'De retour si tôt ! Génial !';
+        message = 'Back so soon! Awesome!';
     } else {
-        message = `Votre dernière visite remonte à ${daysBetween} jour${daysBetween > 1 ? 's' : ''}.`;
+        message = `Your last visit was ${daysBetween} day${daysBetween > 1 ? 's' : ''} ago.`;
     }
 }
 
-// Afficher le message dans la page
+// Display the message in the page
 document.getElementById('message').textContent = message;
 
-
-
+// Function to load the cards
 function loadCards() {
     // Fetch the cards data from the JSON file
     fetch('data/discover.json')
