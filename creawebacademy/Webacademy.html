@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn web development with Webacademy. Sign up for courses in HTML, CSS, JavaScript, Python, and more.">
+    <meta name="keywords" content="Web Development, HTML, CSS, JavaScript, Python, Courses, Webacademy">
+    <meta property="og:title" content="Webacademy - Learn Web Development">
+    <meta property="og:description" content="Discover and sign up for web development courses at Webacademy.">
+    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:url" content="https://webacademy.com">
+    <meta name="twitter:title" content="Webacademy - Learn Web Development">
+    <meta name="twitter:description" content="Sign up for courses at Webacademy and start learning web development today.">
+    <meta name="twitter:image" content="images/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Webacademy - Learn Web Development</title>
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/academy.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Arial&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/academy.css">
+    <!-- Import Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Arial&display=swap" rel="stylesheet">
+    <style>
+        /* Styles for the dropdown menu */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            position: relative;
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav a {
+            display: block;
+            text-decoration: none;
+            padding: 10px 20px;
+            color: #11088f;
+            border-radius: 7px;
+        }
+
+        /* Styles for the submenus */
+        nav .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #f9f9f9;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            z-index: 1;
+        }
+
+        nav li:hover .submenu {
+            display: block;
+        }
+
+        .submenu li {
+            display: block;
+        }
+
+        .submenu a {
+            padding: 10px;
+            color: #333;
+            background-color: #fff;
+            border-radius: 3px;
+        }
+
+        .submenu a:hover {
+            background-color: #ddd;
+        }
+
+        /* Style links and other text elements */
+        nav a {
+            color: black;
+            text-decoration: none;
+        }
+
+        /* Style subtitles in <p> tags */
+        nav p {
+            color: black;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+
+    
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Webacademy Logo">
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                    <ul class="submenu">
+                        <li><a href="index.html">Home Page 1</a></li>
+                        <li><a href="#">Home Page 2</a></li>
+                        <li><a href="#">Home Page 3</a></li>
+                        <li><a href="#">Home Page 4</a></li>
+                        <li><a href="#">Home Page 5</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Learn</a>
+                    <ul class="submenu">
+                        <li><a href="#">Development Courses</a></li>
+                        <li><a href="#">HTML Course</a></li>
+                        <li><a href="#">CSS</a></li>                        
+                        <li><a href="#">JavaScript</a></li>                     
+                        <li><a href="#">Accessibility</a></li>                
+                        <li><a href="#">Python</a></li>                       
+                        <li><a href="#">Marketing Courses</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Compare</a>
+                    <ul class="submenu">
+                        <li><a href="#">Compare Course 1</a></li>
+                        <li><a href="#">Compare Course 2</a></li>
+                        <li><a href="#">Compare Course 3</a></li>
+                        <li><a href="#">Compare Course 4</a></li>
+                        <li><a href="#">Compare Course 5</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Blog</a>
+                    <ul class="submenu">
+                        <li><a href="#">Article 1</a></li>
+                        <li><a href="#">Article 2</a></li>
+                        <li><a href="#">Article 3</a></li>
+                        <li><a href="#">Article 4</a></li>
+                        <li><a href="#">Article 5</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Forum</a>
+                    <ul class="submenu">
+                        <li><a href="#">Forum Discussion 1</a></li>
+                        <li><a href="#">Forum Discussion 2</a></li>
+                        <li><a href="#">Forum Discussion 3</a></li>
+                        <li><a href="#">Forum Discussion 4</a></li>
+                        <li><a href="#">Forum Discussion 5</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                    <ul class="submenu">
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Our Goals</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="hero">
+            <video autoplay loop muted class="hero-video">
+                <source src="images/video.mp4" type="video/mp4">
+                Your browser does not support video playback.
+            </video>
+            <div class="hero-text">
+                <h1>Learn to create websites with Webacademy</h1>
+                <p>Discover courses suitable for your level, from beginner to advanced, in modern technologies.</p>
+                <a href="#" class="cta-button">See All</a>
+            </div>
+        </section>
+        
+        <div id="course-list" class="course-list-container"></div>
+
+        
+        <!-- Modal pour afficher les détails du cours (initialement caché) -->
+        <div id="modal" class="modal" style="display: none;">
+            <div id="modal-data" class="modal-content"></div>
+            <button id="closeModal" class="modal-close-btn">Fermer</button>
+        </div>
+    
+    
+        <!-- Event Section -->
+        <section class="events">
+            <div class="caption" id="caption-section">
+                <div class="caption-text">
+                    <h2>Upcoming Events</h2>
+                    <p>Join our exciting events to learn new skills in web development. Explore our workshops and webinars on modern technologies.</p>
+                </div>
+                <div class="caption-image">
+                    <img src="images/imgc2.jpg" alt="Webacademy Events">
+                </div>
+            </div>
+        </section>
+
+        <!-- Ongoing Events Section -->
+        <section class="events">
+            <h2> Low-Cost Online Training</h2>
+            <div class="event-list">
+                <div class="event">
+                    <h3>CréaWeb Academy:</h3>
+                    <p>Offers online training, reducing costs associated with physical infrastructure and transportation. This makes web development and digital marketing courses accessible without additional costs, offering great value for money.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="event">
+                    <h3> Targeted and Practical Modules</h3>
+                    <p>Programs focus on specific skills such as web development with HTML, CSS, JavaScript, and digital marketing. These short and practical courses allow participants to acquire directly applicable skills while keeping registration costs low.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+       <!-- Image Gallery Section -->
+<section class="image-caption">
+    <h2>Our Trainings in Pictures</h2>
+    <div class="image-gallery" id="image-gallery">
+        <!-- Les éléments seront injectés ici via JavaScript -->
+    </div>
+</section>
+
+        <!-- Spotlight Members Section -->
+        <section class="spotlight">
+            <h2>Featured Members</h2>
+            <div class="spotlight-list">
+                <!-- Display featured gold or silver members here via JavaScript -->
+            </div>
+        </section>
+        <div id="data-list"></div>
+
+<!-- Structure du modal pour afficher les détails d'un élément -->
+<div id="modal" style="display:none;">
+    <div id="modal-data"></div>
+    <button id="closeModal">Fermer</button>
+</div>
+
+<!-- Bouton pour récupérer les données -->
+<button id="fetchDataBtn">Récupérer les données</button>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-socials">
+            <a href="https://www.facebook.com/profile.php?id=61561351449965" class="social-icon">
+                <img src="images/facebook.webp" alt="Facebook">
+            </a>
+            <a href="https://youtu.be/1jE-vJrKu7g" class="social-icon">
+                <img src="images/youtube.webp" alt="YouTube">
+            </a>
+            <a href="#" class="social-icon">
+                <img src="images/instagram.webp" alt="Instagram">
+            </a>
+            <a href="#" class="social-icon">
+                <img src="images/whatsapp.webp" alt="WhatsApp">
+            </a>
+            <a href="#" class="social-icon">
+                <img src="images/linkedin-icon.png" alt="LinkedIn">
+            </a>
+        </div>
+    
+        <div class="footer-caption">
+            <h3>Program Rules</h3>
+            <div class="rules-gallery">
+                <figure class="rule-item">
+                    <img src="images/rule1.jpg" alt="Rule 1">
+                    <figcaption>Respect schedules and attendance for effective learning.</figcaption>
+                </figure>
+                <figure class="rule-item">
+                    <img src="images/rule2.jpg" alt="Rule 2">
+                    <figcaption>Engage in projects for practical learning experiences.</figcaption>
+                </figure>
+                <figure class="rule-item">
+                    <img src="images/rule3.jpg" alt="Rule 3">
+                    <figcaption>Utilize educational tools to enhance learning outcomes.</figcaption>
+                </figure>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External Scripts -->
+    <script src="scripts/academy.js"></script>
+</body>
+</html>

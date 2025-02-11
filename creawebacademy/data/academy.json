@@ -1,0 +1,39 @@
+{
+    "gallery": [
+      {
+        "imgSrc": "images/websi.png",
+        "alt": "HTML/CSS Training",
+        "title": "HTML/CSS Training",
+        "figcaptionTitle": "Learn to create modern, responsive websites using HTML and CSS.",
+        "figcaptionDescription": "Learn the fundamental concepts of web design and development. Build your first websites with HTML and CSS, and make them responsive to different devices."
+      },
+      {
+        "imgSrc": "images/java.png",
+        "alt": "JavaScript Training",
+        "title": "JavaScript Training",
+        "figcaptionTitle": "Learn how to add interactivity to websites using JavaScript.",
+        "figcaptionDescription": "JavaScript is the language of the web. Master the skills needed to bring dynamic content to your web pages and enhance user experience."
+      },
+      {
+        "imgSrc": "images/digital.png",
+        "alt": "Digital Marketing Training",
+        "title": "Digital Marketing Training",
+        "figcaptionTitle": "Learn to promote products online with digital marketing strategies.",
+        "figcaptionDescription": "Explore techniques for social media marketing, SEO, email campaigns, and more. Grow your online presence and boost sales with these skills."
+      },
+      {
+        "imgSrc": "images/python.png",
+        "alt": "Programming Training",
+        "title": "Programming",
+        "figcaptionTitle": "Programming in Python involves writing code to create software, solve problems, automate tasks, and analyze data efficiently.",
+        "figcaptionDescription": "Learn Python from scratch, and gain hands-on experience in solving real-world problems. Automate repetitive tasks and work with data more effectively."
+      }
+    ]
+  }
+
+
+
+
+
+
+

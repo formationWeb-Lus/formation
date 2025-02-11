@@ -1,0 +1,44 @@
+
+  
+  [
+    {
+        "id": 1,
+        "title": "HTML Basics",
+        "category": "Web Development",
+        "price": 49.99,
+        "rating": 4.5,
+        "description": "Learn the fundamentals of HTML."
+    },
+    {
+        "id": 2,
+        "title": "CSS Mastery",
+        "category": "Web Development",
+        "price": 59.99,
+        "rating": 4.7,
+        "description": "Master CSS and create beautiful websites."
+    },
+    {
+        "id": 3,
+        "title": "JavaScript Essentials",
+        "category": "Web Development",
+        "price": 69.99,
+        "rating": 4.8,
+        "description": "Get a deep understanding of JavaScript for modern web development."
+    },
+    {
+        "id": 4,
+        "title": "React for Beginners",
+        "category": "Web Development",
+        "price": 79.99,
+        "rating": 4.9,
+        "description": "Learn how to build dynamic, interactive user interfaces using React."
+    },
+    {
+        "id": 5,
+        "title": "Node.js and Express",
+        "category": "Backend Development",
+        "price": 89.99,
+        "rating": 4.6,
+        "description": "Master server-side JavaScript with Node.js and Express."
+    }
+]
