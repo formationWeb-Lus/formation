@@ -1,44 +1,62 @@
-
-  
-  [
+[
     {
-        "id": 1,
-        "title": "HTML Basics",
-        "category": "Web Development",
-        "price": 49.99,
-        "rating": 4.5,
-        "description": "Learn the fundamentals of HTML."
+        "title": "HTML & CSS",
+        "description": "Learn the basics of web design with HTML & CSS. Create stunning, responsive websites from scratch!"
     },
     {
-        "id": 2,
-        "title": "CSS Mastery",
-        "category": "Web Development",
-        "price": 59.99,
-        "rating": 4.7,
-        "description": "Master CSS and create beautiful websites."
+        "title": "JavaScript for Beginners",
+        "description": "Dive into JavaScript programming and master interactive web elements and functionality."
     },
     {
-        "id": 3,
-        "title": "JavaScript Essentials",
-        "category": "Web Development",
-        "price": 69.99,
-        "rating": 4.8,
-        "description": "Get a deep understanding of JavaScript for modern web development."
+        "title": "Advanced Python",
+        "description": "Master Python and its frameworks for web development, automation, and data analysis."
     },
     {
-        "id": 4,
-        "title": "React for Beginners",
-        "category": "Web Development",
-        "price": 79.99,
-        "rating": 4.9,
-        "description": "Learn how to build dynamic, interactive user interfaces using React."
+        "title": "Web Design Principles",
+        "description": "Learn how to design responsive websites that look great on all devices."
     },
     {
-        "id": 5,
+        "title": "React.js for Beginners",
+        "description": "Start building interactive UIs with React and learn the fundamentals of modern web development."
+    },
+    {
         "title": "Node.js and Express",
-        "category": "Backend Development",
-        "price": 89.99,
-        "rating": 4.6,
-        "description": "Master server-side JavaScript with Node.js and Express."
+        "description": "Learn backend development using Node.js and build server-side applications with Express."
+    },
+    {
+        "title": "PHP for Web Development",
+        "description": "Understand PHP and how to use it for building dynamic websites and web applications."
+    },
+    {
+        "title": "SQL and Databases",
+        "description": "Learn how to interact with databases using SQL and build efficient database-driven websites."
+    },
+    {
+        "title": "Mobile Web Development",
+        "description": "Explore best practices for developing mobile-friendly websites that work on any device."
+    },
+    {
+        "title": "UI/UX Design Fundamentals",
+        "description": "Learn the essentials of user interface and user experience design for creating user-friendly websites."
+    },
+    {
+        "title": "CSS Flexbox and Grid",
+        "description": "Master modern CSS layout techniques including Flexbox and CSS Grid to create complex layouts."
+    },
+    {
+        "title": "JavaScript for Web Development",
+        "description": "Get hands-on with JavaScript and use it to add dynamic functionality to your websites."
+    },
+    {
+        "title": "Web Security Basics",
+        "description": "Learn how to secure your web applications and protect against common vulnerabilities."
+    },
+    {
+        "title": "Git and Version Control",
+        "description": "Learn the basics of Git, version control, and collaboration using GitHub."
+    },
+    {
+        "title": "Agile Web Development",
+        "description": "Understand Agile principles and how to apply them to modern web development workflows."
     }
 ]
