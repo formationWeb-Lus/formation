@@ -14,12 +14,12 @@
 
 <body>
 
+    <!-- Mobile-friendly Hamburger Menu: Always visible, toggles on click -->
     <header>
         <div class="logo">
             <img src="images/logo.png" alt="CréaWeb Academy Logo">
         </div>
         <nav>
-            <!-- Menu Hamburger pour mobile -->
             <div class="hamburger-menu" onclick="toggleMenu()">
                 <div></div>
                 <div></div>
@@ -31,7 +31,7 @@
                 <li><a href="index.html">Explore</a></li>
                 <li><a href="#">Forum</a></li>
                 <li><a href="history.html">About Us</a></li>
-                <li><a href="singnin.html" class="cta-signin">Sign In</a></li>
+                <li><a href="signin.html" class="cta-signin">Sign In</a></li>
             </ul>
         </nav>
         <div class="search-container">
@@ -39,12 +39,14 @@
             <button>Search</button>
         </div>
     </header>
+
     <script>
         function toggleMenu() {
             const menu = document.querySelector('.nav-list');
             menu.classList.toggle('active');
         }
-    </script>    
+    </script>
+
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
@@ -53,7 +55,7 @@
             <div class="hero-text">
                 <h1>Welcome to CréaWeb Academy</h1>
                 <p>The training that shapes the web experts of tomorrow.</p>
-                <a href="singnin.html" class="cta-button">Sign Up Here</a>
+                <a href="signin.html" class="cta-button">Sign Up Here</a>
             </div>
         </section>
 
@@ -72,93 +74,33 @@
             </div>
         </section>
 
-        <!-- Section Our Values -->
-        <section class="values">
-            <div class="values-text">
-                <h2>Our Values</h2>
-                <ul>
-                    <li>We believe that digital skills should be accessible to everyone.</li>
-                    <li>Our training is designed to be directly applicable in the professional world.</li>
-                    <li>We follow the latest trends to offer up-to-date training.</li>
-                </ul>
-            </div>
-            <div class="values-icon">
-                <img src="images/value.jpg" alt="Our Values">
-            </div>
-        </section>
+        <!-- Rest of the content sections here -->
 
-        <!-- Section What Makes Us Different -->
-        <section class="distinction">
-            <div class="distinction-text">
-                <h2>What Makes Us Different</h2>
-                <ul>
-                    <li>CréaWeb Academy stands out for its practical approach and personalized support.</li>
-                    <li>Our students learn by working on real projects and receive continuous guidance.</li>
-                </ul>
-            </div>
-            <div class="distinction-icon">
-                <img src="images/distang.jpg" alt="What Makes Us Different">
-            </div>
-        </section>
-
-        <!-- Section Our Trainings -->
-        <section class="courses">
-            <h2>Our Trainings</h2>
-            <div class="course-list">
-                <!-- Courses will be dynamically loaded via JavaScript -->
-            </div>
-            <a href="index.html" class="cta-button">See all Trainings</a>
-        </section>
-
-        <!-- Call to Action Before Footer -->
-        <section class="cta-before-footer">
-            <div class="cta-content">
-                <h2>Ready to Start Your Journey with CréaWeb Academy?</h2>
-                <p>Unlock your potential with expert-led training in web development, design, marketing, and more.</p>
-                <a href="signin.html" class="cta-button">Start Learning Today</a>
-            </div>
-        </section>
     </main>
 
     <!-- Footer -->
-    
     <footer>
-        
-        <!-- Additional Footer Section with Logo and 4 Rules -->
         <div class="footer-bottom">
             <div class="footer-logo">
                 <img src="images/logo.png" alt="Webacademy Logo">
             </div>
             <div class="footer-rules">
                 <div class="footer-rule">
-                    <h4></h4>
                     <a href="privacy-policy.html" class="cta-button">Privacy Policy</a>
                 </div>
                 <div class="footer-rule">
-                    <h4></h4>
                     <a href="terms-of-use.html" class="cta-button">Terms of Use</a>
                 </div>
                 <div class="footer-rule">
-                    <h4></h4>
                     <a href="cookie-policy.html" class="cta-button">Cookie Policy</a>
                 </div>
                 <div class="footer-rule">
-                    <h4></h4>
                     <a href="about-us.html" class="cta-button">Website Utility</a>
-                    <p>&copy; 2025 Webacademy - All Rights Reserved</p>
-                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+                    <p>&copy; 2025 CréaWeb Academy - All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-<div class="footer-socials">
-    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i> Facebook</a>
-    <a href="#" class="social-icon"><i class="fab fa-instagram"></i> Instagram</a>
-    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
-    <a href="#" class="social-icon"><i class="fab fa-youtube"></i> YouTube</a>
-    <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-</div>
-                    </div>
-                    </div>
-                    </div>
-                    </footer>
-                    
-                    </body>
-                    </html>
+</body>
+</html>
