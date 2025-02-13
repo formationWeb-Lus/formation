@@ -661,7 +661,7 @@ footer .social-icon:hover {
     margin-top: 40px;
     flex-wrap: wrap;
     padding: 20px;
-    background-color: #457b9d;
+    background-color: #010e16;
 }
 
 .footer-logo img {
@@ -706,7 +706,7 @@ footer {
 .footer-rule a.cta-button {
     text-decoration: none;
     color: inherit; /* Enlève la couleur spécifique du texte */
-    background-color: #007bff; /* Garder une couleur de fond */
+    background-color: #061627; /* Garder une couleur de fond */
     font-size: 14px;
     padding: 10px 20px; /* Pour rendre les boutons plus visibles */
     margin-top: 5px;
@@ -732,7 +732,7 @@ footer {
 }
 
 .footer-socials a:hover {
-    color: #007bff; /* Changes icon color on hover */
+    color: #09223b; /* Changes icon color on hover */
 }
 
 /* Copyright message below the social icons */
@@ -789,7 +789,7 @@ footer {
 }
 
 .footer-socials a:hover {
-    color: #007bff;
+    color: #03203f;
 }
 
 /* Footer copyright message */
