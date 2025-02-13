@@ -271,7 +271,7 @@ body {
 }
 
 .cta-button {
-    background-color: #f8a200;
+    background-color: #f19e04;
     padding: 15px 25px;
     color: white;
     text-decoration: none;
@@ -397,7 +397,7 @@ body {
 }
 
 .cta-button {
-    background-color: #f8b400;
+    background-color: #fcb903;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -407,7 +407,7 @@ body {
 }
 
 .cta-button:hover {
-    background-color: #e68900;
+    background-color: #e78b01;
 }
 
 /* Courses section */
@@ -497,7 +497,7 @@ body {
 }
 
 .modal-close-btn {
-    background-color: #f8b400;
+    background-color: #e2d09c;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -507,7 +507,7 @@ body {
 }
 
 .modal-close-btn:hover {
-    background-color: #e68900;
+    background-color: #e68e0b;
 }
 
 /* Footer styles */
@@ -529,5 +529,273 @@ footer {
 }
 
 .footer-socials a:hover {
-    color: #f8b400;
+    color: #f1efe9;
+}
+
+
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7fa;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #1d3557;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header .logo img {
+    width: 120px; /* Smaller logo */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    color: #e63946;
+}
+
+/* Sign In Button Styling */
+.cta-signin {
+    background-color: #e63946;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-signin:hover {
+    background-color: #d62828;
+}
+
+/* Search Container */
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 200px;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    background-color: #457b9d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-container button:hover {
+    background-color: #1d3557;
+}
+
+
+
+
+footer {
+    background-color: #1d3557;
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+footer .footer-socials {
+    margin: 20px 0;
+}
+
+footer .social-icon {
+    margin: 0 15px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+footer .social-icon:hover {
+    color: #e63946;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #457b9d;
+}
+
+.footer-logo img {
+    width: 50px;
+    height: auto;
+}
+
+
+
+footer {
+    background-color: #282828;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+/* Footer Rules Section */
+.footer-rules {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 30px;
+}
+
+.footer-rule {
+    flex: 1;
+    text-align: center;
+}
+
+
+.footer-rule a.cta-button {
+    text-decoration: none;
+    color: inherit; /* Enlève la couleur spécifique du texte */
+    background-color: #007bff; /* Garder une couleur de fond */
+    font-size: 14px;
+    padding: 10px 20px; /* Pour rendre les boutons plus visibles */
+    margin-top: 5px;
+    display: inline-block;
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s ease;
+}
+
+
+.footer-socials {
+    display: flex; /* Aligns the icons horizontally */
+    justify-content: center; /* Centers them horizontally */
+    gap: 20px; /* Space between the icons */
+    margin-bottom: 10px; /* Adds spacing below the icons */
+}
+
+.footer-socials a {
+    text-decoration: none;
+    color: #fff; /* Default icon color */
+    font-size: 18px;
+    display: flex;
+    align-items: center; /* Aligns the icon and text vertically */
+}
+
+.footer-socials a:hover {
+    color: #007bff; /* Changes icon color on hover */
+}
+
+/* Copyright message below the social icons */
+.footer-copy {
+    text-align: center;
+    color: #fff; /* Color for the copyright text */
+    font-size: 14px;
+    margin-top: 10px; /* Adds spacing above the text */
+}
+
+
+
+
+
+.footer-rules {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Réduit l'espace en dessous de la ligne des règles */
+    gap: 10px; /* Réduit l'espace entre chaque règle */
+}
+
+/* Individual footer rule */
+.footer-rule {
+    margin-bottom: 0; /* Réduit l'espace entre les éléments */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrer les éléments dans chaque règle */
+}
+
+/* Call to action button styling */
+.cta-button {
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-top: 5px; /* Réduit l'espace au-dessus du bouton */
+}
+
+/* Footer social icons section */
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Réduit l'espace entre les icônes sociales */
+    margin-top: 10px;
+}
+
+.footer-socials a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-socials a:hover {
+    color: #007bff;
+}
+
+/* Footer copyright message */
+.footer-copy {
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 10px;
 }

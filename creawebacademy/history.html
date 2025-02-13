@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CréaWeb Academy - The training that shapes the web experts of tomorrow.">
+    <meta name="keywords" content="CréaWeb, Academy, Web Training, Web Development, Digital Marketing, UX/UI">
+    <title>CréaWeb Academy - The Training That Shapes the Web Experts of Tomorrow</title>
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/style.css">
+    <script type="module" src="scripts/main.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="CréaWeb Academy Logo">
+        </div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Our Trainings</a></li>
+                <li><a href="#">Explore</a></li>
+                <li><a href="#">Forum</a></li>
+                <li><a href="#">About Us</a></li>
+                <!-- Add Sign In CTA -->
+                <li><a href="signin.html" class="cta-signin">Sign In</a></li>
+            </ul>
+        </nav>
+        <!-- Add a search field next to the navigation -->
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button>Search</button>
+        </div>
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <img src="images/hero.jpg" alt="Web Training" class="hero-image">
+            <div class="hero-text">
+                <h1>Welcome to CréaWeb Academy</h1>
+                <p>The training that shapes the web experts of tomorrow.</p>
+                <a href="signup.html" class="cta-button">Sign Up Here</a>
+            </div>
+        </section>
+
+        <!-- Section Our Story -->
+        <section class="history">
+            <div class="history-text">
+                <h2>Our Story</h2>
+                <p>Founded in <span id="founding-year">2015</span>, CréaWeb Academy was born from the desire to make digital skills accessible to everyone. Since our humble beginnings, we have helped hundreds of students transform their careers through high-quality training.</p>
+            </div>
+            <div class="history-icon">
+                <img src="images/history.jpg" alt="Our Story">
+            </div>
+        </section>
+
+        <!-- Section Our Values -->
+        <section class="values">
+            <div class="values-text">
+                <h2>Our Values</h2>
+                <ul>
+                    <li><strong></strong> We believe that digital skills should be accessible to everyone.</li>
+                    <li><strong></strong> Our training is designed to be directly applicable in the professional world.</li>
+                    <li><strong></strong> We follow the latest trends to offer up-to-date training.</li>
+                </ul>
+            </div>
+            <div class="values-icon">
+                <img src="images/value.jpg" alt="Our Values">
+            </div>
+        </section>
+
+        <!-- Section What Makes Us Different -->
+        <section class="distinction">
+            <div class="distinction-text">
+                <h2>What Makes Us Different</h2>
+                <p>CréaWeb Academy stands out for its practical approach and personalized support. Our students learn by working on real projects and receive continuous guidance.</p>
+            </div>
+            <div class="distinction-icon">
+                <img src="images/distang.jpg" alt="What Makes Us Different">
+            </div>
+        </section>
+
+        <!-- Section Our Trainings -->
+        <section class="courses">
+            <h2>Our Trainings</h2>
+            <div class="course-list">
+                <!-- Courses will be dynamically loaded via JavaScript -->
+            </div>
+            <button id="loadCoursesBtn" class="cta-button">See Trainings</button>
+        </section>
+
+        <!-- Call to Action Before Footer -->
+        <section class="cta-before-footer">
+            <div class="cta-content">
+                <h2>Ready to Start Your Journey with CréaWeb Academy?</h2>
+                <p>Unlock your potential with expert-led training in web development, design, marketing, and more.</p>
+                <a href="signup.html" class="cta-button">Start Learning Today</a>
+            </div>
+        </section>
+
+        <!-- Modal for Course Details -->
+        <div id="courseModal" class="modal">
+            <div class="modal-content">
+                <div id="modal-course-details"></div>
+                <button id="closeModal" class="modal-close-btn">Close</button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 CréaWeb Academy - All Rights Reserved</p>
+            <p>Stay updated with our latest courses and news.</p>
+        </div>
+        <div class="footer-socials">
+            <a href="#" class="social-icon">Facebook</a>
+            <a href="#" class="social-icon">Instagram</a>
+            <a href="#" class="social-icon">LinkedIn</a>
+        </div>
+        <div class="footer-cta">
+            <a href="learn-more.html" class="cta-button">Learn More</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
