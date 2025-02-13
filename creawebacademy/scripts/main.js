@@ -54,6 +54,10 @@ document.getElementById('course-list').addEventListener('click', function(event)
         showModal(courseTitle, courseDesc);  // Afficher les détails dans la modale
     }
 });
+function toggleMenu() {
+    const navList = document.querySelector('.nav-list');
+    navList.classList.toggle('open');
+}
 
 // Initialisation des cours
 loadCourses();  // Charger les cours au démarrage

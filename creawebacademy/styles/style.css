@@ -391,3 +391,76 @@ nav {
         margin-bottom: 10px;
     }
 }
+
+
+
+
+/* Style général pour le menu de navigation */
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-list li {
+    display: inline-block;
+}
+
+.nav-list a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #000;
+}
+
+/* Style pour le menu mobile (par défaut, il est caché) */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger-menu div {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 5px 0;
+}
+
+/* Médias queries pour les écrans plus petits */
+@media (max-width: 768px) {
+    /* Cache le menu de navigation pour les petits écrans */
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: white;
+        width: 200px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Affiche le menu hamburger sur les petits écrans */
+    .hamburger-menu {
+        display: block;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+    }
+
+    .search-container {
+        display: none;
+    }
+}
+
+/* Pour le footer social icons */
+.footer-socials {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}

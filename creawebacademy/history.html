@@ -19,6 +19,12 @@
             <img src="images/logo.png" alt="CréaWeb Academy Logo">
         </div>
         <nav>
+            <!-- Menu Hamburger pour mobile -->
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
             <ul class="nav-list">
                 <li><a href="Webacademy.html">Home</a></li>
                 <li><a href="index.html">Our Trainings</a></li>
@@ -33,7 +39,12 @@
             <button>Search</button>
         </div>
     </header>
-
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.nav-list');
+            menu.classList.toggle('active');
+        }
+    </script>    
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->

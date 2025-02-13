@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,6 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Arial&display=swap" rel="stylesheet">
     <script type="module" src="scripts/main.js" defer></script>
 </head>
+
 <body>
 
     <header>
@@ -26,26 +28,32 @@
             <img src="images/logo.png" alt="CréaWeb Academy Logo">
         </div>
         <nav>
+            <!-- Menu Hamburger for mobile -->
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
             <ul class="nav-list">
                 <li><a href="Webacademy.html">Home</a></li>
                 <li><a href="index.html">Our Trainings</a></li>
                 <li><a href="Webacademy.html">Explore</a></li>
                 <li><a href="#">Forum</a></li>
                 <li><a href="history.html">About Us</a></li>
-                <!-- Add Sign In CTA -->
                 <li><a href="signin.html" class="cta-signin">Sign In</a></li>
             </ul>
         </nav>
-        <!-- Add a search field next to the navigation -->
         <div class="search-container">
             <input type="text" placeholder="Search...">
             <button>Search</button>
         </div>
     </header>
+    
+    
 
     <!-- Main Content -->
     <main>
-        
+
         <section class="hero">
             <img src="images/imgc.jpg" alt="Scenic view of Rwenzori National Park, Uganda" class="hero-image">
             <div class="hero-text">
@@ -54,7 +62,7 @@
                 <a href="signin.html" class="cta-button">APPLY NOW HERE</a>
             </div>
         </section>
-    
+
         <!-- Section Courses -->
         <section class="courses">
             <h2>Here are the courses available at Webacademy, designed to help you master web development and related technologies.</h2>
@@ -63,7 +71,7 @@
             </div>
             <button id="fetchDataBtn">Load Courses</button>
         </section>
-    
+
         <!-- Additional Section for Image, Text, and Call to Action -->
         <section class="cta-section">
             <div class="cta-content">
@@ -75,7 +83,7 @@
                 </div>
             </div>
         </section>
-    
+
         <!-- Modale pour les détails des cours -->
         <div id="modal" class="modal">
             <div class="modal-content">
@@ -86,7 +94,7 @@
     </main>
 
     <footer>
-        
+
         <!-- Additional Footer Section with Logo and 4 Rules -->
         <div class="footer-bottom">
             <div class="footer-logo">
@@ -111,17 +119,18 @@
                     <p>&copy; 2025 Webacademy - All Rights Reserved</p>
                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-<div class="footer-socials">
-    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i> Facebook</a>
-    <a href="#" class="social-icon"><i class="fab fa-instagram"></i> Instagram</a>
-    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
-    <a href="#" class="social-icon"><i class="fab fa-youtube"></i> YouTube</a>
-    <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-</div>
+                    <div class="footer-socials">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i> Facebook</a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i> YouTube</a>
+                        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                     </div>
-                    </div>
-                    </div>
-                    </footer>
-                    
-                    </body>
-                    </html>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
