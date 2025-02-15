@@ -425,22 +425,101 @@ nav {
     margin: 5px 0;
 }
 
-/* Médias queries pour les écrans plus petits */
+
+
+
+/* Déclaration des variables CSS pour les couleurs et tailles */
+:root {
+    --main-color: #2c3e50;
+    --white-color: #ffffff;
+    --nav-item-spacing: 20px;
+    --nav-item-spacing-mobile: 10px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --header-padding: 20px;
+}
+
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--header-padding);
+    background-color: var(--main-color);
+    color: var(--white-color);
+}
+
+/* Assurez-vous que le contenu sous le header commence après le menu */
+main {
+    margin-top: 100px;
+}
+
+/* Nav List Styles */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Menu par défaut (visible sur grands écrans) */
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    margin-right: var(--nav-item-spacing);
+}
+
+.nav-list li a {
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    z-index: 101; /* Toujours au-dessus du menu */
+}
+
+.hamburger-menu div {
+    width: 30px;
+    height: 4px;
+    background-color: var(--white-color);
+    margin: 6px 0;
+}
+
+/* Mobile Styles */
 @media (max-width: 768px) {
-    /* Cache le menu de navigation pour les petits écrans */
+    /* Le menu est caché par défaut */
     .nav-list {
         display: none;
         flex-direction: column;
-        align-items: center;
         position: absolute;
         top: 60px;
         right: 0;
-        background-color: white;
+        background-color: var(--main-color);
         width: 200px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 20px;
+        box-shadow: var(--box-shadow);
     }
 
-    /* Affiche le menu hamburger sur les petits écrans */
+    /* Menu hamburger visible */
     .hamburger-menu {
         display: block;
     }
@@ -450,102 +529,11 @@ nav {
     }
 
     .nav-list li {
-        margin: 10px 0;
+        margin: var(--nav-item-spacing-mobile) 0;
     }
 
     .search-container {
         display: none;
-    }
-}
-
-/* Pour le footer social icons */
-.footer-socials {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-}
-
-
-
-
-
-
-/* Header Styles */
-header {
-    position: fixed; /* Fixe le menu en haut */
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100; /* Assure que le menu reste au-dessus du contenu */
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #2c3e50;
-    color: white;
-}
-
-/* Assurez-vous que le contenu sous le header commence après le menu */
-main {
-    margin-top: 100px; /* Espace pour compenser la hauteur du header */
-}
-
-/* Nav List and Hamburger Menu */
-nav {
-    display: flex;
-    align-items: center;
-}
-
-.nav-list {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-list li {
-    margin-right: 20px;
-}
-
-.nav-list li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-/* Mobile Styles */
-.hamburger-menu {
-    display: none;
-    cursor: pointer;
-}
-
-.hamburger-menu div {
-    width: 30px;
-    height: 4px;
-    background-color: white;
-    margin: 6px 0;
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-    .nav-list {
-        display: none;
-        flex-direction: column;
-        background-color: #2c3e50;
-        width: 100%;
-        text-align: center;
-        padding: 20px;
-    }
-
-    .nav-list.active {
-        display: block;
-    }
-
-    .hamburger-menu {
-        display: block;
-    }
-
-    .nav-list li {
-        margin: 10px 0;
     }
 
     .hero-text h1 {
@@ -553,32 +541,13 @@ nav {
     }
 
     .hero {
-        margin-top: 0; /* Assurez-vous que la section Hero ne soit pas poussée vers le bas */
+        margin-top: 0;
     }
 }
 
-/* Larger Screen Styles */
+/* Styles pour les grands écrans */
 @media (min-width: 1024px) {
     .hero-text h1 {
         font-size: 36px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
