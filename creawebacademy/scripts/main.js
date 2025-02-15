@@ -54,10 +54,14 @@ document.getElementById('course-list').addEventListener('click', function(event)
         showModal(courseTitle, courseDesc);  // Afficher les détails dans la modale
     }
 });
-function toggleMenu() {
-    const navList = document.querySelector('.nav-list');
-    navList.classList.toggle('open');
-}
+// Sélectionner le bouton hamburger et la liste de navigation
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const navList = document.querySelector('.nav-list');
 
+// Ajouter un écouteur d'événement sur le clic du bouton hamburger
+hamburgerMenu.addEventListener('click', () => {
+    // Toggle la classe 'active' sur la liste de navigation pour l'afficher/masquer
+    navList.classList.toggle('active');
+});
 // Initialisation des cours
 loadCourses();  // Charger les cours au démarrage
