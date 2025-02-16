@@ -292,3 +292,132 @@ footer p {
     background-color: #cc0000; /* Darker red when hovered */
 }
 
+
+
+
+
+
+/* Déclaration des variables CSS pour les couleurs et tailles */
+:root {
+    --main-color: #2c3e50;
+    --white-color: #ffffff;
+    --nav-item-spacing: 20px;
+    --nav-item-spacing-mobile: 10px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --header-padding: 20px;
+}
+
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--header-padding);
+    background-color: var(--main-color);
+    color: var(--white-color);
+}
+
+/* Assurez-vous que le contenu sous le header commence après le menu */
+main {
+    margin-top: 100px;
+}
+
+/* Nav List Styles */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Menu par défaut (visible sur grands écrans) */
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    margin-right: var(--nav-item-spacing);
+}
+
+.nav-list li a {
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    z-index: 101; /* Toujours au-dessus du menu */
+}
+
+.hamburger-menu div {
+    width: 30px;
+    height: 4px;
+    background-color: var(--white-color);
+    margin: 6px 0;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    /* Le menu est caché par défaut */
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: var(--main-color);
+        width: 200px;
+        text-align: center;
+        padding: 20px;
+        box-shadow: var(--box-shadow);
+    }
+
+    /* Menu hamburger visible */
+    .hamburger-menu {
+        display: block;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: var(--nav-item-spacing-mobile) 0;
+    }
+
+    .search-container {
+        display: none;
+    }
+
+    .hero-text h1 {
+        font-size: 24px;
+    }
+
+    .hero {
+        margin-top: 0;
+    }
+}
+
+/* Styles pour les grands écrans */
+@media (min-width: 1024px) {
+    .hero-text h1 {
+        font-size: 36px;
+    }
+}
+

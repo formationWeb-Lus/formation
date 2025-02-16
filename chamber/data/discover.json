@@ -1,58 +1,43 @@
 [
     {
         "title": "Rwenzori National Park",
-        "image": "images/rwenzori.webp",
+        "image": "images/photo5.webp",
         "address": "Rwenzori Region, Uganda",
         "description": "This park is a protected reserve with great biodiversity, ideal for hiking and bird watching. It is home to majestic mountains, glaciers, lakes, and exceptional flora and fauna.",
-        "link": "parc-rwenzori.html"
+        "link": "parc-rwenzori.html",
+        "button": "Learn More"
     },
     {
         "title": "National Museum of the Democratic Republic of Congo",
-        "image": "images/musee-rdc.webp",
+        "image": "images/photo4.wbp",
         "address": "Kinshasa, Democratic Republic of Congo",
         "description": "An intriguing museum showcasing the history and culture of Congo, with a rich collection of ancient artifacts, sculptures, and traditional art objects spanning centuries.",
-        "link": "musee-rdc.html"
+        "link": "musee-rdc.html",
+        "button": "Learn More"
     },
     {
         "title": "Inga Falls",
-        "image": "images/chutes-inga.webp",
+        "image": "images/photo3.webp",
         "address": "Kongo-Central Province, Democratic Republic of Congo",
         "description": "These impressive waterfalls, located in the west of the DRC, are a must-see for nature and adventure lovers, offering a spectacular view and a peaceful environment amidst the tropical rainforest.",
-        "link": "chutes-inga.html"
+        "link": "chutes-inga.html",
+        "button": "Learn More"
     },
     {
         "title": "United Nations Square",
-        "image": "images/place-nations-unies.webp",
+        "image": "images/photo2.webp",
         "address": "Kinshasa, Democratic Republic of Congo",
         "description": "The United Nations Square is an iconic site in the heart of the city, used for political gatherings, national events, and celebrations. It is surrounded by important government buildings.",
-        "link": "place-nations-unies.html"
+        "link": "place-nations-unies.html",
+        "button": "Learn More"
     },
     {
         "title": "Boboto Cultural Center",
-        "image": "images/centre-culturel-boboto.webp",
+        "image": "images/photo1.webp",
         "address": "Kinshasa, Democratic Republic of Congo",
         "description": "A space dedicated to art and culture, where exhibitions, workshops, and performances are held. This center showcases local talent and promotes cultural exchange with the rest of the world.",
-        "link": "centre-culturel-boboto.html"
-    },
-    {
-        "title": "Liberty Market",
-        "image": "images/marche-liberte.webp",
-        "address": "Kinshasa, Democratic Republic of Congo",
-        "description": "An energetic market where you can purchase local products, souvenirs, and unique handcrafted items. It's the perfect place to discover traditional products, from crafts to local spices.",
-        "link": "marche-liberte.html"
-    },
-    {
-        "title": "Laïkoro Park",
-        "image": "images/park-laikoro.webp",
-        "address": "Mongala Province, Democratic Republic of Congo",
-        "description": "A natural park offering relaxation areas, picnic spots, and hiking trails to explore the local wildlife and flora. This park is a perfect place to enjoy a moment of peace and connect with nature.",
-        "link": "parc-laikoro.html"
-    },
-    {
-        "title": "Notre-Dame Cathedral of Congo",
-        "image": "images/cathedrale-congo.webp",
-        "address": "Kinshasa, Democratic Republic of Congo",
-        "description": "A magnificent cathedral, a symbol of Christianity in the region, with its imposing architecture and peaceful atmosphere. A must-visit site for spiritual and cultural visitors.",
-        "link": "cathedrale-congo.html"
+        "link": "centre-culturel-boboto.html",
+        "button": "Learn More"
     }
+    
 ]
