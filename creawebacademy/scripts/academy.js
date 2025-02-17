@@ -211,12 +211,12 @@ fetch('data/academy.json')
         `;
         modal.style.display = 'flex';  // Afficher le modal
     }
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuButton = document.querySelector(".hamburger-menu");
+        const navList = document.querySelector(".nav-list");
     
-    // Fonction pour fermer le modal
-    document.getElementById('closeModal').addEventListener('click', () => {
-        const modal = document.getElementById('modal');
-        modal.style.display = 'none';  // Cacher le modal
+        menuButton.addEventListener("click", function () {
+            navList.classList.toggle("active");
+        });
     });
     
-    // Appel de la fonction renderCourses au chargement de la page
-    window.onload = renderCourses;

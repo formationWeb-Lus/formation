@@ -65,3 +65,28 @@ hamburgerMenu.addEventListener('click', () => {
 });
 // Initialisation des cours
 loadCourses();  // Charger les cours au démarrage
+
+// Exemple de redirection après la soumission du formulaire
+document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Empêcher le rechargement de la page
+
+    // Traitez le formulaire via AJAX si nécessaire
+
+    // Redirigez vers la page de remerciement
+    window.location.href = 'thank-you.html';
+});
+document.querySelector('form').addEventListener('submit', function(event) {
+    // Empêcher la soumission par défaut pour faire une validation côté client
+    event.preventDefault();
+
+    // Vérifier si les mots de passe sont identiques
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirm-password').value;
+
+    if (password !== confirmPassword) {
+        alert("Les mots de passe ne correspondent pas.");
+    } else {
+        // Soumettre le formulaire après validation
+        this.submit();
+    }
+});

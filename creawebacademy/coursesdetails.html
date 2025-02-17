@@ -67,6 +67,114 @@
             </div>
             <button id="fetchDataBtn">Load Courses</button>
         </section>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f4f4f4;
+            }
+            header {
+                background-color: #333;
+                color: white;
+                padding: 10px;
+                text-align: center;
+            }
+            .search-filter {
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                padding: 20px;
+                background-color: white;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            .search-filter select, .search-filter input, .search-filter button {
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+            .courses {
+                text-align: center;
+                padding: 20px;
+            }
+            #course-list {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            #course-list div {
+                background: white;
+                padding: 15px;
+                border-radius: 5px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                width: 250px;
+                text-align: left;
+            }
+        </style>
+    </head>
+    
+    <body>
+       
+        
+        <main>
+            <section class="search-filter">
+                <input type="text" id="searchBar" placeholder="Search courses...">
+                <select id="levelFilter">
+                    <option value="">All Levels</option>
+                    <option value="Beginner">Beginner</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Advanced">Advanced</option>
+                </select>
+                <select id="techFilter">
+                    <option value="">All Technologies</option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Python">Python</option>
+                </select>
+                <select id="formatFilter">
+                    <option value="">All Formats</option>
+                    <option value="Online">Online</option>
+                    <option value="In-Person">In-Person</option>
+                </select>
+                <button id="applyFilters">Apply Filters</button>
+            </section>
+            
+            <section class="courses">
+                <h2>Available Courses</h2>
+                <div id="course-list">
+                    <!-- Courses will be displayed here dynamically -->
+                </div>
+            </section>
+        </main>
+    
+        <script>
+            document.getElementById("applyFilters").addEventListener("click", function() {
+                const searchQuery = document.getElementById("searchBar").value.toLowerCase();
+                const selectedLevel = document.getElementById("levelFilter").value;
+                const selectedTech = document.getElementById("techFilter").value;
+                const selectedFormat = document.getElementById("formatFilter").value;
+                
+                // Dummy data for courses
+                const courses = [
+                    { title: "HTML Basics", level: "Beginner", tech: "HTML", format: "Online" },
+                    { title: "Advanced JavaScript", level: "Advanced", tech: "JavaScript", format: "In-Person" },
+                    { title: "Python for Beginners", level: "Beginner", tech: "Python", format: "Online" },
+                    { title: "CSS Mastery", level: "Intermediate", tech: "CSS", format: "Online" }
+                ];
+                
+                const filteredCourses = courses.filter(course =>
+                    (searchQuery === "" || course.title.toLowerCase().includes(searchQuery)) &&
+                    (selectedLevel === "" || course.level === selectedLevel) &&
+                    (selectedTech === "" || course.tech === selectedTech) &&
+                    (selectedFormat === "" || course.format === selectedFormat)
+                );
+                
+                const courseList = document.getElementById("course-list");
+                courseList.innerHTML = filteredCourses.map(course => `<div><h3>${course.title}</h3><p>${course.level} - ${course.tech} - ${course.format}</p></div>`).join("");
+            });
+        </script>
 
         <!-- Additional Section for Image, Text, and Call to Action -->
         <section class="cta-section">

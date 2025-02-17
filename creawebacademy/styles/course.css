@@ -354,6 +354,111 @@ nav ul {
         background-color: #3498db;
     }
 }
+.hero {
+    display: flex;
+    align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
+    height: 60vh; /* Ajuste la hauteur (réduis si nécessaire) */
+    overflow: hidden; /* Empêche le débordement */
+}
+
+.hero-image {
+    max-height: 100%; /* Assure que l’image ne prend pas trop de place */
+    width: auto;
+    object-fit: cover;
+}
+
+.hero-text {
+    max-width: 50%;
+    text-align: center;
+}
+
+
+/* Style du menu de navigation */
+nav {
+    background-color: #2c3e50; /* Couleur de fond */
+    padding: 15px;
+}
+
+/* Style de la liste de navigation */
+.nav-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+/* Style des liens */
+.nav-list a {
+    text-decoration: none;
+    color: white; /* Couleur du texte */
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+/* Effet au survol */
+.nav-list a:hover {
+    background-color: #e74c3c;
+    border-radius: 5px;
+}
+
+/* Bouton Sign In avec une couleur différente */
+.cta-signin {
+    background-color: #e0400f;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+/* Effet au survol du bouton Sign In */
+.cta-signin:hover {
+    background-color: #c70b9ee3;
+}
+
+/* Style du menu hamburger */
+.hamburger-menu {
+    display: none; /* Masqué par défaut sur grand écran */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-menu div {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 5px;
+}
+
+/* Barre de recherche */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.search-container input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-container button {
+    background-color: #27ae60;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.search-container button:hover {
+    background-color: #219150;
+}
 
 
 
