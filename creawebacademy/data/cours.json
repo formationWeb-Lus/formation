@@ -1,62 +1,64 @@
 [
     {
-        "title": "HTML & CSS",
-        "description": "Learn the basics of web design with HTML & CSS. Create stunning, responsive websites from scratch!"
+        "titre": "HTML & CSS",
+        "description": "Apprenez les bases du design web avec HTML & CSS. Créez des sites web réactifs et attrayants dès le début !"
     },
     {
-        "title": "JavaScript for Beginners",
-        "description": "Dive into JavaScript programming and master interactive web elements and functionality."
+        "titre": "JavaScript pour Débutants",
+        "description": "Plongez dans la programmation JavaScript et maîtrisez les éléments interactifs du web."
     },
     {
-        "title": "Advanced Python",
-        "description": "Master Python and its frameworks for web development, automation, and data analysis."
+        "titre": "Python Avancé",
+        "description": "Maîtrisez Python et ses frameworks pour le développement web, l'automatisation et l'analyse de données."
     },
     {
-        "title": "Web Design Principles",
-        "description": "Learn how to design responsive websites that look great on all devices."
+        "titre": "Principes du Design Web",
+        "description": "Apprenez à concevoir des sites web réactifs qui s'adaptent à tous les appareils."
     },
     {
-        "title": "React.js for Beginners",
-        "description": "Start building interactive UIs with React and learn the fundamentals of modern web development."
+        "titre": "React.js pour Débutants",
+        "description": "Commencez à créer des interfaces interactives avec React et découvrez les bases du développement web moderne."
     },
     {
-        "title": "Node.js and Express",
-        "description": "Learn backend development using Node.js and build server-side applications with Express."
+        "titre": "Node.js et Express",
+        "description": "Apprenez le développement backend avec Node.js et créez des applications serveur avec Express."
     },
     {
-        "title": "PHP for Web Development",
-        "description": "Understand PHP and how to use it for building dynamic websites and web applications."
+        "titre": "PHP pour le Développement Web",
+        "description": "Comprenez PHP et comment l'utiliser pour construire des sites web dynamiques et des applications web."
     },
     {
-        "title": "SQL and Databases",
-        "description": "Learn how to interact with databases using SQL and build efficient database-driven websites."
+        "titre": "SQL et Bases de Données",
+        "description": "Apprenez à interagir avec les bases de données en utilisant SQL et à construire des sites efficaces."
     },
     {
-        "title": "Mobile Web Development",
-        "description": "Explore best practices for developing mobile-friendly websites that work on any device."
+        "titre": "Développement Web Mobile",
+        "description": "Découvrez les meilleures pratiques pour développer des sites web adaptés aux mobiles."
     },
     {
-        "title": "UI/UX Design Fundamentals",
-        "description": "Learn the essentials of user interface and user experience design for creating user-friendly websites."
+        "titre": "Fondamentaux du Design UI/UX",
+        "description": "Apprenez les bases du design d'interface utilisateur et d'expérience utilisateur pour créer des sites web ergonomiques."
     },
     {
-        "title": "CSS Flexbox and Grid",
-        "description": "Master modern CSS layout techniques including Flexbox and CSS Grid to create complex layouts."
+        "titre": "CSS Flexbox et Grid",
+        "description": "Maîtrisez les techniques de mise en page modernes comme Flexbox et CSS Grid pour créer des designs avancés."
     },
     {
-        "title": "JavaScript for Web Development",
-        "description": "Get hands-on with JavaScript and use it to add dynamic functionality to your websites."
+        "titre": "JavaScript pour le Développement Web",
+        "description": "Pratiquez JavaScript et utilisez-le pour ajouter des fonctionnalités dynamiques à vos sites web."
     },
     {
-        "title": "Web Security Basics",
-        "description": "Learn how to secure your web applications and protect against common vulnerabilities."
+        "titre": "Bases de la Sécurité Web",
+        "description": "Apprenez à sécuriser vos applications web et à vous protéger contre les vulnérabilités courantes."
     },
     {
-        "title": "Git and Version Control",
-        "description": "Learn the basics of Git, version control, and collaboration using GitHub."
+        "titre": "Git et Contrôle de Version",
+        "description": "Découvrez les bases de Git, du contrôle de version et de la collaboration avec GitHub."
     },
     {
-        "title": "Agile Web Development",
-        "description": "Understand Agile principles and how to apply them to modern web development workflows."
+        "titre": "Développement Web Agile",
+        "description": "Comprenez les principes Agile et comment les appliquer aux flux de travail du développement web moderne."
     }
 ]
+
+

@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn web development with Webacademy. Sign up for courses in HTML, CSS, JavaScript, Python, and more.">
-    <meta name="keywords" content="Web Development, HTML, CSS, JavaScript, Python, Courses, Webacademy">
-    <meta property="og:title" content="Webacademy - Learn Web Development">
-    <meta property="og:description" content="Discover and sign up for web development courses at Webacademy.">
+    <meta name="description" content="Apprenez le développement web avec Webacademy. Inscrivez-vous à des cours en HTML, CSS, JavaScript, Python et plus encore.">
+    <meta name="keywords" content="Développement Web, HTML, CSS, JavaScript, Python, Cours, Webacademy">
+    <meta property="og:title" content="Webacademy - Apprenez le Développement Web">
+    <meta property="og:description" content="Découvrez et inscrivez-vous aux cours de développement web sur Webacademy.">
     <meta property="og:image" content="images/og-image.jpg">
     <meta property="og:url" content="https://webacademy.com">
-    <meta name="twitter:title" content="Webacademy - Learn Web Development">
-    <meta name="twitter:description" content="Sign up for courses at Webacademy and start learning web development today.">
+    <meta name="twitter:title" content="Webacademy - Apprenez le Développement Web">
+    <meta name="twitter:description" content="Inscrivez-vous aux cours de Webacademy et commencez à apprendre le développement web dès aujourd'hui.">
     <meta name="twitter:image" content="images/og-image.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <title>Webacademy - Learn Web Development</title>
+    <title>Webacademy - Apprenez le Développement Web</title>
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="styles/course.cs">
+    <link rel="stylesheet" href="styles/course.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Arial&display=swap" rel="stylesheet">
     <script type="module" src="scripts/main.js" defer></script>
 </head>
@@ -25,7 +25,7 @@
 
     <header>
         <div class="logo">
-            <img src="images/logo.png" alt="CréaWeb Academy Logo">
+            <img src="images/logo.png" alt="Logo Webacademy">
         </div>
         <nav>
             <div class="hamburger-menu" onclick="toggleMenu()">
@@ -34,1013 +34,154 @@
                 <div></div>
             </div>
             <ul class="nav-list">
-                <li><a href="ccueil.html">Home</a></li>
-                <li><a href="detail.html">Our Trainings</a></li>
-                <li><a href="coursesdetails.html">Explore</a></li>
+                <li><a href="accueil.html">Accueil</a></li>
+                <li><a href="detail.html">Formations</a></li>
+                <li><a href="coursesdetails.html">Explorer</a></li>
                 <li><a href="#">Forum</a></li>
-                <li><a href="history.html">About Us</a></li>
-                <li><a href="https://jiresselusa127.systeme.io/inscription" class="cta-signin">Sign In</a></li>
+                <li><a href="history.html">ÀPropos</a></li>
+                <li><a href="https://webacademy.systeme.io/inscription" class="cta-signin">Connexion</a></li>
             </ul>
         </nav>
         <div class="search-container">
-            <input type="text" placeholder="Search...">
-            <button>Search</button>
+            <input type="text" placeholder="Rechercher...">
+            <button>Rechercher</button>
         </div>
     </header>
-    <!-- Main Content -->
+
     <main>
-
         <section class="hero">
-            <img src="images/imgc.jpg" alt="Scenic view of Rwenzori National Park, Uganda" class="hero-image">
+            <img src="images/imgc.jpg" alt="Vue panoramique du parc national du Rwenzori, Ouganda" class="hero-image">
             <div class="hero-text">
-                <h1>Learn Web Development with Webacademy</h1>
-                <p>Join us to learn modern technologies and start your web development journey!</p>
-                <a href="https://jiresselusa127.systeme.io/inscription" class="cta-button">APPLY NOW HERE</a>
+                <h1>Apprenez le Développement Web avec Webacademy</h1>
+                <p>Rejoignez-nous pour apprendre les technologies modernes et commencez votre parcours en développement web !</p>
+                <a href="https://webacademy.systeme.io/inscription" class="cta-button">INSCRIVEZ-VOUS ICI</a>
             </div>
         </section>
 
-        <!-- Section Courses -->
         <section class="courses">
-            <h2>Here are the courses available at Webacademy, designed to help you master web development and related technologies.</h2>
-            <div id="course-list">
-                <!-- Les cours seront affichés ici par JavaScript -->
-            </div>
-            <button id="fetchDataBtn">Load Courses</button>
-        </section>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                margin: 0;
-                padding: 0;
-                background-color: #f4f4f4;
-            }
-            header {
-                background-color: #333;
-                color: white;
-                padding: 10px;
-                text-align: center;
-            }
-            .search-filter {
-                display: flex;
-                justify-content: center;
-                gap: 10px;
-                padding: 20px;
-                background-color: white;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            }
-            .search-filter select, .search-filter input, .search-filter button {
-                padding: 10px;
-                border: 1px solid #ccc;
-                border-radius: 5px;
-            }
-            .courses {
-                text-align: center;
-                padding: 20px;
-            }
-            #course-list {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 15px;
-            }
-            #course-list div {
-                background: white;
-                padding: 15px;
-                border-radius: 5px;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                width: 250px;
-                text-align: left;
-            }
-
+            <h2>Voici les cours disponibles sur Webacademy, conçus pour vous aider à maîtriser le développement web et les technologies associées.</h2>
+            <div id="course-list"></div>
+            <button id="fetchDataBtn">Charger les Cours</button>
             
-/* Style de base */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-}
-
-/* Section Hero */
-.hero {
-    position: relative;
-    height: 100vh; /* Utiliser la hauteur de l'écran pour la section hero */
-    background-color: #572828;
-    color: white;
-}
-
-.hero-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-.cta-button {
-    background-color: #f19e04;
-    padding: 15px 25px;
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    border-radius: 5px;
-}
-
-/* Section Courses */
-.courses {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-#course-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.course {
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.course h3 {
-    font-size: 01.rem;
-}
-
-.view-course-btn {
-    background-color: #007bff;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-/* Modale */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    width: 60%;
-    text-align: center;
-}
-
-.modal h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.modal p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-.modal-close-btn {
-    background-color: red;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-}
-
-
-
-
-
-
-
-/* General styles */
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Hero section styles */
-.hero {
-    position: relative;
-    text-align: center;
-    color: white;
-}
-
-.hero-image {
-    width: 100%;
-    height: 60vh;
-    object-fit: cover;
-
-}
-
-.hero-text {
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-shadow: 2px 2px 4px rgba(131, 7, 7, 0.7);
-}
-
-.hero-text h1 {
-    font-size: 3rem;
-    margin: 0;
-}
-
-.hero-text p {
-    font-size: 1.2rem;
-}
-
-.cta-button {
-    background-color: #fcb903;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-.cta-button:hover {
-    background-color: #e78b01;
-}
-
-/* Courses section */
-.courses {
-    padding: 40px 20px;
-    text-align: center;
-    background-color: #f4f4f4;
-}
-
-.courses h1 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-}
-
-/* Call to action section (CTA) */
-.cta-section {
-    background-color: #007BFF;
-    color: white;
-    padding: 50px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.cta-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 1200px;
-    gap: 30px;
-}
-
-.cta-image {
-    width: 400px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.cta-text {
-    max-width: 500px;
-}
-
-.cta-text h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.cta-text p {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-}
-
-.cta-button {
-    background-color: #f8b400;
-    padding: 12px 25px;
-    border-radius: 5px;
-    font-weight: bold;
-    text-decoration: none;
-    color: white;
-    transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #e68900;
-}
-
-
-
-
-
-
-/* Styles généraux */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Styles du header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-}
-
-header .logo img {
-    width: 120px;
-}
-
-nav {
-    display: flex;
-    justify-content: flex-end;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-}
-
-/* Menu hamburger */
-.hamburger-menu {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 25px;
-    cursor: pointer;
-}
-
-.hamburger-menu div {
-    height: 5px;
-    background-color: white;
-    border-radius: 5px;
-}
-
-/* Menu vertical pour mobile */
-.nav-list {
-    display: flex;
-    gap: 20px;
-}
-
-.nav-list li {
-    display: inline;
-}
-
-.nav-list a {
-    color: white;
-    text-decoration: none;
-}
-
-/* Menu hamburger visible sur mobile */
-@media (max-width: 768px) {
-    /* Cache les liens de menu par défaut */
-    nav ul {
-        display: none;
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
-        width: 100%;
-    }
-
-    /* Affiche le hamburger */
-    .hamburger-menu {
-        display: flex;
-    }
-
-    /* Affiche le menu quand on active la classe "open" */
-    .nav-list.open {
-        display: flex;
-    }
-
-    nav ul li {
-        width: 100%;
-        text-align: center;
-    }
-
-    /* Pour les éléments de menu */
-    nav a {
-        padding: 15px 20px;
-        display: block;
-        width: 100%;
-    }
-
-    nav a:hover {
-        background-color: #3498db;
-    }
-}
-.hero {
-    display: flex;
-    align-items: center; /* Centre verticalement */
-    justify-content: center; /* Centre horizontalement */
-    height: 60vh; /* Ajuste la hauteur (réduis si nécessaire) */
-    overflow: hidden; /* Empêche le débordement */
-}
-
-.hero-image {
-    max-height: 100%; /* Assure que l’image ne prend pas trop de place */
-    width: auto;
-    object-fit: cover;
-}
-
-.hero-text {
-    max-width: 50%;
-    text-align: center;
-}
-
-
-/* Style du menu de navigation */
-nav {
-    background-color: #2c3e50; /* Couleur de fond */
-    padding: 15px;
-}
-
-/* Style de la liste de navigation */
-.nav-list {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.nav-list li {
-    margin: 0 15px;
-}
-
-/* Style des liens */
-.nav-list a {
-    text-decoration: none;
-    color: white; /* Couleur du texte */
-    font-weight: bold;
-    padding: 10px 15px;
-    transition: 0.3s;
-}
-
-/* Effet au survol */
-.nav-list a:hover {
-    background-color: #e74c3c;
-    border-radius: 5px;
-}
-
-/* Bouton Sign In avec une couleur différente */
-.cta-signin {
-    background-color: #e0400f;
-    padding: 8px 15px;
-    border-radius: 5px;
-}
-
-/* Effet au survol du bouton Sign In */
-.cta-signin:hover {
-    background-color: #c70b9ee3;
-}
-
-/* Style du menu hamburger */
-.hamburger-menu {
-    display: none; /* Masqué par défaut sur grand écran */
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.hamburger-menu div {
-    width: 30px;
-    height: 4px;
-    background-color: white;
-    margin: 5px;
-}
-
-/* Barre de recherche */
-.search-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.search-container input {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.search-container button {
-    background-color: #27ae60;
-    color: white;
-    padding: 8px 15px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-left: 5px;
-}
-
-.search-container button:hover {
-    background-color: #219150;
-}
-
-
-
-
-
-
-
-.footer-rules {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px; /* Réduit l'espace en dessous de la ligne des règles */
-    gap: 10px; /* Réduit l'espace entre chaque règle */
-}
-
-/* Individual footer rule */
-.footer-rule {
-    margin-bottom: 0; /* Réduit l'espace entre les éléments */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centrer les éléments dans chaque règle */
-}
-
-/* Call to action button styling */
-.cta-button {
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    margin-top: 5px; /* Réduit l'espace au-dessus du bouton */
-}
-
-/* Footer social icons section */
-.footer-socials {
-    display: flex;
-    justify-content: center;
-    gap: 15px; /* Réduit l'espace entre les icônes sociales */
-    margin-top: 10px;
-}
-
-.footer-socials a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-}
-
-.footer-socials a:hover {
-    color: #03203f;
-}
-
-/* Footer copyright message */
-.footer-copy {
-    text-align: center;
-    color: #fff;
-    font-size: 14px;
-    margin-top: 10px;
-}
-
-
-
-
-
-
-
-
-
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html, body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-}
-
-/* Header Styling */
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-}
-
-.logo img {
-    width: 120px;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-
-.hero-image {
-    width: 100%;
-    height: auto;
-}
-
-.hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-}
-
-.hero h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-/* Button Styling */
-.cta-button {
-    background-color: #f4a261;
-    padding: 12px 25px;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-/* Courses Section */
-.courses {
-    padding: 20px;
-    text-align: center;
-}
-
-.courses h2 {
-    margin-bottom: 20px;
-    font-size: 1.5rem;
-}
-
-#course-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-button#fetchDataBtn {
-    padding: 10px 20px;
-    background-color: #f4a261;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-/* CTA Section */
-.cta-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 40px 0;
-}
-
-.cta-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 500px;
-    text-align: center;
-}
-
-.cta-image {
-    width: 100%;
-    height: auto;
-}
-
-.cta-text h2 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-}
-
-/* Footer Section */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 30px;
-}
-
-.footer-bottom {
-    display: flex;
-    justify-content: space-between;
-}
-
-.footer-logo img {
-    width: 100px;
-}
-
-.footer-rules {
-    display: flex;
-    gap: 20px;
-}
-
-.footer-rule a {
-    color: white;
-    text-decoration: none;
-}
-
-
-
-
-
-/* Déclaration des variables CSS pour les couleurs et tailles */
-:root {
-    --main-color: #2c3e50;
-    --white-color: #ffffff;
-    --nav-item-spacing: 20px;
-    --nav-item-spacing-mobile: 10px;
-    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --header-padding: 20px;
-}
-
-/* Styles généraux */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-/* Header Styles */
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--header-padding);
-    background-color: var(--main-color);
-    color: var(--white-color);
-}
-
-/* Assurez-vous que le contenu sous le header commence après le menu */
-main {
-    margin-top: 100px;
-}
-
-/* Nav List Styles */
-nav {
-    display: flex;
-    align-items: center;
-}
-
-/* Menu par défaut (visible sur grands écrans) */
-.nav-list {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-list li {
-    margin-right: var(--nav-item-spacing);
-}
-
-.nav-list li a {
-    color: var(--white-color);
-    text-decoration: none;
-    font-size: 16px;
-}
-
-/* Hamburger Menu */
-.hamburger-menu {
-    display: none;
-    cursor: pointer;
-    z-index: 101; /* Toujours au-dessus du menu */
-}
-
-.hamburger-menu div {
-    width: 30px;
-    height: 4px;
-    background-color: var(--white-color);
-    margin: 6px 0;
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-    /* Le menu est caché par défaut */
-    .nav-list {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: var(--main-color);
-        width: 200px;
-        text-align: center;
-        padding: 20px;
-        box-shadow: var(--box-shadow);
-    }
-
-    /* Menu hamburger visible */
-    .hamburger-menu {
-        display: block;
-    }
-
-    .nav-list.active {
-        display: flex;
-    }
-
-    .nav-list li {
-        margin: var(--nav-item-spacing-mobile) 0;
-    }
-
-    .search-container {
-        display: none;
-    }
-
-    .hero-text h1 {
-        font-size: 24px;
-    }
-
-    .hero {
-        margin-top: 0;
-    }
-}
-
-        </style>
-    </head>
-    
-    <body>
-        <script>
-            // JSON data inside the script tag
-            const courses = [
-                { title: "HTML Basics", level: "Beginner", tech: "HTML", format: "Online" },
-                { title: "Advanced JavaScript", level: "Advanced", tech: "JavaScript", format: "In-Person" },
-                { title: "Python for Beginners", level: "Beginner", tech: "Python", format: "Online" },
-                { title: "CSS Mastery", level: "Intermediate", tech: "CSS", format: "Online" }
-            ];
-    
-            // Function to handle the button click and load courses
-            document.getElementById("fetchDataBtn").addEventListener("click", function() {
-                const courseList = document.getElementById("course-list");
-                courseList.innerHTML = courses.map(course => 
-                    `<div><h3>${course.title}</h3><p>${course.level} - ${course.tech} - ${course.format}</p></div>`
-                ).join("");
-            });
-        </script>
-       
+        </section>
         
-        <main>
-            <section class="search-filter">
-                <input type="text" id="searchBar" placeholder="Search courses...">
-                <select id="levelFilter">
-                    <option value="">All Levels</option>
-                    <option value="Beginner">Beginner</option>
-                    <option value="Intermediate">Intermediate</option>
-                    <option value="Advanced">Advanced</option>
-                </select>
-                <select id="techFilter">
-                    <option value="">All Technologies</option>
-                    <option value="HTML">HTML</option>
-                    <option value="CSS">CSS</option>
-                    <option value="JavaScript">JavaScript</option>
-                    <option value="Python">Python</option>
-                </select>
-                <select id="formatFilter">
-                    <option value="">All Formats</option>
-                    <option value="Online">Online</option>
-                    <option value="In-Person">In-Person</option>
-                </select>
-                <button id="applyFilters">Apply Filters</button>
-            </section>
-            
-            <section class="courses">
-                <h2>Available Courses</h2>
-                <div id="course-list">
-                    <!-- Courses will be displayed here dynamically -->
-                </div>
-            </section>
-        </main>
-    
-        <script>
-            document.getElementById("applyFilters").addEventListener("click", function() {
-                const searchQuery = document.getElementById("searchBar").value.toLowerCase();
-                const selectedLevel = document.getElementById("levelFilter").value;
-                const selectedTech = document.getElementById("techFilter").value;
-                const selectedFormat = document.getElementById("formatFilter").value;
-                
-                // Dummy data for courses
-                const courses = [
-                    { title: "HTML Basics", level: "Beginner", tech: "HTML", format: "Online" },
-                    { title: "Advanced JavaScript", level: "Advanced", tech: "JavaScript", format: "In-Person" },
-                    { title: "Python for Beginners", level: "Beginner", tech: "Python", format: "Online" },
-                    { title: "CSS Mastery", level: "Intermediate", tech: "CSS", format: "Online" }
-                ];
-                
-                const filteredCourses = courses.filter(course =>
-                    (searchQuery === "" || course.title.toLowerCase().includes(searchQuery)) &&
-                    (selectedLevel === "" || course.level === selectedLevel) &&
-                    (selectedTech === "" || course.tech === selectedTech) &&
-                    (selectedFormat === "" || course.format === selectedFormat)
-                );
-                
-                const courseList = document.getElementById("course-list");
-                courseList.innerHTML = filteredCourses.map(course => `<div><h3>${course.title}</h3><p>${course.level} - ${course.tech} - ${course.format}</p></div>`).join("");
-            });
-        </script>
-
-        <!-- Additional Section for Image, Text, and Call to Action -->
-        <section class="cta-section">
-            <div class="cta-content">
-                <img src="images/signup.png" alt="Sign up" class="cta-image">
-                <div class="cta-text">
-                    <h2>Ready to Start Your Journey?</h2>
-                    <p>Join Webacademy today and unlock your potential with our expert-led courses. Take the first step now!</p>
-                    <a href="signin.html" class="cta-button">Sign Up Now</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Modale pour les détails des cours -->
+        <!-- Modale pour afficher les détails des cours -->
         <div id="modal" class="modal">
             <div class="modal-content">
                 <div id="modal-data"></div>
-                <button id="closeModal" class="modal-close-btn">Close</button>
+                <button id="closeModal" class="modal-close-btn">Fermer</button>
             </div>
         </div>
+        
+   
+
+    <!-- Image et CTA pour la promotion -->
+    <div class="cta-promotion">
+        <img src="images/promotion.jpg" alt="Profitez de notre promotion" class="promo-image">
+        <div class="promo-text">
+            <h3>Profitez de notre offre spéciale !</h3>
+            <p>Inscrivez-vous dès aujourd'hui et bénéficiez de 30% de réduction sur toutes nos formations en développement web.</p>
+            <a href="https://webacademy.systeme.io/inscription" class="cta-button">Inscrivez-vous Maintenant</a>
+        </div>
+    </div>
+</section>
+<!-- CTA pour aller vers la page "À Propos" -->
+<div class="cta-about">
+    <h3>En savoir plus sur Webacademy</h3>
+    <p>Découvrez notre histoire, notre mission et comment nous aidons les étudiants à maîtriser le développement web.</p>
+    <a href="history.html" class="cta-button">À Propos de Webacademy</a>
+</div>
+
+
+<!-- Modale pour afficher les détails des cours -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <div id="modal-data"></div>
+        <button id="closeModal" class="modal-close-btn">Fermer</button>
+    </div>
+</div>
+
+<section class="caption-section">
+    <div class="caption">
+        <h1>Bonne Formation</h1>
+        <p>Accédez à des formations de qualité adaptées à tous les niveaux et maîtrisez les compétences essentielles du développement web.</p>
+    </div>
+    <div class="caption">
+        <h1>Connaissance</h1>
+        <p>Développez vos connaissances en HTML, CSS, JavaScript et bien d'autres technologies modernes.</p>
+    </div>
+    <div class="caption">
+        <h1>Succès</h1>
+        <p>Utilisez vos nouvelles compétences pour décrocher un emploi ou lancer vos propres projets en ligne.</p>
+    </div>
+</section>
+<!-- Image et CTA pour la promotion -->
+<div class="cta-promotion">
+    <img src="images/promotion.jpg" alt="Profitez de notre promotion" class="promo-image">
+    <div class="promo-text">
+        <h3>Profitez de notre offre spéciale !</h3>
+        <p>Inscrivez-vous dès aujourd'hui et bénéficiez de 30% de réduction sur toutes nos formations en développement web.</p>
+        <a href="https://webacademy.systeme.io/inscription" class="cta-button">Inscrivez-vous Maintenant</a>
+    </div>
+</div>
+</section>
+
+
+    
+<section class="caption-section">
+    <!-- Première série de captions avec 3 images -->
+    <div class="caption-images">
+        <div class="image-box">
+            <img src="images/competence.jpg" alt="Améliorez vos compétences">
+            <p>Améliorez vos compétences</p>
+        </div>
+        <div class="image-box">
+            <img src="images/travail.jpg" alt="Trouvez un travail">
+            <p>Trouvez un meilleur emploi</p>
+        </div>
+        <div class="image-box">
+            <img src="images/carriere.jpg" alt="Lancez votre propre carrière">
+            <p>Lancez votre propre carrière</p>
+        </div>
+    </div>
+
+
+
+    <!-- Deuxième série de captions avec 2 images -->
+    <div class="caption-images-two">
+        <div class="image-box">
+            <img src="images/siteweb.jpg" alt="Créer un site web et le développer">
+            <p>Créer un site web et le développer</p>
+        </div>
+        <div class="image-box">
+            <img src="images/application.jpg" alt="Créer des applications et les développer">
+            <p>Créer des applications et les développer</p>
+        </div>
+    </div>
+</section>
+
+    
     </main>
 
     <footer>
-
-        <!-- Additional Footer Section with Logo and 4 Rules -->
         <div class="footer-bottom">
             <div class="footer-logo">
-                <img src="images/logo.png" alt="Webacademy Logo">
+                <img src="images/logo.png" alt="Logo Webacademy">
             </div>
             <div class="footer-rules">
                 <div class="footer-rule">
-                    <h4></h4>
-                    <a href="privacy-policy.html" class="cta-button">Privacy Policy</a>
+                    <a href="privacy-policy.html" class="cta-button">Politique de Confidentialité</a>
                 </div>
                 <div class="footer-rule">
-                    <h4></h4>
-                    <a href="terms-of-use.html" class="cta-button">Terms of Use</a>
+                    <a href="terms-of-use.html" class="cta-button">Conditions d'Utilisation</a>
                 </div>
                 <div class="footer-rule">
-                    <h4></h4>
-                    <a href="cookie-policy.html" class="cta-button">Cookie Policy</a>
+                    <a href="cookie-policy.html" class="cta-button">Politique des Cookies</a>
                 </div>
                 <div class="footer-rule">
-                    <h4></h4>
-                    <a href="about-us.html" class="cta-button">Website Utility</a>
-                    <p>&copy; 2025 Webacademy - All Rights Reserved</p>
+                    <a href="about-us.html" class="cta-button">Utilité du Site</a>
+                    <p>&copy; 2025 Webacademy - Tous Droits Réservés</p>
                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
                     <div class="footer-socials">
                         <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i> Facebook</a>
                         <a href="#" class="social-icon"><i class="fab fa-instagram"></i> Instagram</a>
@@ -1052,7 +193,6 @@ nav {
             </div>
         </div>
     </footer>
-
 </body>
 
 </html>

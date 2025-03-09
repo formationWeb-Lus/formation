@@ -1,601 +1,100 @@
+/* ------------------------------- */
+/* 🎨 STYLES GÉNÉRAUX */
+/* ------------------------------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
 }
 
-/* Style global */
 body {
-    background-color: #f5f5f5;
-    color: #333;
-    font-size: 16px;
+    font-family: 'Mulish', sans-serif;
     line-height: 1.6;
-}
-
-/* En-tête */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #0044cc;
-    color: white;
-}
-
-header .logo img {
-    width: 120px;
-}
-
-header nav ul {
-    display: flex;
-    list-style: none;
-}
-
-header nav ul li {
-    margin-right: 20px;
-}
-
-header nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
-
-header nav ul li a:hover {
-    color: #f5f5f5;
-}
-
-
-
-/* Section Événements */
-.events {
-    padding: 40px 20px;
-    background-color: #ffffff;
-    text-align: center;
-}
-
-.events h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.event-list {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-}
-
-.event {
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 8px;
-    width: 45%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.event h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.event p {
-    font-size: 1rem;
-    margin-bottom: 15px;
-}
-
-.event a {
-    text-decoration: none;
-    color: #0044cc;
-    font-weight: bold;
-}
-
-.event a:hover {
-    color: #ffcc00;
-}
-
-/* Section Météo */
-.weather {
-    background-color: #e7f5ff;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.weather h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.weather-info {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.weather-info p {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.weather-info h3 {
-    margin-top: 20px;
-    font-size: 1.5rem;
-}
-
-#forecast {
-    list-style: none;
-    margin-top: 10px;
-    padding: 0;
-}
-
-.weather-info ul li {
-    font-size: 1rem;
-    margin-bottom: 5px;
-}
-
-/* Section Spotlight Membres */
-.spotlight {
-    padding: 40px 20px;
-    background-color: #ffffff;
-    text-align: center;
-}
-
-.spotlight h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.spotlight-list {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-}
-
-/* Pied de page */
-footer {
-    background-color: #d31515;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-footer .footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-footer .footer-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer .footer-links a:hover {
-    color: #ffcc00;
-}
-
-/* Responsivité */
-@media (max-width: 768px) {
-    .event-list {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .spotlight-list {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-
-}
-
-
-
-
-
-
-
-.events {
-    padding: 20px;
     background-color: #f4f4f4;
-}
-
-/* Styles pour chaque caption */
-.caption {
-    display: grid;
-    grid-template-columns: 1fr 1fr;  /* Deux colonnes égales */
-    gap: 20px;
-    margin-bottom: 40px;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Alignement du texte dans la première colonne (gauche) */
-.caption-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-/* Alignement de l'image dans la deuxième colonne (droite) */
-.caption-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.caption-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-/* Adaptation pour les petits écrans avec Media Queries */
-@media (max-width: 768px) {
-    .caption {
-        grid-template-columns: 1fr;  /* Une seule colonne */
-    }
-
-    .caption-image img {
-        max-width: 80%;
-    }
-}
-
-
-.image-caption {
-    padding: 40px 0;
-    text-align: center;
-}
-
-.image-caption h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
     color: #333;
+    padding-top: 60px; /* Espace pour le header fixe */
 }
 
-.image-gallery {
-    display: flex;
-    justify-content: space-around; /* Pour espacer les images horizontalement */
-    flex-wrap: wrap; /* Permet de revenir à la ligne si l'écran est trop petit */
+/* ------------------------------- */
+/* 🔝 HEADER & NAVIGATION */
+/* ------------------------------- */
+
+
+.logo img {
+    height: 50px;
 }
 
-.image-item {
-    margin: 10px;
-    width: 30%; /* Chaque image occupe 30% de l'espace, vous pouvez ajuster */
-    text-align: center;
-}
-
-.image-item img {
-    width: 100%; /* L'image occupe toute la largeur de son conteneur */
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.image-item figcaption {
-    margin-top: 10px;
-    font-size: 1.1em;
-    color: #555;
-}
-
-
-
-
-.footer-socials {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-.social-icon img {
-    width: 30px;
-    height: 30px;
-}
-
-.footer-caption {
-    text-align: center;
-}
-
-.rules-gallery {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.rule-item {
-    text-align: center;
-    width: 18%;
-}
-
-.rule-item img {
-    width: 100%;
-    height: auto;
-}
-
-.rule-item figcaption {
-    margin-top: 5px;
-    font-weight: bold;
-    font-size: 14px;
-}
-
-
-/* Effet de survol des icônes sociales */
-.social-icon img {
-    transition: transform 0.3s ease;
-}
-
-/* Effet de zoom sur les images de règles */
-.rule-item img {
-    transition: transform 0.3s ease;
-}
-
-/* Animation pour les membres en vedette */
-.spotlight-member {
-    opacity: 0;
-    animation: fadeInUp 1s forwards;
-}
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-
-
-
-
-
-header {
-    background-color: #1d1d1d;  /* Couleur de fond sombre */
-    color: #fff;  /* Texte en blanc pour un meilleur contraste */
-}
-
-header a {
-    color: #d1d1d1;  /* Lien clair pour une bonne visibilité */
-}
-
-header a:hover {
-    color: #ffcc00;  /* Lien au survol avec une couleur plus vive */
-}
-
-
-
-/* Section des événements */
-.events {
-    background-color: #f8f8f8;  /* Fond clair */
-    color: #333;  /* Texte foncé */
-}
-
-.event a {
-    color: #ffcc00;
-}
-
-.event a:hover {
-    color: #e6b800;
-}
-
-.hero-img, .caption-image img {
-    filter: brightness(80%);  /* Assombrir légèrement l'image de fond pour améliorer la lisibilité */
-}
-
-h1, h2, h3 {
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);  /* Ombre légère pour une meilleure lisibilité */
-}
-
-.section {
-    border: 1px solid #ddd;  /* Bordure douce pour délimiter les sections */
-    padding: 20px;
-}
-
-/* Footer */
-footer {
-    background-color: #60688a;  /* Fond foncé */
-    color: #fff;  /* Texte en blanc */
-}
-
-/* Améliorer la visibilité des règles */
-footer .rule-item figcaption {
-    color: #f1f1f1;  /* Texte sombre pour une bonne lisibilité */
-}
-
-
-.hero {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* La section prend toute la hauteur de la fenêtre */
-    overflow: hidden;
-}
-
-.hero-video {
+/* ✅ Bouton menu mobile */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
     position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Cela permet de remplir toute la section sans déformer la vidéo */
-    z-index: -1; /* Cela place la vidéo derrière le texte */
+    top: 15px;
+    right: 20px;
+    z-index: 1001;
 }
 
-
-body {
-    font-family: 'Roboto', sans-serif;
-}
-
-/* Styles pour le menu déroulant */
+/* ✅ Menu principal */
 nav ul {
-    list-style-type: none;
-    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 20px;
     margin: 0;
+    padding: 0;
 }
 
-nav li {
+nav ul li {
     position: relative;
-    display: inline-block;
-    margin-right: 20px;
 }
 
-nav a {
-    display: block;
+nav ul li a {
     text-decoration: none;
-    padding: 10px 20px;
-    color: #11088f;
-    border-radius: 7px;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
 }
 
-/* Sous-menus */
-nav .submenu {
+/* ✅ Sous-menu */
+.submenu {
     display: none;
     position: absolute;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
     top: 100%;
     left: 0;
-    background-color: #f9f9f9;
-    min-width: 200px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    z-index: 1;
+    width: 200px;
+    padding: 10px 0;
 }
 
-nav li:hover .submenu {
+nav ul li:hover .submenu {
     display: block;
 }
 
 .submenu li {
+    padding: 10px;
+}
+
+.submenu li a {
+    color: black;
     display: block;
 }
 
-.submenu a {
-    padding: 10px;
-    color: #333;
-    background-color: #fff;
-    border-radius: 3px;
-}
-
-.submenu a:hover {
-    background-color: #ddd;
-}
-
-nav a {
-    color: black;
-    text-decoration: none;
-}
-
-nav p {
-    color: black;
-    font-size: 14px;
-    margin: 5px 0;
-}
-
-/* Section hero */
-.hero-img {
-    width: 100%;
-    height: auto;
-}
-
-/* Section caption */
-.caption {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
-}
-
-.caption-text {
-    width: 50%;
-}
-
-.caption-image {
-    width: 40%;
-}
-
-.caption-image img {
-    width: 100%;
-    height: auto;
-}
-
-
-    .caption {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .caption-text, .caption-image {
-        width: 100%;
-        text-align: center;
-    }
-
-    .event-list {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .event {
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    .event h3 {
-        font-size: 1.2rem;
-    }
-
-    .image-gallery {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-    .image-item {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .image-item img {
-        width: 100%;
-        height: auto;
-    }
-
-    .footer-socials {
-        display: flex;
-        justify-content: center;
-        margin: 20px 0;
-    }
-
-    .footer-socials a {
-        margin: 0 10px;
-    }
-
-
-@media screen and (max-width: 480px) {
-    .hero-text h1 {
-        font-size: 1.2rem;
-    }
-
-    .caption-text p {
-        font-size: 0.9rem;
-    }
-
-    .footer-caption {
-        text-align: center;
-    }
-}
-
-
-
-/* Section Hero */
+/* ------------------------------- */
+/* 🚀 HERO SECTION */
+/* ------------------------------- */
 .hero {
     position: relative;
     width: 100%;
-    height: 100vh; /* La section prend toute la hauteur de la fenêtre */
+    height: 100vh;
     overflow: hidden;
+    text-align: center;
+    color: white;
 }
 
 .hero-video {
@@ -605,8 +104,8 @@ nav p {
     transform: translateX(-50%);
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Cela permet de remplir toute la section sans déformer la vidéo */
-    z-index: -1; /* Cela place la vidéo derrière le texte */
+    object-fit: cover;
+    z-index: -1;
 }
 
 .hero-text {
@@ -614,262 +113,757 @@ nav p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white; /* White text for contrast */
     text-align: center;
-    z-index: 1; /* Text above the video */
-    opacity: 1; /* Ensure the text is always visible */
-    padding: 0 20px; /* Add some padding to avoid text being too close to the edges */
+    padding: 20px;
 }
 
 .hero-text h1 {
-    font-size: 03rem; /* Increase the font size of the main heading */
-    margin-bottom: 20px; /* Add some space below the title */
-    font-weight: bold; /* Make the title bold for emphasis */
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
 .hero-text p {
-    font-size: 1.5rem; /* Larger size for the description */
-    margin-bottom: 30px; /* Add some space between the text and the button */
+    font-size: 1.5rem;
+    margin-bottom: 30px;
 }
 
+/* ✅ CTA */
 .cta-button {
     background-color: #007BFF;
     color: white;
-    padding: 15px 30px; /* Increase padding for a larger button */
+    padding: 15px 30px;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 1.5rem; /* Larger text for the button */
+    font-size: 1.5rem;
     transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: #0056b3; /* Darker blue for hover effect */
+    background-color: #0056b3;
 }
 
-
-
-/* Style for the image-caption section */
-.image-caption {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.image-caption h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-
-
-/* Style for the image-caption section */
-.image-caption {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.image-caption h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-/* Style for the image-caption section */
-.image-caption {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.image-caption h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-
-
-
-.image-caption {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.image-caption h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-
-
-/* Style for the image-caption section */
-.image-caption {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.image-caption h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-
-
-
-.image-caption {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.image-caption h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-/* Style for the image-caption section */
-.image-caption {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.image-caption h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-
-/* Style for the image-caption section */
-.image-caption {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.image-caption h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-
-
-/* Style global pour la section */
-.image-caption {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.image-caption h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-
-
-
-.image-caption {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.image-caption h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-/* Grid layout pour la galerie d'images */
-.image-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));  /* Utilisation de Grid avec des éléments de taille variable */
-    gap: 20px;  /* Espacement entre les éléments */
-    justify-items: center;  /* Centrage des éléments */
-    align-items: stretch;  /* Étirement pour occuper l'espace vertical */
-    margin-top: 20px;
-}
-
-/* Style pour chaque élément de la galerie */
-.image-item {
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;  /* Bordure légère autour de chaque élément */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  /* Ombre légère pour les éléments */
-    border-radius: 8px;  /* Coins arrondis pour un effet plus doux */
-    padding: 15px;
+/* ------------------------------- */
+/* 🏆 SECTIONS GÉNÉRALES */
+/* ------------------------------- */
+section {
+    padding: 60px 20px;
     text-align: center;
 }
 
-/* Style pour les images */
-.image-item img {
-    width: 100%;  /* L'image prendra toute la largeur de son conteneur */
-    height: auto;  /* Maintient les proportions de l'image */
-    max-height: 180px;  /* Limite la hauteur pour réduire les images */
-    object-fit: cover;  /* Assure que l'image est bien recadrée sans déformation */
-    border-radius: 8px;  /* Arrondi les coins de l'image pour correspondre au style général */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #2b2d42;
 }
 
-/* Style pour le titre des images */
-.image-item h3 {
-    font-size: 1.1em;
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-/* Style pour la description du <figcaption> */
-.image-item figcaption {
-    margin-top: 10px;
-    font-size: 0.95em;
-    color: #555;  /* Couleur de texte grise pour une meilleure lisibilité */
-}
-
-/* Style spécifique pour le titre et la description dans le <figcaption> */
-.image-item figcaption .title {
-    font-weight: bold;  /* Accentue le titre de la description */
-    margin-bottom: 8px;  /* Espacement sous le titre */
-}
-
-.image-item figcaption .description {
-    font-size: 0.85em;  /* Réduit la taille du texte de la description */
-    line-height: 1.4;  /* Espacement entre les lignes de texte pour une meilleure lisibilité */
-    margin-bottom: 12px;  /* Espacement sous la description */
-    color: #777;  /* Couleur de texte plus claire pour la description */
-}
-
-
-
-.image-caption {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.image-caption h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-/* Flexbox layout pour la galerie d'images (horizontalement) */
-.image-gallery {
-    display: flex;  /* Utiliser Flexbox pour aligner les éléments sur une ligne */
-    justify-content: space-between;  /* Espacement égal entre les éléments */
-    align-items: flex-start;  /* Alignement en haut des éléments */
-    gap: 20px;  /* Espacement entre chaque élément */
-    flex-wrap: nowrap;  /* Ne permet pas à la ligne de se replier */
-    margin-top: 20px;
-}
-
-/* Style pour chaque élément de la galerie */
-.image-item {
-    width: 23%;  /* Fixe la largeur des éléments à 23% pour les 4 éléments dans une ligne */
-    text-align: center;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;  /* Bordure légère autour de chaque élément */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  /* Ombre légère pour les éléments */
-    border-radius: 8px;  /* Coins arrondis pour un effet plus doux */
-    padding: 15px;
+/* ✅ Liste des avantages */
+.advantage-list {
     display: flex;
-    flex-direction: column;  /* Disposition des éléments internes en colonne */
-    align-items: center;  /* Centre les éléments à l'intérieur du conteneur */
-    justify-content: flex-start;  /* Aligne les éléments en haut */
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
-/* Style pour les images */
-.image-item img {
-    width: 100%;  /* L'image prendra toute la largeur de son conteneur */
-    height: auto;  /* Maintient les proportions de l'image */
-    max-height: 180px;  /* Limite la hauteur pour réduire les images */
-    object-fit: cover;  /* Assure que l'image est bien recadrée sans déformation */
-    border-radius: 8px;  /* Arrondi les coins de l'image pour correspondre au style général */
+.advantage {
+    background-color: #ece9e9;
+    border: 1px solid #f3efef;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
+.advantage:hover {
+    transform: translateY(-10px);
+}
+
+.advantage p {
+    font-size: 1rem;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* ✅ Témoignages */
+.testimonial-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 45%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.testimonial img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* ------------------------------- */
+/* 🔚 FOOTER */
+/* ------------------------------- */
+footer {
+    background-color: #2b2d42;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* ------------------------------- */
+/* 📱 RESPONSIVE DESIGN */
+/* ------------------------------- */
+@media (max-width: 768px) {
+    /* ✅ Menu mobile */
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgb(233, 231, 231);
+        width: 200px;
+        box-shadow: 0px 4px 6px rgba(20, 51, 228, 0.1);
+        border-radius: 5px;
+        padding: 10px;
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        margin-bottom: 10px;
+    }
+
+    .nav-menu li a {
+        color: rgb(243, 20, 87);
+        background-color: #080000;
+     
+    }
+
+    /* ✅ Réduction des sections */
+    .advantage {
+        width: 80%;
+    }
+
+    .testimonial {
+        width: 80%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 2; /* ✅ Assure que le texte est au-dessus de la vidéo */
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+}
+
+/* Styles pour le footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    font-family: 'Mulish', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-logo img {
+    max-width: 150px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.footer-links ul li {
+    display: inline;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: orange;
+}
+
+.footer-socials a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.footer-socials img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.footer-socials a:hover img {
+    transform: scale(1.1);
+}
+
+.footer-legal {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.footer-legal a {
+    color: orange;
+    text-decoration: none;
+}
+
+.footer-legal a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-links ul {
+        flex-direction: column; gap: 10px; }.footer-socials { margin-top: 10px;
+    }
+}
+
+/* Styles pour le footer et la navigation responsive */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Mulish', sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    padding: 15px 20px;
+}
+
+.logo img {
+    max-width: 150px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+nav {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    display: block;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: orange;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 150px;
+    top: 100%;
+}
+
+.nav-menu li:hover .submenu {
+    display: block;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-logo img {
+    max-width: 150px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: orange;
+}
+
+.footer-socials a {
+    margin: 0 10px;
+}
+
+.footer-socials img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.footer-socials a:hover img {
+    transform: scale(1.1);
+}
+
+.footer-legal {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.footer-legal a {
+    color: orange;
+    text-decoration: none;
+}
+
+.footer-legal a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        text-align: left;
+        padding: 10px;
+       
+    }
+    .nav-menu.active {
+        display: flex;
+    }
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-links ul {
+        flex-direction: column;
+    }
+}
+#modules {
+    text-align: center;
+   
+  }
+  
+  #modules-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+  }
+  
+  .module-card {
+    background: rgb(193, 199, 231);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+  }
+  
+  .module-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .module-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  figcaption {
+    font-size: 17px;
+    color:rgb(83, 69, 69);
+    margin-top: 5px;
+  }
+  
+  .module-card h3 {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  
+  .module-card p {
+    font-size: 18px;
+    color: #080000;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-top: 10px;
+    background: #ff5100;
+    color: rgb(236, 231, 231);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  .btn:hover {
+    background: #1700e7;
+  }
+  
+
+  /* ------ Styles du Footer ------ */
+footer {
+    background-color: #222; /* Couleur de fond sombre */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-logo img {
+    width: 120px; /* Taille du logo */
+    margin-bottom: 20px;
+  }
+  
+  .footer-rules {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .footer-rule {
+    text-align: center;
+  }
+  
+  .footer-rule a {
+    display: inline-block;
+    background: #ff7f00; /* Couleur du bouton */
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+    font-weight: bold;
+  }
+  
+  .footer-rule a:hover {
+    background: #e76e00;
+  }
+  
+  /* ------ Réseaux Sociaux ------ */
+  .footer-socials {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .footer-socials a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border: 1px solid white;
+    border-radius: 5px;
+    transition: all 0.3s;
+  }
+  
+  .footer-socials a:hover {
+    background: white;
+    color: #222;
+  }
+  
+  .footer-socials i {
+    font-size: 16px;
+  }
+  
+  /* Copyright */
+  .footer-rule p {
+    font-size: 12px;
+    color: #ccc;
+    margin-top: 10px;
+  }
+
+  
+  /* ------ Styles du Header ------ */
+header {
+    background-color: #914b09; /* Fond sombre */
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  /* Logo */
+  .logo img {
+    width: 120px; /* Taille du logo */
+  }
+  
+  /* Menu Toggle (pour mobile) */
+  .menu-toggle {
+    display: none; /* Caché sur desktop */
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Navigation */
+  nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-menu li {
+    position: relative;
+  }
+  
+  .nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-menu a:hover {
+    color: #ff7f00; /* Couleur orange au survol */
+  }
+  
+  /* Sous-menu */
+  .submenu {
+    display: none;
+    position: absolute;
+   
+    list-style: none;
+    padding: 10px;
+    border-radius: 5px;
+    top: 100%;
+    left: 0;
+  }
+  
+  .nav-menu li:hover .submenu {
+    display: block;
+  }
+  
+  .submenu li {
+    margin-bottom: 5px;
+  }
+  
+  .submenu a {
+    display: block;
+    padding: 8px;
+    color: white;
+  }
+  
+  .submenu a:hover {
+    background: #ff7f00;
+    color: white;
+  }
+  
+  /* Comparer les Cours, Blog, Forum, À Propos */
+  .nav-menu li a {
+    padding: 10px 15px;
+  }
+  
+  /* Bouton S'inscrire */
+  .cta-signin {
+    background: #ff7f00;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  
+  .cta-signin:hover {
+    background: #e76e00;
+  }
+  
+  /* Barre de Recherche */
+  .search-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-container input {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .search-container button {
+    padding: 8px 12px;
+    background: #ff7f00;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .search-container button:hover {
+    background: #e76e00;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block; /* Afficher le menu burger sur mobile */
+    }
+  
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      
+      position: absolute;
+      top: 60px;
+      right: 0;
+      
+      text-align: center;
+      padding: 20px 0;
+    }
+}
+  
