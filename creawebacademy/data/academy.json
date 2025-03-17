@@ -5,7 +5,7 @@
     "description": "Apprenez HTML, CSS, JavaScript et plus encore.",
     "figcaptionDescription": "Un guide complet pour débuter en développement web.",
     "image": "images/imgc.jpg",
-    "lien": "https://jiresselusa127.systeme.io/dev-web"
+    "lien": "detail.html"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "description": "Maîtrisez les concepts avancés du JavaScript.",
     "figcaptionDescription": "Approfondissez vos connaissances en JavaScript.",
     "image": "images/java.png",
-    "lien": "https://jiresselusa127.systeme.io/javascript"
+    "lien": "detail.html"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "description": "Apprenez le design web avec CSS et les frameworks modernes.",
     "figcaptionDescription": "Améliorez l'apparence de vos sites web avec CSS.",
     "image": "images/css.png",
-    "lien": "https://jiresselusa127.systeme.io/css"
+    "lien": "detail.html"
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "description": "Comprenez comment structurer et manipuler des données JSON.",
     "figcaptionDescription": "Manipulez les données efficacement avec JSON et API.",
     "image": "images/imgc2.jpg",
-    "lien": "https://jiresselusa127.systeme.io/json"
+    "lien": "detail.html"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "description": "Les bases du HTML pour créer des pages web structurées.",
     "figcaptionDescription": "Apprenez à structurer vos pages web avec HTML.",
     "image": "images/html.png",
-    "lien": "https://jiresselusa127.systeme.io/html"
+    "lien": "detail.html"
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "description": "Découvrez la programmation avec Python, un langage polyvalent.",
     "figcaptionDescription": "Apprenez Python, un langage puissant et facile à utiliser.",
     "image": "images/python.png",
-    "lien": "https://jiresselusa127.systeme.io/python"
+    "lien": "detail.html"
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@
     "description": "Apprenez à gérer et interroger des bases de données MySQL.",
     "figcaptionDescription": "Maîtrisez MySQL pour manipuler des bases de données.",
     "image": "images/sql.png",
-    "lien": "https://jiresselusa127.systeme.io/mysql"
+    "lien": "detail.html"
   },
   {
     "id": 8,
@@ -61,7 +61,7 @@
     "description": "Les stratégies essentielles pour réussir dans le marketing en ligne.",
     "figcaptionDescription": "Développez vos compétences en marketing numérique.",
     "image": "images/digital.png",
-    "lien": "https://jiresselusa127.systeme.io/marketing"
+    "lien": "detail.html"
   }
 ]
 
