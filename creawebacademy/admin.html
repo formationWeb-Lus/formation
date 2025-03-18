@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -36,7 +36,8 @@
                 snapshot.forEach(doc => {
                     let data = doc.data();
                     let listItem = document.createElement("li");
-                    listItem.textContent = `${data.name} - ${data.email}`;
+                    listItem.textContent = `Nom: ${data.nom}, Prénom: ${data.prenom}, Pays: ${data.pays}, Ville: ${data.ville}, Code Postal: ${data.code_postal}, Téléphone: ${data.telephone}, Email: ${data.email}, Cours: ${data.cours.join(", ")}`;
+
                     inscriptionsList.appendChild(listItem);
                 });
             })
