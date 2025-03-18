@@ -1,0 +1,53 @@
+<<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des Inscrits</title>
+
+    <!-- Importer Firebase via la syntaxe moderne -->
+    <script type="module">
+        // Importer les modules nécessaires de Firebase
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js';
+        import { getFirestore, collection, getDocs, orderBy, query } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js';
+
+        // Configuration Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyDzMpVFXdYEQ_4ch3GthMvF52hIRce9qD8",
+            authDomain: "inscriptionapp-ddb3e.firebaseapp.com",
+            projectId: "inscriptionapp-ddb3e",
+            storageBucket: "inscriptionapp-ddb3e.firebasestorage.app",
+            messagingSenderId: "213159898520",
+            appId: "1:213159898520:web:a986ee20ed1762b4e58fed"
+        };
+
+        // Initialiser Firebase avec la configuration
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // Récupérer les inscriptions
+        const inscriptionsRef = collection(db, "inscriptions");
+        const q = query(inscriptionsRef, orderBy("timestamp", "desc"));
+
+        // Récupérer les données et les afficher
+        getDocs(q)
+            .then(snapshot => {
+                const inscriptionsList = document.getElementById("inscriptionsList");
+                snapshot.forEach(doc => {
+                    let data = doc.data();
+                    let listItem = document.createElement("li");
+                    listItem.textContent = `${data.name} - ${data.email}`;
+                    inscriptionsList.appendChild(listItem);
+                });
+            })
+            .catch(error => console.error("Erreur de récupération :", error));
+    </script>
+
+</head>
+<body>
+
+    <h2>Liste des Inscrits</h2>
+    <ul id="inscriptionsList"></ul>
+
+</body>
+</html>

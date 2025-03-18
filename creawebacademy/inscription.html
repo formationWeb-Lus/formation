@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - CréaWeb Academy</title>
+    <link rel="stylesheet" href="styles/inscription.css">
+    
+    
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo de CréaWeb Academy">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="formations.html">Formations</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="forum.html">Forum</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="inscription">
+            <h1>Inscription à CréaWeb Academy</h1>
+            <form id="captureForm">
+                <label for="nom">Nom de famille</label>
+                <input type="text" id="nom" name="nom" required>
+
+                <label for="prenom">Prénom</label>
+                <input type="text" id="prenom" name="prenom" required>
+
+                <label for="pays">Pays</label>
+                <input type="text" id="pays" name="pays" required>
+
+                <label for="ville">Ville</label>
+                <input type="text" id="ville" name="ville" required>
+
+                <label for="code_postal">Code Postal</label>
+                <input type="text" id="code_postal" name="code_postal" required>
+
+                <label for="telephone">Numéro de téléphone</label>
+                <input type="tel" id="telephone" name="telephone" required>
+
+                <label for="email">Adresse Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <h2>Sélectionnez vos cours :</h2>
+                <div class="cours-list">
+                    <label><input type="checkbox" name="cours[]" value="html-css-debutant"> HTML & CSS (Débutant)</label>
+                    <label><input type="checkbox" name="cours[]" value="html-css-avance"> HTML & CSS (Avancé)</label>
+                    <label><input type="checkbox" name="cours[]" value="javascript-debutant"> JavaScript (Débutant)</label>
+                    <label><input type="checkbox" name="cours[]" value="javascript-avance"> JavaScript (Avancé)</label>
+                    <label><input type="checkbox" name="cours[]" value="python-debutant"> Python (Débutant)</label>
+                    <label><input type="checkbox" name="cours[]" value="python-avance"> Python (Avancé)</label>
+                    <label><input type="checkbox" name="cours[]" value="mysql-debutant"> MySQL (Débutant)</label>
+                    <label><input type="checkbox" name="cours[]" value="mysql-avance"> MySQL (Avancé)</label>
+                    <label><input type="checkbox" name="cours[]" value="marketing-digital"> Marketing Digital</label>
+                </div>
+
+                <button type="submit">S'inscrire</button>
+            </form>
+        </section>
+        <!-- Importer Firebase v9+ -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+        import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
+
+        // Configuration Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyDzMpVFXdYEQ_4ch3GthMvF52hIRce9qD8",
+            authDomain: "inscriptionapp-ddb3e.firebaseapp.com",
+            projectId: "inscriptionapp-ddb3e",
+            storageBucket: "inscriptionapp-ddb3e.firebasestorage.app",
+            messagingSenderId: "213159898520",
+            appId: "1:213159898520:web:a986ee20ed1762b4e58fed"
+        };
+
+        // Initialiser Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("captureForm").addEventListener("submit", async function(event) {
+                event.preventDefault(); // Empêche le rechargement de la page
+
+                // Récupération et nettoyage des valeurs
+                let nom = document.getElementById("nom").value.trim();
+                let prenom = document.getElementById("prenom").value.trim();
+                let pays = document.getElementById("pays").value.trim();
+                let ville = document.getElementById("ville").value.trim();
+                let code_postal = document.getElementById("code_postal").value.trim();
+                let telephone = document.getElementById("telephone").value.trim();
+                let email = document.getElementById("email").value.trim();
+
+                // Vérification des champs
+                if (!nom || !prenom || !pays || !ville || !code_postal || !telephone || !email) {
+                    alert("Veuillez remplir tous les champs !");
+                    return;
+                }
+
+                // Récupérer les cours sélectionnés
+                let cours = [];
+                document.querySelectorAll('input[name="cours[]"]:checked').forEach((checkbox) => {
+                    cours.push(checkbox.value);
+                });
+
+                // Vérifier si les données sont bien captées
+                console.log("Nom:", nom);
+                console.log("Prénom:", prenom);
+                console.log("Pays:", pays);
+                console.log("Ville:", ville);
+                console.log("Code postal:", code_postal);
+                console.log("Téléphone:", telephone);
+                console.log("Email:", email);
+                console.log("Cours sélectionnés:", cours);
+
+                // Stocker les données dans Firestore
+                try {
+                    await addDoc(collection(db, "inscriptions"), {
+                        nom,
+                        prenom,
+                        pays,
+                        ville,
+                        code_postal,
+                        telephone,
+                        email,
+                        cours,
+                        timestamp: serverTimestamp()
+                    });
+                    console.log("Données enregistrées !");
+                    
+                    // Redirection vers la page de remerciement
+                    window.location.href = "merci.html";
+                } catch (error) {
+                    console.error("Erreur d'enregistrement :", error);
+                }
+            });
+        });
+    </script>
+    </main>
+    <footer>
+        <p>&copy; 2025 CréaWeb Academy - Tous droits réservés</p>
+    </footer>
+</body>
+</html>
+

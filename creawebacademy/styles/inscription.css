@@ -1,0 +1,154 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #222;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f9a826;
+}
+
+nav ul li:first-child a {
+    text-transform: uppercase;
+}
+
+main {
+    width: 50%;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.inscription h1 {
+    text-align: center;
+    color: #222;
+    position: relative;
+}
+
+.inscription h1::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #f9a826;
+    margin: 5px auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input:focus {
+    border-color: #f9a826;
+    outline: none;
+    box-shadow: 0 0 5px rgba(249, 168, 38, 0.5);
+}
+
+.cours-list {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.cours-list label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.cours-list label:hover {
+    background: rgba(249, 168, 38, 0.2);
+}
+
+.cours-list input {
+    margin-right: 10px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9a826;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #e0891c;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+    margin-top: 20px;
+    position: relative;
+}
+
+footer::before {
+    content: 'Rejoignez-nous et développez vos compétences !';
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #f9a826;
+    margin-bottom: 10px;
+}
