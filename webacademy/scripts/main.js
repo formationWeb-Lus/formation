@@ -61,3 +61,14 @@ document.addEventListener("DOMContentLoaded", () => {
     // Ajouter un gestionnaire d'événement pour le bouton "Charger les Cours"
     document.getElementById("fetchDataBtn").addEventListener("click", loadCourses);
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menu-toggle");
+    const navMenu = document.getElementById("nav-menu");
+
+    menuToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("nav-visible");
+        navMenu.classList.toggle("nav-hidden");
+    });
+});

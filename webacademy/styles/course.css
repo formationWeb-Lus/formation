@@ -7,52 +7,6 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-}
-
-/* Section Hero */
-.hero {
-    position: relative;
-    height: 100vh; /* Utiliser la hauteur de l'écran pour la section hero */
-    background-color: #572828;
-    color: white;
-}
-
-.hero-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-.cta-button {
-    background-color: #f19e04;
-    padding: 15px 25px;
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    border-radius: 5px;
-}
-
 /* Section Courses */
 .courses {
     padding: 40px 20px;
@@ -84,52 +38,6 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
-
-/* Modale */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    width: 60%;
-    text-align: center;
-}
-
-.modal h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.modal p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-.modal-close-btn {
-    background-color: red;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-}
-
-
-
-
-
-
 
 /* General styles */
 body {
@@ -1197,47 +1105,158 @@ footer {
     height: 100%;
 }
 
-/* Styles pour chaque boîte d'image */
+
+
+
+
+
+/* Style de base pour les images et les captions */
+.caption-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.caption-images, .caption-images-two {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 900px;
+}
+
 .image-box {
-    flex: 1;
-    min-width: 200px;  /* Largeur minimale pour éviter les boîtes trop petites */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    border-radius: 8px;
-    overflow: hidden;
-    background-color: #f4f4f4;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+    max-width: 250px;
 }
 
 .image-box img {
     width: 100%;
+    max-width: 250px;
     height: auto;
-    display: block;
-    border-bottom: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(197, 13, 13, 0.1);
 }
 
 .image-box p {
-    margin: 15px 0;
-    font-size: 1.2rem;
+    margin-top: 10px;
+    font-size: 1rem;
     font-weight: bold;
-    color: #333;
+    color: #3a3a3a;
 }
 
-/* Effet au survol des boîtes d'image */
-.image-box:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Responsive Design pour les petites tailles d'écrans */
+/* Responsive Design */
 @media (max-width: 768px) {
     .caption-images, .caption-images-two {
-        flex-direction: row; /* Assure que l'affichage reste horizontal */
-        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+    }
+    .image-box {
+        width: 90%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-box p {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+/* Style du bouton menu burger */
+.menu-button {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+/* Masquer le menu sur mobile par défaut */
+.nav-hidden {
+    display: none;
+}
+
+/* Afficher le menu quand actif */
+.nav-visible {
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background: rgb(185, 8, 8);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(179, 4, 4, 0.2);
+}
+
+/* Style responsive */
+@media (max-width: 768px) {
+    .menu-button {
+        display: block;
     }
 
-    .image-box {
-        width: 100%; /* Les boîtes s'ajustent à la largeur de l'écran */
-        margin-bottom: 20px;
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+/* Style de base du menu */
+#nav-menu {
+    display: flex;  /* Le menu est visible par défaut */
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Masquer le menu sur mobile uniquement */
+@media (max-width: 768px) {
+    #nav-menu {
+        display: none; /* Le menu est caché sur mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        background: white;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu-button {
+        display: block; /* Afficher le bouton burger */
+    }
+
+    .nav-visible {
+        display: flex !important; /* Afficher le menu quand il est actif */
+    }
+}
+
+/* Bouton menu burger (caché sur grand écran) */
+.menu-button {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+@media (max-width: 768px) {
+    .menu-button {
+        display: block;
     }
 }
