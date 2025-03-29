@@ -25,9 +25,9 @@
         <nav>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
-                <li><a href="formations.html">Formations</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="forum.html">Forum</a></li>
+                <li><a href="detail.html">Formations</a></li>
+                <li><a href="history.html">À Propos</a></li>
+                <li><a href="detail.html">Explorer</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
@@ -56,20 +56,44 @@
 
                 <label for="email">Adresse Email</label>
                 <input type="email" id="email" name="email" required>
-
                 <h2>Sélectionnez vos cours :</h2>
+                <p>Veuillez cliquer sur l'un des boutons ci-dessous pour afficher les cours correspondants. Choisissez "Débutants" si vous commencez, ou "Avancés" si vous avez déjà des bases.</p>
                 <div class="cours-list">
-                    <label><input type="checkbox" name="cours" value="html-css-debutant"> HTML & CSS (Débutant)</label>
-<label><input type="checkbox" name="cours" value="html-css-avance"> HTML & CSS (Avancé)</label>
-<label><input type="checkbox" name="cours" value="javascript-debutant"> JavaScript (Débutant)</label>
-<label><input type="checkbox" name="cours" value="javascript-avance"> JavaScript (Avancé)</label>
-<label><input type="checkbox" name="cours" value="python-debutant"> Python (Débutant)</label>
-<label><input type="checkbox" name="cours" value="python-avance"> Python (Avancé)</label>
-<label><input type="checkbox" name="cours" value="mysql-debutant"> MySQL (Débutant)</label>
-<label><input type="checkbox" name="cours" value="mysql-avance"> MySQL (Avancé)</label>
-<label><input type="checkbox" name="cours" value="marketing-digital"> Marketing Digital</label>
-
+                    <button type="button" id="select-debutant">Afficher les cours débutants</button>
+                    <button type="button" id="select-avance">Afficher les cours avancés</button>
+                    
+                    <div id="cours-debutant" style="display: none;">
+                        <label><input type="checkbox" name="cours" value="html-css-debutant" class="debutant"> HTML & CSS (Débutant)</label>
+                        <label><input type="checkbox" name="cours" value="javascript-debutant" class="debutant"> JavaScript (Débutant)</label>
+                        <label><input type="checkbox" name="cours" value="python-debutant" class="debutant"> Python (Débutant)</label>
+                        <label><input type="checkbox" name="cours" value="mysql-debutant" class="debutant"> MySQL (Débutant)</label>
+                    </div>
+                    
+                    <div id="cours-avance" style="display: none;">
+                        <label><input type="checkbox" name="cours" value="html-css-avance" class="avance"> HTML & CSS (Avancé)</label>
+                        <label><input type="checkbox" name="cours" value="javascript-avance" class="avance"> JavaScript (Avancé)</label>
+                        <label><input type="checkbox" name="cours" value="python-avance" class="avance"> Python (Avancé)</label>
+                        <label><input type="checkbox" name="cours" value="mysql-avance" class="avance"> MySQL (Avancé)</label>
+                    </div>
+                    
+                    <label><input type="checkbox" name="cours" value="marketing-digital"> Marketing Digital</label>
                 </div>
+                
+                <script>
+                    document.getElementById("select-debutant").addEventListener("click", function() {
+                        let debutantDiv = document.getElementById("cours-debutant");
+                        let checkboxes = debutantDiv.querySelectorAll("input[type='checkbox']");
+                        debutantDiv.style.display = (debutantDiv.style.display === "none" || debutantDiv.style.display === "") ? "block" : "none";
+                        checkboxes.forEach(checkbox => checkbox.checked = true);
+                    });
+                    
+                    document.getElementById("select-avance").addEventListener("click", function() {
+                        let avanceDiv = document.getElementById("cours-avance");
+                        let checkboxes = avanceDiv.querySelectorAll("input[type='checkbox']");
+                        avanceDiv.style.display = (avanceDiv.style.display === "none" || avanceDiv.style.display === "") ? "block" : "none";
+                        checkboxes.forEach(checkbox => checkbox.checked = true);
+                    });
+                </script>
 
                 <button type="submit">S'inscrire</button>
             </form>
