@@ -18,8 +18,8 @@
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="styles/course.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Arial&display=swap" rel="stylesheet">
-    <script type="module" src="scripts/main.js" defer></script>
-</head>
+    <script type="module" src="scripts/main.js"></script>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-N1LQ6YZ5F7"></script>
 <script>
@@ -29,14 +29,15 @@
 
   gtag('config', 'G-N1LQ6YZ5F7');
 </script>
+</head>
 
 <body>
 
-    <header>
+<header>
         <div class="logo">
             <img src="images/logo.png" alt="Logo Webacademy">
         </div>
-        <nav>
+    
             <button id="menu-toggle" class="menu-button">☰</button>
 <nav id="nav-menu" class="nav-hidden">
     <ul class="nav-list">
@@ -83,15 +84,15 @@
    
 
     <!-- Image et CTA pour la promotion -->
-    <div class="cta-promotion">
+    <section class="cta-promotion">
         <img src="images/promotion.jpg" alt="Profitez de notre promotion" class="promo-image">
         <div class="promo-text">
             <h3>Profitez de notre offre spéciale !</h3>
             <p>Inscrivez-vous dès aujourd'hui et bénéficiez de 30% de réduction sur toutes nos formations en développement web.</p>
             <a href="inscription.html" class="cta-button">Inscrivez-vous Maintenant</a>
         </div>
-    </div>
-</section>
+    </section>
+    
 <!-- CTA pour aller vers la page "À Propos" -->
 <div class="cta-about">
     <h3>En savoir plus sur Webacademy</h3>
@@ -100,13 +101,22 @@
 </div>
 
 
-<!-- Modale pour afficher les détails des cours -->
-<div id="modal" class="modal">
+<!-- Première modale -->
+<div id="modal-1" class="modal">
     <div class="modal-content">
-        <div id="modal-data"></div>
-        <button id="closeModal" class="modal-close-btn">Fermer</button>
+        <div id="modal-data-1"></div>
+        <button id="closeModal-1" class="modal-close-btn">Fermer</button>
     </div>
 </div>
+
+<!-- Deuxième modale -->
+<div id="modal-2" class="modal">
+    <div class="modal-content">
+        <div id="modal-data-2"></div>
+        <button id="closeModal-2" class="modal-close-btn">Fermer</button>
+    </div>
+</div>
+
 
 <section class="caption-section">
     <div class="caption">
@@ -123,19 +133,24 @@
     </div>
 </section>
 <!-- Image et CTA pour la promotion -->
-<div class="cta-promotion">
-    <img src="images/emotio.jpg" alt="Profitez de notre promotion" class="promo-image">
-    <div class="promo-text">
-        <h3>Profitez de notre offre spéciale !</h3>
-        <p>Inscrivez-vous dès aujourd'hui et bénéficiez de 30% de réduction sur toutes nos formations en développement web.</p>
-        <a href="inscription.html" class="cta-button">Inscrivez-vous Maintenant</a>
+<section class="promotion-section">
+    <div class="cta-promotion">
+        <img src="images/emotio.jpg" alt="Profitez de notre promotion" class="promo-image">
+        <div class="promo-text">
+            <h3>Profitez de notre offre spéciale !</h3>
+            <p>Inscrivez-vous dès aujourd'hui et bénéficiez de 30% de réduction sur toutes nos formations en développement web.</p>
+            <a href="inscription.html" class="cta-button">Inscrivez-vous Maintenant</a>
+        </div>
     </div>
-</div>
-</section>
+</section>  <!-- ✅ Fermeture correcte -->
 
 
     
 <section class="caption-section">
+    <h2>Suivez le chemin vers le succès</h2>
+    <p>Découvrez nos offres spéciales sur nos formations en développement web.</p>
+</section>
+
     <!-- Première série de captions avec 3 images -->
     <div class="caption-images">
         <div class="image-box">
@@ -154,18 +169,19 @@
 
 
 
-    <!-- Deuxième série de captions avec 2 images -->
-    <div class="caption-images-two">
-        <div class="image-box">
-            <img src="images/application-2699082_640.jpg" alt="Créer un site web et le développer">
-            <p>Créer un site web et le développer</p>
+    <section class="caption-section">
+        <div class="caption-images-two">
+            <div class="image-box">
+                <img src="images/application-2699082_640.jpg" alt="Créer un site web et le développer">
+                <p>Créer un site web et le développer</p>
+            </div>
+            <div class="image-box">
+                <img src="images/site.jpg" alt="Créer des applications et les développer">
+                <p>Créer des applications et les développer</p>
+            </div>
         </div>
-        <div class="image-box">
-            <img src="images/site.jpg" alt="Créer des applications et les développer">
-            <p>Créer des applications et les développer</p>
-        </div>
-    </div>
-</section>
+    </section> <!-- Fermeture correcte de la section -->
+    
 
     
     </main>

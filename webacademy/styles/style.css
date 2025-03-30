@@ -207,7 +207,7 @@ footer, footer, .footer-logo img {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1rem;
-    background-color: dark;
+    background-color: rgb(0, 0, 0); 
     
   }
   .footer-bottom {
@@ -215,7 +215,7 @@ footer, footer, .footer-logo img {
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    background-color: dark;
+    background-color: #000;
     color: white;
     flex-wrap: wrap;
 }
