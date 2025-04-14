@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Review Form</title>
+  <meta name="description" content="Submit a review for a product including rating, installation date, and features used." />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="styles/form.css" />
+  <script defer src="scripts/form.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Product Review</h1>
+  </header>
+
+  <main>
+    <form id="reviewForm" method="get" action="review.html" aria-labelledby="form-title">
+      <fieldset>
+        <legend id="form-title">Submit Your Review</legend>
+
+        <!-- Product selection -->
+        <label for="product">Product Name:</label>
+        <select id="product" name="product" required>
+          <option value="" disabled selected>Select a product...</option>
+        </select>
+
+        <!-- Rating section -->
+        <fieldset class="rating">
+          <legend>Overall Rating:</legend>
+          <div class="stars">
+            <input type="radio" id="star5" name="rating" value="5" required />
+            <label for="star5" title="5 stars">★★★★★</label>
+
+            <input type="radio" id="star4" name="rating" value="4" />
+            <label for="star4" title="4 stars">★★★★</label>
+
+            <input type="radio" id="star3" name="rating" value="3" />
+            <label for="star3" title="3 stars">★★★</label>
+
+            <input type="radio" id="star2" name="rating" value="2" />
+            <label for="star2" title="2 stars">★★</label>
+
+            <input type="radio" id="star1" name="rating" value="1" />
+            <label for="star1" title="1 star">★</label>
+          </div>
+        </fieldset>
+
+        <!-- Installation date -->
+        <label for="installDate">Installation Date:</label>
+        <input type="date" id="installDate" name="installDate" required />
+
+        <!-- Useful features -->
+        <fieldset class="features">
+          <legend>Useful Features:</legend>
+          <div>
+            <input type="checkbox" id="feature1" name="features" value="debugging-tools" />
+            <label for="feature1">Debugging Tools</label>
+          </div>
+          <div>
+            <input type="checkbox" id="feature2" name="features" value="code-completion" />
+            <label for="feature2">Code Completion</label>
+          </div>
+          <div>
+            <input type="checkbox" id="feature3" name="features" value="version-control" />
+            <label for="feature3">Version Control</label>
+          </div>
+          <div>
+            <input type="checkbox" id="feature4" name="features" value="integrated-terminal" />
+            <label for="feature4">Integrated Terminal</label>
+          </div>
+        </fieldset>
+
+        <!-- Text review -->
+        <label for="review">Written Review:</label>
+        <textarea id="review" name="review" rows="4" placeholder="Write your thoughts here..."></textarea>
+
+        <!-- Username -->
+        <label for="username">Username (optional):</label>
+        <input type="text" id="username" name="username" />
+
+        <!-- Submit button -->
+        <button type="submit">Submit</button>
+      </fieldset>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - All rights reserved | <a href="/robots.txt">robots.txt</a></p>
+  </footer>
+</body>
+</html>

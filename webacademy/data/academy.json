@@ -1,74 +1,66 @@
 [
   {
     "id": 1,
-    "titre": "Développement Web Moderne",
+    "title": "Développement Web Moderne",
     "description": "Apprenez HTML, CSS, JavaScript et plus encore.",
-    "figcaptionDescription": "Un guide complet pour débuter en développement web.",
+    "figcaptionDescription": "Un guide complet pour débuter dans le développement web.",
     "image": "images/imgc.jpg",
-    "lien": "detail.html"
+    "link": "detail.html"
   },
   {
     "id": 2,
-    "titre": "JavaScript Avancé",
-    "description": "Maîtrisez les concepts avancés du JavaScript.",
+    "title": "JavaScript Avancé",
+    "description": "Maîtrisez les concepts avancés de JavaScript.",
     "figcaptionDescription": "Approfondissez vos connaissances en JavaScript.",
     "image": "images/java.png",
-    "lien": "detail.html"
+    "link": "detail.html"
   },
   {
     "id": 3,
-    "titre": "Maîtriser CSS",
+    "title": "Maîtriser le CSS",
     "description": "Apprenez le design web avec CSS et les frameworks modernes.",
-    "figcaptionDescription": "Améliorez l'apparence de vos sites web avec CSS.",
+    "figcaptionDescription": "Améliorez l’apparence de vos sites web avec CSS.",
     "image": "images/css.png",
-    "lien": "detail.html"
+    "link": "detail.html"
   },
   {
     "id": 4,
-    "titre": "JSON et API",
-    "description": "Comprenez comment structurer et manipuler des données JSON.",
-    "figcaptionDescription": "Manipulez les données efficacement avec JSON et API.",
+    "title": "JSON et APIs",
+    "description": "Comprenez comment structurer et manipuler les données JSON.",
+    "figcaptionDescription": "Gérez efficacement les données avec JSON et les APIs.",
     "image": "images/imgc2.jpg",
-    "lien": "detail.html"
+    "link": "detail.html"
   },
   {
     "id": 5,
-    "titre": "HTML Fondamentaux",
+    "title": "Les Fondamentaux du HTML",
     "description": "Les bases du HTML pour créer des pages web structurées.",
     "figcaptionDescription": "Apprenez à structurer vos pages web avec HTML.",
     "image": "images/html.png",
-    "lien": "detail.html"
+    "link": "detail.html"
   },
   {
     "id": 6,
-    "titre": "Python pour Débutants",
+    "title": "Python pour Débutants",
     "description": "Découvrez la programmation avec Python, un langage polyvalent.",
     "figcaptionDescription": "Apprenez Python, un langage puissant et facile à utiliser.",
     "image": "images/python.png",
-    "lien": "detail.html"
+    "link": "detail.html"
   },
   {
     "id": 7,
-    "titre": "MySQL et Bases de Données",
+    "title": "MySQL et Bases de Données",
     "description": "Apprenez à gérer et interroger des bases de données MySQL.",
-    "figcaptionDescription": "Maîtrisez MySQL pour manipuler des bases de données.",
+    "figcaptionDescription": "Maîtrisez MySQL pour manipuler les bases de données efficacement.",
     "image": "images/sql.png",
-    "lien": "detail.html"
+    "link": "detail.html"
   },
   {
     "id": 8,
-    "titre": "Marketing Digital",
-    "description": "Les stratégies essentielles pour réussir dans le marketing en ligne.",
-    "figcaptionDescription": "Développez vos compétences en marketing numérique.",
+    "title": "Marketing Digital",
+    "description": "Stratégies essentielles pour réussir dans le marketing en ligne.",
+    "figcaptionDescription": "Développez vos compétences en marketing digital.",
     "image": "images/digital.png",
-    "lien": "detail.html"
+    "link": "detail.html"
   }
 ]
-
-
-
-
-
-
-
-

@@ -2,10 +2,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.querySelector(".menu-toggle");
     const navMenu = document.querySelector(".nav-menu");
 
+
     menuToggle.addEventListener("click", function () {
         navMenu.classList.toggle("active"); // Affiche ou cache le menu
     });
 });
+
 
 async function chargerModules() {
     try {
@@ -26,13 +28,13 @@ async function chargerModules() {
   
         div.innerHTML = `
           <figure>
-            <img src="${module.image}" alt="${module.titre}">
-            <figcaption>${module.figcaptionDescription}</figcaption>
-          </figure>
-          <h3>${module.titre}</h3>
-          <p>${module.description}</p>
-          <a href="${module.lien}" target="_blank" class="btn">Découvrir</a>
-        `;
+    <img src="${module.image}" alt="${module.titte}" loading="lazy">
+    <figcaption>${module.figcaptionDescription}</figcaption>
+  </figure>
+  <h3>${module.title}</h3>
+  <p>${module.description}</p>
+  <a href="${module.lien}" target="_blank" class="btn">see more</a>
+`;
   
         container.appendChild(div);
       });

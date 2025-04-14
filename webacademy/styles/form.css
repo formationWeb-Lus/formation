@@ -1,0 +1,181 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+header {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+label {
+    display: block;
+    margin-top: 10px;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+.rating label {
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+}
+button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* form.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+}
+
+main {
+    max-width: 600px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 30px;
+    cursor: pointer;
+    color: rgb(194, 26, 26);
+    transition: color 0.3s;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+    color: rgb(7, 6, 0);
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+.features label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    margin-top: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #218838;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+    margin-top: 20px;
+}
+
+.rating {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.stars {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rating input[type="radio"] {
+    display: none;
+}
+
+.rating label {
+    font-size: 24px;
+    cursor: pointer;
+    color: lightgray;
+    transition: color 0.3s;
+}
+
+.rating input[type="radio"]:checked + label,
+.rating label:hover,
+.rating label:hover ~ label {
+    color: gold;
+}
+
+.stars input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+}

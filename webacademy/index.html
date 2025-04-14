@@ -3,22 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Apprenez le développement web avec CréaWeb Academy. Inscrivez-vous à nos cours en HTML, CSS, JavaScript, Python et bien plus encore.">
+    <meta name="description" content="Apprenez le développement web avec CréaWeb Academy. Inscrivez-vous à nos cours HTML, CSS, JavaScript, Python et bien plus.">
     <meta name="keywords" content="Développement Web, HTML, CSS, JavaScript, Python, Formation, CréaWeb Academy">
     <meta property="og:title" content="CréaWeb Academy - Apprenez le Développement Web">
-    <meta property="og:description" content="Découvrez et inscrivez-vous à nos formations en développement web sur CréaWeb Academy.">
+    <meta property="og:description" content="Découvrez et inscrivez-vous à notre formation en développement web chez CréaWeb Academy.">
     <meta property="og:image" content="images/og-image.jpg">
     <meta property="og:url" content="https://jiresselusa127.systeme.io/school/course/">
-    <meta name="twitter:title" content=" Apprenez le Développement Web">
-    <meta name="twitter:description" content="Inscrivez-vous dès maintenant et apprenez à créer des sites web professionnels.">
+    <meta name="twitter:title" content="Apprenez le Développement Web">
+    <meta name="twitter:description" content="Inscrivez-vous maintenant et apprenez à créer des sites web professionnels.">
     <meta name="twitter:image" content="images/og-image.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <title> Apprenez le Développement Web frontend</title>
+    <title>CréaWeb Academy | Formation Frontend en Développement Web</title>
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="styles/academy.css">
+    <script type="module" src="scripts/academy.js"></script>
+    <a href="${module.lien}" target="_blank" class="btn" title="Découvrir le module ${module.titre}">Découvrir</a>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap" rel="stylesheet">
-
-<!-- Google tag (gtag.js) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<!-- Balise Google (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3SKSXS8XL1"></script>
 
 <script>
@@ -32,7 +34,8 @@
 <body>   
     <header>
         <div class="logo">
-            <img src="images/logo.png" alt="Logo de CréaWeb Academy">
+            <img src="images/logo.png" alt="WebAcademy Logo" style="max-height: 80px;">
+
         </div>
         <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
         <nav id="navMenu">
@@ -47,74 +50,69 @@
                         <li><a href="detail.html">Marketing Digital</a></li>
                     </ul>
                 </li>
-                <li><a href="history.html">Comparer les Cours</a></li>
+                <li><a href="history.html">Comparer les Formations</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Forum</a></li>
-                <li><a href="history.html">À Propos</a></li>
+                <li><a href="history.html">À propos</a></li>
                 <li><a href="page_d'information.html" class="cta-signin">S'inscrire</a></li>
                 <li class="search-container">
                     <input type="text" placeholder="Rechercher...">
-                    
                 </li>
             </ul>
         </nav>
     </header>
     <main>
-        
         <section class="hero">
             <video autoplay loop muted class="hero-video">
                 <source src="images/video.mp4" type="video/mp4">
-                Votre navigateur ne supporte pas la lecture de vidéo.
+                Votre navigateur ne prend pas en charge la lecture vidéo.
             </video>
             <div class="hero-text">
                 <h1>Maîtrisez la Création de Sites Web</h1>
-                <p>Des formations adaptées à tous les niveaux pour vous perfectionner dans les technologies modernes.</p>
-                <a href="detail.html" class="cta-button">Voir les cours</a>
+                <p>Des cours adaptés à tous les niveaux pour maîtriser les technologies modernes.</p>
+                <a href="detail.html" class="cta-button">Voir les Formations</a>
             </div>
-            
         </section>
         <section class="advantages">
-            <h2>Pourquoi choisir CréaWeb Academy ?</h2>
+            <h2>Pourquoi Choisir CréaWeb Academy ?</h2>
             <div class="advantage-list">
                 <div class="advantage">
-                    <h3>Des Formateurs Experts</h3>
-                    <p>Apprenez auprès de professionnels du secteur avec des méthodes pédagogiques adaptées.</p>
+                    <h3>Formateurs Experts</h3>
+                    <p>Apprenez auprès de professionnels du secteur avec des méthodes éprouvées.</p>
                 </div>
                 <div class="advantage">
-                    <h3>Une Formation 100% en Ligne</h3>
-                    <p>Accédez aux cours où que vous soyez et progressez à votre rythme.</p>
+                    <h3>Formation 100% en ligne</h3>
+                    <p>Accédez aux cours de partout et progressez à votre rythme.</p>
                 </div>
                 <div class="advantage">
-                    <h3>Trouvez un emploi pendant la formation</h3>
-                    <p>Acquérez des compétences recherchées et démarrez votre carrière immédiatement.</p>
+                    <h3>Trouvez un Emploi Pendant la Formation</h3>
+                    <p>Acquérez des compétences recherchées et commencez votre carrière immédiatement.</p>
                 </div>
             </div>
             <section id="modules">
                 <h2>Nos Modules de Formation</h2>
                 <div id="modules-container">
-                  <!-- Les modules seront affichés ici dynamiquement -->
+                    <!-- Les modules seront affichés dynamiquement ici -->
                 </div>
-              </section>
+            </section>
         </section>
         <section class="testimonials">
-            <h2>Ce que disent nos apprenants</h2>
+            <h2>Ce Que Disent Nos Étudiants</h2>
             <div class="testimonial-list">
                 <div class="testimonial">
                     <img src="images/black.jpg" alt="Jean Dupont">
-                    <p>“Grâce à CréaWeb Academy, j’ai pu lancer ma carrière de développeur en seulement quelques mois !”</p>
+                    <p>« Grâce à CréaWeb Academy, j'ai pu commencer ma carrière de développeur en quelques mois seulement ! »</p>
                     <h4>Jean Dupont</h4>
                 </div>
                 <div class="testimonial">
                     <img src="images/man.jpg" alt="Marie Leblanc">
-                    <p>“Les formations sont claires et complètes, parfaites pour apprendre efficacement.”</p>
+                    <p>« Les cours sont clairs et complets, parfaits pour un apprentissage efficace. »</p>
                     <h4>Marie Leblanc</h4>
                 </div>
             </div>
         </section>
-        
     </main>
     <footer>
-
         <!-- Section supplémentaire du pied de page avec logo et 4 règles -->
         <div class="footer-bottom">
             <div class="footer-logo">
@@ -122,34 +120,31 @@
             </div>
             <div class="footer-rules">
                 <div class="footer-rule">
-                    <a href="privacy-policy.html" class="cta-button">Politique de confidentialité</a>
+                    <a href="privacy-policy.html" class="cta-button">Politique de Confidentialité</a>
                 </div>
                 <div class="footer-rule">
-                    <a href="terms-of-use.html" class="cta-button">Conditions d'utilisation</a>
+                    <a href="terms-of-use.html" class="cta-button">Conditions d'Utilisation</a>
                 </div>
                 <div class="footer-rule">
-                    <a href="cookie-policy.html" class="cta-button">Politique des cookies</a>
+                    <a href="cookie-policy.html" class="cta-button">Politique de Cookies</a>
                 </div>
                 <div class="footer-rule">
-                    <a href="about-us.html" class="cta-button">Utilité du site</a>
+                    <a href="about-us.html" class="cta-button">Objectif du Site</a>
                     <p>&copy; 2025 Webacademy - Tous droits réservés</p>
-                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-                    <div class="footer-socials">
-                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i> Facebook</a>
-                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i> Instagram</a>
-                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
-                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i> YouTube</a>
-                        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                    </div>
+                </div>
+                <div class="footer-socials">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i> Facebook</a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i> YouTube</a>
+                    <a href="jiresselusa127@gmail.com" class="social-icon"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                 </div>
             </div>
         </div>
     </footer>
-    
-    <!-- Code injecté par live-server -->
+
+    <!-- Code injecté par Live-server -->
     <script>
-        // <![CDATA[  <-- Pour la prise en charge des SVG
         if ('WebSocket' in window) {
             (function () {
                 function refreshCSS() {
@@ -175,20 +170,14 @@
                     else if (msg.data == 'refreshcss') refreshCSS();
                 };
                 if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-                    console.log('Rechargement en direct activé.');
+                    console.log('Actualisation en direct activée.');
                     sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
                 }
             })();
         }
         else {
-            console.error('Mettez à jour votre navigateur. Ce navigateur ne prend PAS en charge WebSocket pour le rechargement en direct.');
+            console.error('Veuillez mettre à jour votre navigateur. Ce navigateur NE prend PAS en charge WebSocket pour le rechargement en direct.');
         }
-        // ]]>
     </script>
-       <script type="module" src="scripts/academy.js"></script>
-    
-    </body>
-    </html>
-    
-
-   
+</body>
+</html>

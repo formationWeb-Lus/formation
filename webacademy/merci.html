@@ -1,71 +1,147 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Merci - CréaWeb Academy</title>
-    <link rel="stylesheet" href="styles/inscri.css">
-    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Merci - CréaWeb Academy</title>
+  <link rel="stylesheet" href="styles/inscri.css" />
+  <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: orange;
+      border-bottom: 1px solid #ddd;
+      position: relative;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    .menu-toggle {
+      font-size: 28px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      height: 100%;
+      width: 250px;
+      background-color: #333;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 60px 20px;
+      transition: left 0.3s ease;
+      z-index: 1000;
+    }
+
+    nav.active {
+      left: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      width: 100%;
+    }
+
+    nav ul li {
+      margin: 20px 0;
+      width: 100%;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      display: block;
+      width: 100%;
+    }
+
+    @media(min-width: 768px) {
+      .menu-toggle {
+        display: none;
+      }
+
+      nav {
+        position: static;
+        height: auto;
+        width: auto;
+        background-color: transparent;
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+        left: 0;
+      }
+
+      nav ul {
+        display: flex;
+        gap: 20px;
+      }
+
+      nav ul li {
+        margin: 0;
+      }
+
+      nav ul li a {
+        color: #333;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3SKSXS8XL1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-3SKSXS8XL1');
-</script>
-<script>
-    
-</script>
-    <header>
-        <div class="logo">
-            <img src="images/logo.png" alt="Logo de CréaWeb Academy">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="detail.html">Formations</a></li>
-                <li><a href="detail.html">explorer</a></li>
-                <li><a href="history.html">histoire</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main class="thank-you-container">
-        <section class="thank-you">
-            <h1>Merci pour votre inscription !</h1>
-            <p>Votre inscription à <strong>CréaWeb Academy</strong> est bien enregistrée.</p>
-            <p>Nous vous enverrons un email avec toutes les informations nécessaires dans moins de 6 heures.</p>
-            <p>En attendant, vous pouvez explorer nos cours et découvrir nos contenus.</p>
-            <a href="formations.html" class="cta-button">Voir les formations</a>
-        </section>
-        
-        <section class="thank-you-images">
-            <h2>Bienvenue dans notre communauté</h2>
-            <div class="image-gallery">
-                <figure>
-                    <img src="images/imgc.jpg" alt="Bienvenue à CréaWeb Academy">
-                    <figcaption>Explorez nos formations adaptées à tous les niveaux.</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/imgc2.jpg" alt="Apprenez et progressez">
-                    <figcaption>Développez vos compétences avec nos cours interactifs.</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/success.jpg" alt="Atteignez vos objectifs">
-                    <figcaption>Rejoignez une communauté engagée et réussissez votre parcours.</figcaption>
-                </figure>
-            </div>
-            <a href="index.html" class="cta-button secondary">Retour à l'accueil</a>
-        </section>
-    </main>
-    
-    <footer>
-        <p>&copy; 2025 CréaWeb Academy - Tous droits réservés</p>
-    </footer>
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="WebAcademy Logo" style="max-height: 80px;">
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav id="mobileNav">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="detail.html">Cours</a></li>
+        <li><a href="detail.html">Explorer</a></li>
+        <li><a href="history.html">NotreHistoire</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="thank-you-container">
+    <section class="thank-you">
+      <h1>Merci pour votre inscription !</h1>
+      <p>Votre inscription à <strong>CréaWeb Academy</strong> a bien été enregistrée.</p>
+      <p>Nous vous enverrons un e-mail contenant toutes les informations nécessaires dans un délai de 6 heures.</p>
+      <p>En attendant, n'hésitez pas à explorer nos cours et découvrir notre contenu.</p>
+      <a href="formations.html" class="cta-button">Voir les cours</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 CréaWeb Academy - Tous droits réservés</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('mobileNav');
+      nav.classList.toggle('active');
+    }
+  </script>
+
 </body>
 </html>

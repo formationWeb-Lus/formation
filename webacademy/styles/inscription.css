@@ -2,12 +2,12 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ec4794;
+    background-color: #ebe7e4;
     color: #333;
 }
 
 header {
-    background-color: #222;
+    background-color: #da720b;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -30,7 +30,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #0a0800;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
@@ -45,9 +45,9 @@ nav ul li:first-child a {
 }
 
 main {
-    width: 50%;
+    width: 80%;
     margin: 40px auto;
-    background: #fff;
+    
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -65,7 +65,7 @@ main {
     display: block;
     width: 50px;
     height: 3px;
-    background: #f9a826;
+    background: #c9800a;
     margin: 5px auto;
 }
 
@@ -151,4 +151,61 @@ footer::before {
     font-size: 14px;
     color: #f9a826;
     margin-bottom: 10px;
+}
+
+
+/* Masque le menu sur mobile */
+nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Ajuste selon la hauteur de ton header */
+        right: 0;
+        background-color: rgb(253, 251, 251);
+        padding: 0.1rem;
+        border: 0.1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+    .row {
+        grid-template-columns: 1fr;
+    }
 }

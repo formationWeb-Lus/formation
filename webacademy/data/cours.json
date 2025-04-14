@@ -1,7 +1,7 @@
 [
     {
         "titre": "HTML & CSS",
-        "description": "Apprenez les bases du design web avec HTML & CSS. Créez des sites web réactifs et attrayants dès le début !"
+        "description": "Apprenez les bases du design web avec HTML et CSS. Commencez à créer des sites web réactifs et attrayants dès maintenant !"
     },
     {
         "titre": "JavaScript pour Débutants",
@@ -9,35 +9,35 @@
     },
     {
         "titre": "Python Avancé",
-        "description": "Maîtrisez Python et ses frameworks pour le développement web, l'automatisation et l'analyse de données."
+        "description": "Maîtrisez Python et ses frameworks pour le développement web, l'automatisation et l’analyse de données."
     },
     {
         "titre": "Principes du Design Web",
-        "description": "Apprenez à concevoir des sites web réactifs qui s'adaptent à tous les appareils."
+        "description": "Apprenez à concevoir des sites web réactifs qui s’adaptent à tous les appareils."
     },
     {
         "titre": "React.js pour Débutants",
-        "description": "Commencez à créer des interfaces interactives avec React et découvrez les bases du développement web moderne."
+        "description": "Commencez à créer des interfaces interactives avec React et apprenez les bases du développement web moderne."
     },
     {
         "titre": "Node.js et Express",
-        "description": "Apprenez le développement backend avec Node.js et créez des applications serveur avec Express."
+        "description": "Apprenez le développement back-end avec Node.js et créez des applications côté serveur avec Express."
     },
     {
         "titre": "PHP pour le Développement Web",
-        "description": "Comprenez PHP et comment l'utiliser pour construire des sites web dynamiques et des applications web."
+        "description": "Comprenez le PHP et comment l’utiliser pour créer des sites web et des applications dynamiques."
     },
     {
         "titre": "SQL et Bases de Données",
-        "description": "Apprenez à interagir avec les bases de données en utilisant SQL et à construire des sites efficaces."
+        "description": "Apprenez à interagir avec les bases de données en utilisant SQL et à créer des sites efficaces."
     },
     {
         "titre": "Développement Web Mobile",
-        "description": "Découvrez les meilleures pratiques pour développer des sites web adaptés aux mobiles."
+        "description": "Découvrez les meilleures pratiques pour développer des sites optimisés pour les appareils mobiles."
     },
     {
-        "titre": "Fondamentaux du Design UI/UX",
-        "description": "Apprenez les bases du design d'interface utilisateur et d'expérience utilisateur pour créer des sites web ergonomiques."
+        "titre": "Principes de Design UI/UX",
+        "description": "Apprenez les bases de l’interface utilisateur et de l’expérience utilisateur pour créer des sites conviviaux."
     },
     {
         "titre": "CSS Flexbox et Grid",
@@ -48,17 +48,15 @@
         "description": "Pratiquez JavaScript et utilisez-le pour ajouter des fonctionnalités dynamiques à vos sites web."
     },
     {
-        "titre": "Bases de la Sécurité Web",
+        "titre": "Notions de Sécurité Web",
         "description": "Apprenez à sécuriser vos applications web et à vous protéger contre les vulnérabilités courantes."
     },
     {
-        "titre": "Git et Contrôle de Version",
+        "titre": "Git et Gestion de Version",
         "description": "Découvrez les bases de Git, du contrôle de version et de la collaboration avec GitHub."
     },
     {
         "titre": "Développement Web Agile",
-        "description": "Comprenez les principes Agile et comment les appliquer aux flux de travail du développement web moderne."
+        "description": "Comprenez les principes Agile et comment les appliquer aux flux de travail modernes en développement web."
     }
 ]
-
-

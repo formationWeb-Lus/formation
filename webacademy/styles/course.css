@@ -1108,59 +1108,67 @@ footer {
 
 
 
-
-
-/* Style de base pour les images et les captions */
-.caption-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-.caption-images, .caption-images-two {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    width: 100%;
-    max-width: 900px;
+.caption-images {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 images en ligne */
+    gap: 20px; /* Espacement entre les images */
+    justify-items: center; /* Centrer les éléments horizontalement */
+    align-items: center; /* Centrer les éléments verticalement */
+    margin: 40px 0; /* Marge autour de la section */
 }
 
 .image-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    max-width: 250px;
+    text-align: center; /* Centrer le texte sous l'image */
+    overflow: hidden; /* Empêcher l'image de déborder */
 }
 
 .image-box img {
-    width: 100%;
-    max-width: 250px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(197, 13, 13, 0.1);
+    width: 100%; /* L'image occupe toute la largeur de la boîte */
+    max-width: 200px; /* Limite la largeur à 200px */
+    height: auto; /* Garde les proportions de l'image */
+    border-radius: 8px; /* Bord arrondi pour un style plus doux */
+    transition: transform 0.3s ease; /* Effet au survol */
+}
+
+.image-box img:hover {
+    transform: scale(1.1); /* Zoom au survol */
 }
 
 .image-box p {
-    margin-top: 10px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #3a3a3a;
+    margin-top: 10px; /* Espacement entre l'image et le texte */
+    font-size: 16px; /* Taille du texte */
+    font-weight: 600; /* Met le texte en gras */
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .caption-images, .caption-images-two {
-        flex-direction: column;
-        align-items: center;
-    }
-    .image-box {
-        width: 90%;
-        max-width: 300px;
-    }
+.caption-section {
+    background-color: #f4f4f4; /* Fond clair pour mettre en évidence la section */
+    padding: 40px 20px; /* Espacement interne (haut, bas, gauche, droite) */
+    text-align: center; /* Centrer le texte */
+    border-radius: 8px; /* Coins arrondis pour un style plus doux */
+    margin: 40px 0; /* Marge au-dessus et en dessous de la section */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre douce autour de la section */
 }
+
+.caption-section h2 {
+    font-size: 32px; /* Taille du titre */
+    font-weight: 700; /* Gras pour le titre */
+    color: #804005; /* Couleur du texte */
+    margin-bottom: 15px; /* Marge sous le titre */
+}
+
+.caption-section p {
+    font-size: 18px; /* Taille de la description */
+    font-weight: 400; /* Poids normal pour le texte */
+    color: #555; /* Couleur plus claire pour le texte */
+    margin-bottom: 20px; /* Espacement sous la description */
+    line-height: 1.6; /* Espacement entre les lignes pour rendre le texte plus lisible */
+}
+
+
+
+
+
+
 
 @media (max-width: 480px) {
     .image-box p {
@@ -1260,3 +1268,5 @@ footer {
         display: block;
     }
 }
+
+
