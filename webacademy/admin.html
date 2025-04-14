@@ -26,7 +26,7 @@
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
 
-        // Récupérer les inscriptions
+        // Référencer la collection des inscriptions
         const inscriptionsRef = collection(db, "inscriptions");
         const q = query(inscriptionsRef, orderBy("timestamp", "desc"));
 
@@ -37,7 +37,7 @@
                 snapshot.forEach(doc => {
                     let data = doc.data();
                     let listItem = document.createElement("li");
-                    listItem.textContent = `Nom: ${data.nom}, Prénom: ${data.prenom}, Pays: ${data.pays}, Ville: ${data.ville}, Code Postal: ${data.code_postal}, Téléphone: ${data.telephone}, Email: ${data.email}, Cours: ${data.cours.join(", ")}`;
+                    listItem.textContent = `Nom : ${data.nom}, Prénom : ${data.prenom}, Pays : ${data.pays}, Ville : ${data.ville}, Code postal : ${data.code_postal}, Téléphone : ${data.telephone}, Email : ${data.email}, Cours : ${data.cours.join(", ")}`;
 
                     inscriptionsList.appendChild(listItem);
                 });
