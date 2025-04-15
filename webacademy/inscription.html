@@ -15,6 +15,43 @@
   gtag('js', new Date());
 
   gtag('config', 'G-4KL4074Z9V');
+
+  document.addEventListener('DOMContentLoaded', function () {
+    
+    const btnDebutant = document.getElementById("select-debutant");
+    const btnAvance = document.getElementById("select-avance");
+    const form = document.getElementById("captureForm");
+
+    // Suivi bouton Débutant
+    if (btnDebutant) {
+      btnDebutant.addEventListener("click", function () {
+        gtag('event', 'click_cours_debutant', {
+          'event_category': 'cours',
+          'event_label': 'Afficher les cours Débutants'
+        });
+      });
+    }
+
+    // Suivi bouton Avancé
+    if (btnAvance) {
+      btnAvance.addEventListener("click", function () {
+        gtag('event', 'click_cours_avance', {
+          'event_category': 'cours',
+          'event_label': 'Afficher les cours Avancés'
+        });
+      });
+    }
+
+    // Suivi soumission du formulaire
+    if (form) {
+      form.addEventListener("submit", function () {
+        gtag('event', 'form_inscription', {
+          'event_category': 'formulaire',
+          'event_label': 'Soumission du formulaire d\'inscription'
+        });
+      });
+    }
+  });
 </script>
 
 

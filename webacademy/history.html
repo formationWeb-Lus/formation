@@ -18,6 +18,19 @@
   gtag('js', new Date());
 
   gtag('config', 'G-4KL4074Z9V');
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const btnInscription = document.getElementById('btn-inscription');
+    if (btnInscription) {
+      btnInscription.addEventListener('click', function () {
+        gtag('event', 'click_inscription', {
+          'event_category': 'bouton',
+          'event_label': 'INSCRIVEZ-VOUS ICI',
+          'value': 1
+        });
+      });
+    }
+  });
 </script>
 
 
@@ -62,7 +75,8 @@
             <div class="hero-text">
                 <h1>Bienvenue à CréaWeb Academy</h1>
                 <p>La formation qui façonne les experts du web de demain.</p>
-                <a href="page_d'information.html" class="cta-button">Inscrivez-vous ici</a>
+                <a href="page_d'information.html" id="btn-inscription" class="cta-button">INSCRIVEZ-VOUS ICI</a>
+
             </div>
         </section>
 

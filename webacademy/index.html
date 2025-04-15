@@ -28,6 +28,19 @@
   gtag('js', new Date());
 
   gtag('config', 'G-4KL4074Z9V');
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const btnFormations = document.getElementById('btn-formations');
+    if (btnFormations) {
+      btnFormations.addEventListener('click', function () {
+        gtag('event', 'click_voir_formations', {
+          'event_category': 'bouton',
+          'event_label': 'Voir les Formations',
+          'value': 1
+        });
+      });
+    }
+  });
 </script>
 
 
@@ -71,7 +84,7 @@
             <div class="hero-text">
                 <h1>Maîtrisez la Création de Sites Web</h1>
                 <p>Des cours adaptés à tous les niveaux pour maîtriser les technologies modernes.</p>
-                <a href="detail.html" class="cta-button">Voir les Formations</a>
+                <a href="detail.html" id="btn-formations" class="cta-button">Voir les Formations</a>
             </div>
         </section>
         <section class="advantages">

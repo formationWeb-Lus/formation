@@ -21,6 +21,19 @@
   gtag('js', new Date());
 
   gtag('config', 'G-4KL4074Z9V');
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const btnInscription = document.getElementById('btn-inscription');
+    if (btnInscription) {
+      btnInscription.addEventListener('click', function () {
+        gtag('event', 'click_inscription', {
+          'event_category': 'bouton',
+          'event_label': 'INSCRIVEZ-VOUS ICI',
+          'value': 1
+        });
+      });
+    }
+  });
 </script>
 
 </head>
@@ -56,7 +69,8 @@
         <div class="hero-text">
             <h1>Apprenez le développement web avec Webacademy</h1>
             <p>Rejoignez-nous pour apprendre les technologies modernes et commencez votre parcours dans le développement web !</p>
-            <a href="page_d'information.html" class="cta-button">INSCRIVEZ-VOUS ICI</a>
+            <a href="page_d'information.html" id="btn-inscription" class="cta-button">INSCRIVEZ-VOUS ICI</a>
+
         </div>
     </section>
 

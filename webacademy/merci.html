@@ -14,6 +14,18 @@
   gtag('js', new Date());
 
   gtag('config', 'G-4KL4074Z9V');
+  document.addEventListener("DOMContentLoaded", function () {
+    const voirCoursBtn = document.querySelector('a.cta-button[href="formations.html"]');
+
+    if (voirCoursBtn) {
+      voirCoursBtn.addEventListener("click", function () {
+        gtag('event', 'click_voir_cours', {
+          'event_category': 'navigation',
+          'event_label': 'Voir les cours'
+        });
+      });
+    }
+  });
 </script>
 
   <style>
@@ -139,6 +151,7 @@
       <p>Nous vous enverrons un e-mail contenant toutes les informations nécessaires dans un délai de 6 heures.</p>
       <p>En attendant, n'hésitez pas à explorer nos cours et découvrir notre contenu.</p>
       <a href="formations.html" class="cta-button">Voir les cours</a>
+
     </section>
   </main>
 
