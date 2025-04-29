@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Rejoins WebAcademy – Apprends à créer des sites web !</title>
+
+  <!-- META SEO -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formation pratique en HTML, CSS, JavaScript. Rejoins WebAcademy et développe ton avenir numérique.">
+  <meta name="author" content="WebAcademy">
+
+  <!-- META Open Graph pour Facebook -->
+  <meta property="og:title" content="Rejoins WebAcademy – Apprends à créer des sites web !">
+  <meta property="og:description" content="Découvre une formation 100% pratique pour apprendre le HTML, CSS, JavaScript et créer ton propre site web.">
+  <meta property="og:image" content="https://tonsite.com/images/apercu.jpg">
+  <meta property="og:url" content="https://tonsite.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+
+  <!-- META Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rejoins WebAcademy – Apprends à créer des sites web !">
+  <meta name="twitter:description" content="Formation pratique en développement web – Crée ton avenir avec WebAcademy.">
+  <meta name="twitter:image" content="https://tonsite.com/images/apercu.jpg">
+
+  <!-- CSS intégré -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f0f0;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #2c3e50;
+    }
+
+    .image-container {
+      position: relative;
+      display: inline-block;
+      max-width: 100%;
+    }
+
+    .image-container img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .image-container button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 14px 24px;
+      font-size: 20px;
+      background-color: #d30729;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .image-container button:hover {
+      background-color: #b99f29;
+    }
+
+    #message {
+      margin-top: 30px;
+      font-size: 20px;
+      color: #27ae60;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bienvenue sur WebAcademy</h1>
+
+  <!-- Conteneur image + bouton centré -->
+  <div class="image-container">
+    <img src="images/faceb.png" alt="Aperçu WebAcademy">
+    <button onclick="afficherMessage()">Clique ici</button>
+  </div>
+
+  <p id="message"></p>
+
+  <script>
+    function afficherMessage() {
+      window.location.href = "page_d'information.html"; // remplace par le bon nom de fichier ou URL
+    }
+  </script>
+  
+</body>
+</html>
