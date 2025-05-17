@@ -1,12 +1,28 @@
 {
-  "name": "webacademy",
+  "name": "dir",
   "version": "1.0.0",
-  "description": "",
+  "description": "my first project node.js",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "elder lusa",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/formationWeb-Lus/cse341-my-project1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/formationWeb-Lus/cse341-my-project1/issues"
+  },
+  "homepage": "https://github.com/formationWeb-Lus/cse341-my-project1#readme",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongodb": "^6.16.0",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.1"
+  }
 }
