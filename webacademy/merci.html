@@ -6,8 +6,36 @@
   <title>Merci - CréaWeb Academy</title>
   <link rel="stylesheet" href="styles/inscri.css" />
   <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YJ17KCLW8N"></script>
-  
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YJ17KCLW8N');
+  </script>
+
+  <!-- 📌 Facebook Pixel avec CompleteRegistration -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '1033257251452638'); // Ton Pixel ID
+    fbq('track', 'PageView'); // Vue de page
+    fbq('track', 'CompleteRegistration'); // ✅ Suivi d'inscription réussie
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=1033257251452638&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- 📌 Fin Pixel Facebook -->
 
   <style>
     body {
@@ -131,8 +159,7 @@
       <p>Votre inscription à <strong>CréaWeb Academy</strong> a bien été enregistrée.</p>
       <p>Nous vous enverrons un e-mail contenant toutes les informations nécessaires dans un délai de 6 heures.</p>
       <p>En attendant, n'hésitez pas à explorer nos cours et découvrir notre contenu.</p>
-      <a href="https://webacademy.systeme.io/webacademy" class="cta-button">connexion</a>
-
+      <a href="https://webacademy.systeme.io/webacademy" class="cta-button">Connexion</a>
     </section>
   </main>
 
