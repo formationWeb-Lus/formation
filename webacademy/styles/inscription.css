@@ -1,211 +1,211 @@
-body {
-    font-family: 'Arial', sans-serif;
+/* ====== RESET ====== */
+* {
     margin: 0;
     padding: 0;
-    background-color: #ebe7e4;
-    color: #333;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* ====== BODY ====== */
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ====== HEADER ====== */
 header {
-    background-color: #da720b;
-    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15px 50px;
+    background-color: #140e0e;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-.logo img {
-    max-height: 50px;
+header .logo img {
+    max-height: 60px;
+    color: #fff;
 }
 
 nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
-}
-
-nav ul li {
-    margin-left: 20px;
+    gap: 20px;
+    color: #f3eeee;
 }
 
 nav ul li a {
-    color: #0a0800;
     text-decoration: none;
-    font-weight: bold;
+    color: #f5eded;
+    font-weight: 500;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #f9a826;
+    color: #f8f6f6;
 }
 
-nav ul li:first-child a {
-    text-transform: uppercase;
-}
-
+/* ====== MAIN ====== */
 main {
-    width: 80%;
-    margin: 40px auto;
-    
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: relative;
+    max-width: 800px; /* réduit largeur générale pour centrer */
+    margin: 50px auto;
+    padding: 0 20px;
 }
 
-.inscription h1 {
-    text-align: center;
+/* ====== TITRES ====== */
+h1, h2, h3 {
+    margin-bottom: 15px;
     color: #222;
-    position: relative;
 }
 
-.inscription h1::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 3px;
-    background: #c9800a;
-    margin: 5px auto;
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
+/* ====== FORMULAIRE ====== */
 form {
-    display: flex;
-    flex-direction: column;
+    background-color: #fff;
+    padding: 25px 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-label {
-    margin: 10px 0 5px;
-    font-weight: bold;
-}
-
-input, select {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-input:focus {
-    border-color: #f9a826;
-    outline: none;
-    box-shadow: 0 0 5px rgba(249, 168, 38, 0.5);
-}
-
-.cours-list {
-    display: flex;
-    flex-direction: column;
-    margin: 10px 0;
-}
-
-.cours-list label {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    transition: background 0.3s;
-    padding: 5px;
-    border-radius: 5px;
-}
-
-.cours-list label:hover {
-    background: rgba(249, 168, 38, 0.2);
-}
-
-.cours-list input {
-    margin-right: 10px;
-}
-
-button {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #f9a826;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-button:hover {
-    background-color: #e0891c;
-}
-
-button:active {
-    transform: scale(0.98);
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #222;
-    color: white;
-    margin-top: 20px;
-    position: relative;
-}
-
-footer::before {
-    content: 'Rejoignez-nous et développez vos compétences !';
-    display: block;
-    text-align: center;
-    font-size: 14px;
-    color: #f9a826;
-    margin-bottom: 10px;
-}
-
-
-/* Masque le menu sur mobile */
-nav ul {
-    display: flex;
-    gap: 1rem;
-    list-style: none;
-}
-
-.menu-toggle {
-    display: none;
-    font-size: 2rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-/* Responsive */
-@media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px; /* Ajuste selon la hauteur de ton header */
-        right: 0;
-        background-color: rgb(253, 251, 251);
-        padding: 0.1rem;
-        border: 0.1px solid #ccc;
-        border-radius: 5px;
-    }
-
-    nav ul.active {
-        display: flex;
-    }
-}
-
+/* Champs réduits */
 .row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
 .field {
+    flex: 1 1 48%; /* champs plus courts */
     display: flex;
     flex-direction: column;
 }
 
-@media screen and (max-width: 768px) {
+.field input {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #710808;
+    font-size: 0.95rem;
+    transition: border-color 0.3s;
+}
+
+.field input:focus {
+    border-color: #e60000;
+    outline: none;
+}
+
+/* Champs plein largeur pour mobile */
+.field-full {
+    flex: 1 1 100%;
+}
+
+/* ====== BOUTON ====== */
+.submit-btn {
+    display: block;
+    background-color: #e60000;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 20px auto 0 auto; /* centré horizontalement */
+}
+
+.submit-btn:hover {
+    background-color: #b30000;
+}
+
+/* ====== CARTES DE COURS ====== */
+.cours-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* centré */
+    margin-bottom: 30px;
+}
+
+.cours-card {
+    background-color: #ebe2e7;
+    flex: 1 1 300px; /* carte plus compacte */
+    max-width: 350px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+}
+
+.cours-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.cours-card h3 {
+    margin-bottom: 15px;
+    color: #e60000;
+}
+
+.cours-card label {
+    display: block;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* Carte marketing centrée */
+.marketing-card {
+    flex: 1 1 300px;
+    max-width: 350px;
+    margin: 0 auto 20px auto; /* centrée */
+    text-align: center;
+}
+
+/* ====== FOOTER ====== */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    background-color: #180a0a;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+    color: #ece5e5;
+}
+
+/* ====== RESPONSIVE ====== */
+@media screen and (max-width: 900px) {
+    .cours-card, .marketing-card {
+        flex: 1 1 80%;
+        max-width: none;
+    }
+
     .row {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+
+    .field {
+        flex: 1 1 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
     }
 }

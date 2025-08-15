@@ -5,55 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription - CréaWeb Academy</title>
     <link rel="stylesheet" href="styles/inscription.css">
+
+    <!-- 📌 Pixel Facebook -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;
+      n.push=n;
+      n.loaded=!0;
+      n.version='2.0';
+      n.queue=[];
+      t=b.createElement(e);
+      t.async=!0;
+      t.src=v;
+      s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)
+      }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1033257251452638'); 
+      fbq('track', 'PageView');
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none"
+           src="https://www.facebook.com/tr?id=1033257251452638&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- 📌 Fin Pixel Facebook -->
+
+    <script>
+        // 🔒 Bloque l'accès si l'utilisateur n'a pas accepté le paiement
+        if (!sessionStorage.getItem("paidConfirmation")) {
+            alert("Vous ne pouvez pas accéder à cette page sans accepter le paiement.");
+            window.location.href = "index.html"; 
+        }
+    </script>
 </head>
 <body>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YJ17KCLW8N"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-YJ17KCLW8N');
-
-  document.addEventListener('DOMContentLoaded', function () {
-    
-    const btnDebutant = document.getElementById("select-debutant");
-    const btnAvance = document.getElementById("select-avance");
-    const form = document.getElementById("captureForm");
-
-    // Suivi bouton Débutant
-    if (btnDebutant) {
-      btnDebutant.addEventListener("click", function () {
-        gtag('event', 'click_cours_debutant', {
-          'event_category': 'cours',
-          'event_label': 'Afficher les cours Débutants'
-        });
-      });
-    }
-
-    // Suivi bouton Avancé
-    if (btnAvance) {
-      btnAvance.addEventListener("click", function () {
-        gtag('event', 'click_cours_avance', {
-          'event_category': 'cours',
-          'event_label': 'Afficher les cours Avancés'
-        });
-      });
-    }
-
-    // Suivi soumission du formulaire
-    if (form) {
-      form.addEventListener("submit", function () {
-        gtag('event', 'form_inscription', {
-          'event_category': 'formulaire',
-          'event_label': 'Soumission du formulaire d\'inscription'
-        });
-      });
-    }
-  });
-</script>
-
-
 <header>
     <div class="logo">
         <img src="images/logo.png" alt="WebAcademy Logo" style="max-height: 80px;">
@@ -71,6 +58,9 @@
 </header>
 
 <main>
+    <h1>Formulaire d'inscription</h1>
+
+    <!-- Formulaire utilisateur -->
     <form id="captureForm">
         <div class="row">
             <div class="field">
@@ -93,7 +83,7 @@
                 <input type="text" id="ville" name="ville" required>
             </div>
         </div>
-        
+
         <div class="row">
             <div class="field">
                 <label for="code_postal">Code Postal</label>
@@ -104,7 +94,7 @@
                 <input type="tel" id="telephone" name="telephone" required>
             </div>
         </div>
-        
+
         <div class="row">
             <div class="field">
                 <label for="email">Adresse Email</label>
@@ -112,54 +102,40 @@
             </div>
         </div>
 
-        <h2> afficher vos cours :</h2>
-        <p>Veuillez cliquer sur l'un des boutons ci-dessous pour afficher les cours correspondants. Choisissez "Débutant" si vous commencez, ou "Avancé" si vous avez déjà des bases.</p>
-
-        <div class="cours-list">
-            <button type="button" id="select-debutant">Afficher les cours Débutants</button>
-            <button type="button" id="select-avance">Afficher les cours Avancés</button>
-            
-            <div id="cours-debutant" style="display: none;">
-                <label><input type="checkbox" name="cours" value="html-css-debutant" class="debutant"> HTML & CSS (Débutant)</label>
-                <label><input type="checkbox" name="cours" value="javascript-debutant" class="debutant"> JavaScript (Débutant)</label>
-                <label><input type="checkbox" name="cours" value="python-debutant" class="debutant"> Python (Débutant)</label>
-                <label><input type="checkbox" name="cours" value="mysql-debutant" class="debutant"> MySQL (Débutant)</label>
-            </div>
-            
-            <div id="cours-avance" style="display: none;">
-                <label><input type="checkbox" name="cours" value="html-css-avance" class="avance"> HTML & CSS (Avancé)</label>
-                <label><input type="checkbox" name="cours" value="javascript-avance" class="avance"> JavaScript (Avancé)</label>
-                <label><input type="checkbox" name="cours" value="python-avance" class="avance"> Python (Avancé)</label>
-                <label><input type="checkbox" name="cours" value="mysql-avance" class="avance"> MySQL (Avancé)</label>
-                <label><input type="checkbox" name="cours" value="mongoDB-avance" class="avance"> mongoDB (Avancé)</label>
-                <label><input type="checkbox" name="cours" value="node.js-avance" class="avance"> node.js (Avancé)</label>
-                <label><input type="checkbox" name="cours" value="pgadmin-avance" class="avance"> pgadmin (Avancé)</label>
-                <label><input type="checkbox" name="cours" value="github -avance" class="avance"> github  (Avancé)</label>
-                <label><input type="checkbox" name="cours" value="git-" class="avance-avence"> geti (Avancé)</label>
+        <!-- Choix des cours en cartes -->
+        <h2>Choisissez vos cours :</h2>
+        <div class="cours-container">
+            <!-- Carte Débutant -->
+            <div class="cours-card">
+                <h3>Débutant</h3>
+                <label><input type="checkbox" name="cours" value="html-css-debutant"> HTML & CSS</label>
+                <label><input type="checkbox" name="cours" value="javascript-debutant"> JavaScript</label>
+                <label><input type="checkbox" name="cours" value="python-debutant"> Python</label>
+                <label><input type="checkbox" name="cours" value="mysql-debutant"> MySQL</label>
             </div>
 
+            <!-- Carte Avancé -->
+            <div class="cours-card">
+                <h3>Avancé</h3>
+                <label><input type="checkbox" name="cours" value="html-css-avance"> HTML & CSS</label>
+                <label><input type="checkbox" name="cours" value="javascript-avance"> JavaScript</label>
+                <label><input type="checkbox" name="cours" value="python-avance"> Python</label>
+                <label><input type="checkbox" name="cours" value="mysql-avance"> MySQL</label>
+                <label><input type="checkbox" name="cours" value="mongoDB-avance"> mongoDB</label>
+                <label><input type="checkbox" name="cours" value="nodejs-avance"> node.js</label>
+                <label><input type="checkbox" name="cours" value="pgadmin-avance"> pgAdmin</label>
+                <label><input type="checkbox" name="cours" value="git-avance"> Git</label>
+                <label><input type="checkbox" name="cours" value="github-avance"> GitHub</label>
+            </div>
+        </div>
+
+        <!-- Carte Marketing séparée -->
+        <div class="cours-card marketing-card">
+            <h3>Marketing</h3>
             <label><input type="checkbox" name="cours" value="marketing-digital"> Marketing Digital</label>
         </div>
 
-        <script>
-            document.getElementById("select-debutant").addEventListener("click", function() {
-                let debutantDiv = document.getElementById("cours-debutant");
-                let checkboxes = debutantDiv.querySelectorAll("input[type='checkbox']");
-                debutantDiv.style.display = (debutantDiv.style.display === "none" || debutantDiv.style.display === "") ? "block" : "none";
-                checkboxes.forEach(checkbox => checkbox.checked = true);
-            });
-
-            document.getElementById("select-avance").addEventListener("click", function() {
-                let avanceDiv = document.getElementById("cours-avance");
-                let checkboxes = avanceDiv.querySelectorAll("input[type='checkbox']");
-                avanceDiv.style.display = (avanceDiv.style.display === "none" || avanceDiv.style.display === "") ? "block" : "none";
-                checkboxes.forEach(checkbox => checkbox.checked = true);
-            });
-        </script>
-
-        <button type="submit" style="background-color: red; color: white; padding: 10px 20px; border: none; border-radius: 5px;">
-            S'inscrire
-        </button>
+        <button type="submit" class="submit-btn">S'inscrire</button>
     </form>
 
     <!-- Firebase v9+ -->
@@ -183,40 +159,31 @@
             document.getElementById("captureForm").addEventListener("submit", async function(event) {
                 event.preventDefault();
 
-                let nom = document.getElementById("nom").value.trim();
-                let prenom = document.getElementById("prenom").value.trim();
-                let pays = document.getElementById("pays").value.trim();
-                let ville = document.getElementById("ville").value.trim();
-                let code_postal = document.getElementById("code_postal").value.trim();
-                let telephone = document.getElementById("telephone").value.trim();
-                let email = document.getElementById("email").value.trim();
-
-                if (!nom || !prenom || !pays || !ville || !code_postal || !telephone || !email) {
-                    alert("Veuillez remplir tous les champs !");
+                if (!sessionStorage.getItem("paidConfirmation")) {
+                    alert("Vous devez accepter le paiement avant de vous inscrire.");
                     return;
                 }
 
-                let cours = [];
-                document.querySelectorAll('input[name="cours"]:checked').forEach((checkbox) => {
-                    cours.push(checkbox.value);
+                const formData = {};
+                ["nom", "prenom", "pays", "ville", "code_postal", "telephone", "email"].forEach(id => {
+                    formData[id] = document.getElementById(id).value.trim();
+                    if (!formData[id]) throw alert("Veuillez remplir tous les champs !");
                 });
 
+                formData.cours = [];
+                document.querySelectorAll('input[name="cours"]:checked').forEach(cb => formData.cours.push(cb.value));
+
                 try {
-                    await addDoc(collection(db, "inscriptions"), {
-                        nom,
-                        prenom,
-                        pays,
-                        ville,
-                        code_postal,
-                        telephone,
-                        email,
-                        cours,
-                        timestamp: serverTimestamp()
-                    });
-                    console.log("Données enregistrées !");
+                    await addDoc(collection(db, "inscriptions"), { ...formData, timestamp: serverTimestamp() });
+
+                    // 📌 Déclenchement événement Facebook Pixel
+                    fbq('track', 'CompleteRegistration');
+
+                    alert("Inscription réussie !");
                     window.location.href = "merci.html";
                 } catch (error) {
                     console.error("Erreur d'enregistrement :", error);
+                    alert("Une erreur est survenue. Veuillez réessayer plus tard.");
                 }
             });
         });

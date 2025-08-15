@@ -6,15 +6,43 @@
   <title>Merci - CréaWeb Academy</title>
   <link rel="stylesheet" href="styles/inscri.css" />
   <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+
+  <!-- 📌 Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YJ17KCLW8N"></script>
-  
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YJ17KCLW8N');
+  </script>
+  <!-- 📌 Fin Google Analytics -->
+
+  <!-- 📌 Pixel Facebook -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '1033257251452638'); 
+    fbq('track', 'PageView');
+    fbq('track', 'CompleteRegistration');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=1033257251452638&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- 📌 Fin Pixel Facebook -->
 
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
     }
-
     header {
       display: flex;
       justify-content: space-between;
@@ -24,11 +52,9 @@
       border-bottom: 1px solid #ddd;
       position: relative;
     }
-
     .logo img {
       height: 50px;
     }
-
     .menu-toggle {
       font-size: 28px;
       background: none;
@@ -36,7 +62,6 @@
       cursor: pointer;
       z-index: 1001;
     }
-
     nav {
       position: fixed;
       top: 0;
@@ -52,22 +77,18 @@
       transition: left 0.3s ease;
       z-index: 1000;
     }
-
     nav.active {
       left: 0;
     }
-
     nav ul {
       list-style: none;
       padding: 0;
       width: 100%;
     }
-
     nav ul li {
       margin: 20px 0;
       width: 100%;
     }
-
     nav ul li a {
       color: white;
       text-decoration: none;
@@ -75,12 +96,10 @@
       display: block;
       width: 100%;
     }
-
     @media(min-width: 768px) {
       .menu-toggle {
         display: none;
       }
-
       nav {
         position: static;
         height: auto;
@@ -91,19 +110,34 @@
         padding: 0;
         left: 0;
       }
-
       nav ul {
         display: flex;
         gap: 20px;
       }
-
       nav ul li {
         margin: 0;
       }
-
       nav ul li a {
         color: #333;
       }
+    }
+    main.thank-you-container {
+      text-align: center;
+      padding: 50px 20px;
+    }
+    .thank-you h1 {
+      font-size: 2rem;
+      color: orange;
+    }
+    .cta-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: orange;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      margin-top: 20px;
     }
   </style>
 </head>
@@ -119,7 +153,7 @@
         <li><a href="index.html">Accueil</a></li>
         <li><a href="detail.html">Cours</a></li>
         <li><a href="detail.html">Explorer</a></li>
-        <li><a href="history.html">NotreHistoire</a></li>
+        <li><a href="history.html">Notre Histoire</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -131,8 +165,7 @@
       <p>Votre inscription à <strong>CréaWeb Academy</strong> a bien été enregistrée.</p>
       <p>Nous vous enverrons un e-mail contenant toutes les informations nécessaires dans un délai de 6 heures.</p>
       <p>En attendant, n'hésitez pas à explorer nos cours et découvrir notre contenu.</p>
-      <a href="https://webacademy.systeme.io/webacademy" class="cta-button">connexion</a>
-
+      <a href="https://webacademy.systeme.io/webacademy" class="cta-button">Connexion</a>
     </section>
   </main>
 
