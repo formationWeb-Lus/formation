@@ -14,6 +14,13 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-YJ17KCLW8N');
+
+    // ✅ Suivi inscription sur GA4
+    gtag('event', 'complete_registration', {
+      event_category: 'engagement',
+      event_label: 'Inscription CréaWeb Academy',
+      value: 1
+    });
   </script>
   <!-- 📌 Fin Google Analytics -->
 
@@ -28,7 +35,7 @@
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
 
-    fbq('init', '1033257251452638'); 
+    fbq('init', '1033257251452638');
     fbq('track', 'PageView');
     fbq('track', 'CompleteRegistration');
   </script>

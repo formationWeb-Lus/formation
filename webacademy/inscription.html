@@ -6,39 +6,32 @@
     <title>Inscription - CréaWeb Academy</title>
     <link rel="stylesheet" href="styles/inscription.css">
 
-    <!-- 📌 Pixel Facebook -->
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YJ17KCLW8N"></script>
     <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;
-      n.push=n;
-      n.loaded=!0;
-      n.version='2.0';
-      n.queue=[];
-      t=b.createElement(e);
-      t.async=!0;
-      t.src=v;
-      s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)
-      }(window, document, 'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '1033257251452638'); 
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YJ17KCLW8N');
+    </script>
+
+    <!-- Facebook Pixel -->
+    <script>
+      !function(f,b,e,v,n,t,s){
+        if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)
+      }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1033257251452638');
       fbq('track', 'PageView');
     </script>
     <noscript>
       <img height="1" width="1" style="display:none"
            src="https://www.facebook.com/tr?id=1033257251452638&ev=PageView&noscript=1"/>
     </noscript>
-    <!-- 📌 Fin Pixel Facebook -->
-
-    <script>
-        // 🔒 Bloque l'accès si l'utilisateur n'a pas accepté le paiement
-        if (!sessionStorage.getItem("paidConfirmation")) {
-            alert("Vous ne pouvez pas accéder à cette page sans accepter le paiement.");
-            window.location.href = "index.html"; 
-        }
-    </script>
 </head>
 <body>
 <header>
@@ -60,7 +53,6 @@
 <main>
     <h1>Formulaire d'inscription</h1>
 
-    <!-- Formulaire utilisateur -->
     <form id="captureForm">
         <div class="row">
             <div class="field">
@@ -102,10 +94,8 @@
             </div>
         </div>
 
-        <!-- Choix des cours en cartes -->
         <h2>Choisissez vos cours :</h2>
         <div class="cours-container">
-            <!-- Carte Débutant -->
             <div class="cours-card">
                 <h3>Débutant</h3>
                 <label><input type="checkbox" name="cours" value="html-css-debutant"> HTML & CSS</label>
@@ -113,8 +103,6 @@
                 <label><input type="checkbox" name="cours" value="python-debutant"> Python</label>
                 <label><input type="checkbox" name="cours" value="mysql-debutant"> MySQL</label>
             </div>
-
-            <!-- Carte Avancé -->
             <div class="cours-card">
                 <h3>Avancé</h3>
                 <label><input type="checkbox" name="cours" value="html-css-avance"> HTML & CSS</label>
@@ -129,7 +117,6 @@
             </div>
         </div>
 
-        <!-- Carte Marketing séparée -->
         <div class="cours-card marketing-card">
             <h3>Marketing</h3>
             <label><input type="checkbox" name="cours" value="marketing-digital"> Marketing Digital</label>
@@ -159,6 +146,7 @@
             document.getElementById("captureForm").addEventListener("submit", async function(event) {
                 event.preventDefault();
 
+                // Vérification paiement
                 if (!sessionStorage.getItem("paidConfirmation")) {
                     alert("Vous devez accepter le paiement avant de vous inscrire.");
                     return;
@@ -176,8 +164,14 @@
                 try {
                     await addDoc(collection(db, "inscriptions"), { ...formData, timestamp: serverTimestamp() });
 
-                    // 📌 Déclenchement événement Facebook Pixel
+                    // Pixel Facebook
                     fbq('track', 'CompleteRegistration');
+
+                    // GA4 event
+                    gtag('event', 'complete_registration', {
+                        event_category: 'engagement',
+                        event_label: 'Inscription CréaWeb Academy'
+                    });
 
                     alert("Inscription réussie !");
                     window.location.href = "merci.html";
@@ -187,6 +181,10 @@
                 }
             });
         });
+
+        function toggleMenu() {
+            document.querySelector("nav ul").classList.toggle("active");
+        }
     </script>
 </main>
 
