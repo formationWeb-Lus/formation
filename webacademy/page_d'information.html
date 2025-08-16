@@ -64,7 +64,7 @@
     <section class="hero">
         <div class="hero-text">
             <h1>Merci d'être ici !</h1>
-            <p>Pour commencer, l'inscription est gratuite ! Le paiement pour la formation est dû après 7 jours le début des cours.</p>
+            <p>Pour commencer, l'inscription est gratuite ! Le paiement pour la formation est dû après 5 jours le début des cours.</p>
 
             <section class="formations">
                 <div class="caption">
@@ -96,7 +96,7 @@
                         <li>GitHub (Avancé)</li>
                         <li>Marketing Digital</li>
                     </ul>
-                    <p class="price"><strong>Prix total :</strong> 50 $</p>
+                    <p class="price"><strong>Prix total :</strong> 70 $</p>
                     <p><strong>Durée :</strong> 12 semaines</p>
                 </div>
             </section>
@@ -123,7 +123,7 @@
     });
 
     document.getElementById("select-advanced").addEventListener("click", () => {
-        let accept = confirm("Êtes-vous prêt à payer 70$ pour la formation Avancée après 5 jours ?");
+        let accept = confirm("Êtes-vous prêt à payer 70$ pour la formation Avancée après 5 jours d'essaie ?");
         if (accept) {
             sessionStorage.setItem("paidConfirmation", "true");
             window.location.href = "inscription.html"; // seulement si accepté
