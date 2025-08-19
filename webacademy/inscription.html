@@ -52,6 +52,9 @@
 
 <main>
     <h1>Formulaire d'inscription</h1>
+    <p style="color:green; font-weight:bold;">
+        💡 merci pour votre inscription de <strong>5$</strong>. Veuillez remplir correctement vos informations.
+    </p>
 
     <form id="captureForm">
         <div class="row">
@@ -145,12 +148,6 @@
         document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("captureForm").addEventListener("submit", async function(event) {
                 event.preventDefault();
-
-                // Vérification paiement
-                if (!sessionStorage.getItem("paidConfirmation")) {
-                    alert("Vous devez d'abord accepter le paiement apres 5 jours d'essaie avant de vous inscrire.");
-                    return;
-                }
 
                 const formData = {};
                 ["nom", "prenom", "pays", "ville", "code_postal", "telephone", "email"].forEach(id => {

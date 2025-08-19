@@ -19,24 +19,6 @@
     <link rel="stylesheet" href="styles/information.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Arial&display=swap" rel="stylesheet">
     <script type="module" src="scripts/information.js"></script>
-
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-YJ17KCLW8N');
-        document.addEventListener("DOMContentLoaded", function () {
-            const voirCoursBtn = document.querySelector('a.cta-button[href="formations.html"]');
-            if (voirCoursBtn) {
-                voirCoursBtn.addEventListener("click", function () {
-                    gtag('event', 'click_voir_cours', {
-                        'event_category': 'navigation',
-                        'event_label': 'Voir les cours'
-                    });
-                });
-            }
-        });
-    </script>
 </head>
 
 <body>
@@ -63,7 +45,7 @@
     <section class="hero">
         <div class="hero-text">
             <h1>Merci d'être ici !</h1>
-            <p>Pour commencer, l'inscription est gratuite ! Le paiement pour la formation est dû après 5 jours le début des cours.</p>
+            <p>L'inscription est à seulement <strong>5 $ ou 7 $</strong> ! Veuillez suivre attentivement les informations de chaque page afin de ne pas vous tromper lorsque vous remplissez les formulaires.</p>
 
             <section class="formations">
                 <div class="caption">
@@ -75,7 +57,7 @@
                         <li>Python (Débutant)</li>
                         <li>Marketing Digital</li>
                     </ul>
-                    <p class="price"><strong>Prix total :</strong> $50 </p>
+                    <p class="price"><strong>Prix total :</strong> $5 </p>
                     <p><strong>Durée :</strong> 7 semaines</p>
                 </div>
 
@@ -95,29 +77,17 @@
                         <li>GitHub (Avancé)</li>
                         <li>Marketing Digital</li>
                     </ul>
-                    <p class="price"><strong>Prix total :</strong> 70 $</p>
+                    <p class="price"><strong>Prix total :</strong> $7</p>
                     <p><strong>Durée :</strong> 12 semaines</p>
                 </div>
             </section>
 
             <p>La formation inclut des projets pratiques pour vous aider à appliquer vos nouvelles compétences.</p>
 
-            <p><strong>Paiements :</strong> L'inscription ainsi que toute la phase d'introduction sont entièrement gratuites. Aucun paiement ne sera demandé au début de la formation.</p>
+            <p><strong>Paiements :</strong> L'inscription est de <strong>5 $</strong> seulement.et vous debloquez touts les paquers en plus vous aurez l'accompagnement tout along des cours.</p>
 
             <!-- Boutons redirection directe -->
-            <button id="select-beginner" class="cta-button">Choisir Formation Débutant</button>
-            <button id="select-advanced" class="cta-button">Choisir Formation Avancée</button>
-
-             <script>
-    // Redirige directement vers infodecompte.html sans confirmation
-    document.getElementById("select-beginner").addEventListener("click", () => {
-      window.location.href = "infodecompte.html";
-    });
-
-    document.getElementById("select-advanced").addEventListener("click", () => {
-      window.location.href = "infodecompte.html";
-    });
-  </script>
+            <button onclick="window.location.href='infodecompte.html'" class="cta-button">Continuer</button>
         </div>
     </section>
 </main>
