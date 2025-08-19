@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Instructions de paiement</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root{
+      --primary:#198754; --bg1:#00c6ff; --bg2:#007bff;
+      --card:#fff; --muted:#6b7280; --line:#e5e7eb; --radius:16px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      min-height:100vh; display:grid; place-items:center;
+      background:linear-gradient(135deg,var(--bg1),var(--bg2)); padding:24px;
+    }
+    .container{
+      width:min(720px,100%); background:var(--card); border-radius:var(--radius);
+      box-shadow:0 12px 30px rgba(0,0,0,.16); padding:28px;
+    }
+    h1{margin:0 0 8px; font-size:26px}
+    .muted{color:var(--muted); margin:0 0 18px}
+    .panel{
+      background:#f8fafc; border:1px solid var(--line); border-radius:12px;
+      padding:16px; margin:12px 0 20px;
+    }
+    .row{display:flex; gap:12px; margin:6px 0; flex-wrap:wrap}
+    .label{min-width:150px; color:#334155; font-weight:600}
+    .badge{display:inline-flex; align-items:center; gap:8px; padding:6px 10px;
+      border-radius:999px; border:1px solid var(--line); background:#fff}
+    .badge svg{height:22px}
+    .form-group{margin:12px 0}
+    .form-group label{display:block; font-weight:700; margin-bottom:6px}
+    .form-group input{
+      width:100%; padding:12px; border:1px solid var(--line); border-radius:10px; font-size:16px;
+    }
+    .btn{
+      width:100%; padding:14px 16px; border:0; border-radius:12px;
+      background:var(--primary); color:#fff; font-size:16px; font-weight:700; cursor:pointer;
+      margin-top:10px;
+    }
+    .success{margin-top:14px; text-align:center; color:#1f9d55; font-weight:700}
+    .error{margin-top:14px; text-align:center; color:#dc2626; font-weight:700}
+    .back{display:inline-block; margin-bottom:12px; text-decoration:none; color:#0d6efd}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back" href="index.html">← Modifier le choix</a>
+    <h1>Instructions de paiement</h1>
+    <p class="muted">
+      Veuillez payer avec les informations ci-dessous, puis captez le nom de ce compte  pour confirmer.
+    </p>
+
+    <div class="panel" id="details"></div>
+
+    <div class="form-group">
+      <label>Nom de compte trouvé lors de paiement :</label>
+      <input id="nomCompte" type="text" placeholder="Ex. Alexandre Mwambe" />
+    </div>
+
+    <button class="btn" onclick="confirmer()">S’inscrire</button>
+    <div id="msg"></div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(location.search);
+    const raw = params.get('data');
+    let brand, label, numero;
+
+    // ✅ Noms cachés (jamais affichés à l’utilisateur)
+    const validNames = {
+      "airtel": ["KATIYABUSHINDI"],
+      "orange": ["ANASTA KONGOLO"],
+      "mpesa": ["BENEDITTE MAZALA", "BENEDITTE MWANGALA"],
+      "EQUITY BANK": ["BENEDICTE MAZALA"]
+    };
+
+    function logo(brandKey){
+      switch(brandKey){
+        case 'airtel': return `<div class="badge"><svg viewBox="0 0 120 36"><rect width="120" height="36" rx="18" fill="#E4002B"/><text x="60" y="24" text-anchor="middle" font-size="16" fill="#fff" font-weight="700">airtel</text></svg><span>Airtel</span></div>`;
+        case 'orange': return `<div class="badge"><svg viewBox="0 0 120 36"><rect width="120" height="36" rx="8" fill="#FF7900"/><text x="60" y="24" text-anchor="middle" font-size="16" fill="#fff" font-weight="700">orange</text></svg><span>Orange</span></div>`;
+        case 'mpesa': return `<div class="badge"><svg viewBox="0 0 120 36"><rect width="120" height="36" rx="8" fill="#1FB25A"/><text x="60" y="24" text-anchor="middle" font-size="16" fill="#fff" font-weight="700">M-Pesa</text></svg><span>M-Pesa</span></div>`;
+        case 'EQUITY BANK': return `<div class="badge"><svg viewBox="0 0 140 36"><rect width="140" height="36" rx="8" fill="#101010"/><text x="70" y="24" text-anchor="middle" font-size="16" fill="#F9C900" font-weight="700">EQUITY</text></svg><span>Equity Bank</span></div>`;
+        default: return '';
+      }
+    }
+
+    if(raw){
+      [brand, label, numero] = raw.split('|');
+      document.getElementById('details').innerHTML = `
+        <div class="row"><div class="label">Moyen :</div><div>${label}</div></div>
+        <div class="row"><div class="label">Numéro :</div><div>${numero}</div></div>
+        <div class="row"><div class="label">Icône :</div><div>${logo(brand)}</div></div>
+        <hr style="border:none;border-top:1px solid #e5e7eb;margin:12px 0">
+        <div>💡 <b>Astuce :</b> quand vous avez terminé de payer, prenez le <b>nom exact</b> de ce compte trouvé lors de paiement et saisissez-le ci-dessous  pour valider votre inscription.</div>
+      `;
+    } else {
+      document.getElementById('details').textContent = "Aucune donnée reçue. Retournez à la page précédente.";
+    }
+
+    function confirmer(){
+      const nom = document.getElementById('nomCompte').value.trim().toUpperCase();
+      const msg = document.getElementById('msg');
+      msg.innerHTML = "";
+
+      if(!nom){ 
+        msg.innerHTML = `<div class="error">⚠️ Veuillez entrer un nom.</div>`; 
+        return; 
+      }
+
+      if(validNames[brand] && validNames[brand].includes(nom)){
+        msg.innerHTML = `<div class="success">✅ Paiement confirmé via ${label} (${numero}).</div>`;
+        setTimeout(()=>{ window.location.href="confirmation.html"; },2000);
+      } else {
+        msg.innerHTML = `<div class="error">❌ Nom incorrect. Veuillez saisir le nom exact du compte trouvé lors de paiement.</div>`;
+      }
+    }
+  </script>
+</body>
+</html>

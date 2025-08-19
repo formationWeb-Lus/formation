@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Confirmation du paiement</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: linear-gradient(135deg, #00c6ff, #007bff);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 24px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+      padding: 32px;
+      max-width: 480px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 28px;
+      color: #198754;
+      margin: 0 0 12px;
+    }
+    p {
+      font-size: 16px;
+      color: #374151;
+      margin-bottom: 24px;
+    }
+    .checkmark {
+      font-size: 56px;
+      color: #198754;
+      margin-bottom: 16px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 12px;
+      background: #007bff;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background .2s;
+    }
+    .btn:hover { background: #0056b3; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="checkmark">✅</div>
+    <h1>Paiement confirmé</h1>
+    <p>Votre paiement a été validé avec succès.<br>
+    Merci pour votre paiement  cliquez sur le bouton dessous et inscrivez-vous.</p>
+    <a href="inscription.html" class="btn">inscrivez-vous maintenant</a>
+  </div>
+</body>
+</html>

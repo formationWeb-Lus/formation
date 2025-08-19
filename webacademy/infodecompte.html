@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sélection du compte</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root{
+      --primary:#0d6efd;
+      --bg-grad1:#007bff; --bg-grad2:#00c6ff;
+      --card:#ffffff; --muted:#6b7280; --line:#e5e7eb;
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      min-height:100vh; display:grid; place-items:center;
+      background:linear-gradient(135deg,var(--bg-grad1),var(--bg-grad2));
+      padding:24px;
+    }
+    .container{
+      width:min(720px,100%); background:var(--card);
+      border-radius:var(--radius); box-shadow:0 12px 30px rgba(0,0,0,.16);
+      padding:28px;
+    }
+    h1{margin:0 0 14px; font-size:26px;}
+    p.lead{margin:0 0 22px; color:var(--muted)}
+    .price{
+      display:inline-block;
+      background:#f3f4f6;
+      color:#111827;
+      font-weight:700;
+      font-size:18px;
+      padding:10px 18px;
+      border-radius:12px;
+      margin-bottom:20px;
+      border:2px solid var(--line);
+    }
+    .account{
+      border:2px solid var(--line); border-radius:14px; padding:14px 16px;
+      display:flex; gap:12px; align-items:center; cursor:pointer; margin:12px 0;
+      transition:.2s border-color,.2s background;
+    }
+    .account:hover{border-color:var(--primary); background:#f5f9ff}
+    .account input{accent-color:var(--primary); width:18px; height:18px}
+    .info{flex:1}
+    .title{font-weight:700}
+    .sub{color:var(--muted); font-size:14px; margin-top:2px}
+    .badge{display:inline-flex; align-items:center; gap:8px; padding:6px 10px;
+      border-radius:999px; border:1px solid var(--line); margin-top:8px}
+    .badge svg{height:20px; width:auto; display:block}
+    .btn{
+      width:100%; padding:14px 16px; border:0; border-radius:12px;
+      background:var(--primary); color:#fff; font-size:16px; font-weight:700;
+      cursor:pointer; margin-top:14px;
+    }
+    .btn:active{transform:translateY(1px)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Choisissez un compte pour le paiement</h1>
+    <p class="lead">Sélectionnez le moyen de paiement puis cliquez sur <b>Suivant</b>.</p>
+
+    <!-- Prix affiché -->
+    <div class="price">💵 Frais d'inscription : 5 $</div>
+
+    <!-- Airtel -->
+    <label class="account">
+      <input type="radio" name="compte" value="airtel|Airtel Money|+243 995271831">
+      <div class="info">
+        <div class="title">Airtel Money</div>
+        <div class="sub">Numéro : +243 995271831</div>
+        <div class="badge" aria-label="Airtel">
+          <svg viewBox="0 0 120 36" aria-hidden="true">
+            <rect x="0" y="0" width="120" height="36" rx="18" fill="#E4002B"/>
+            <text x="60" y="24" text-anchor="middle" font-size="16" font-family="Arial, Helvetica, sans-serif" fill="#ffffff" font-weight="700">airtel</text>
+          </svg>
+          <span>Airtel</span>
+        </div>
+      </div>
+    </label>
+
+    <!-- Orange -->
+    <label class="account">
+      <input type="radio" name="compte" value="orange|Orange Money|+243 899864081">
+      <div class="info">
+        <div class="title">Orange Money</div>
+        <div class="sub">Numéro : +243 899864081</div>
+        <div class="badge" aria-label="Orange">
+          <svg viewBox="0 0 120 36" aria-hidden="true">
+            <rect x="0" y="0" width="120" height="36" rx="8" fill="#FF7900"/>
+            <text x="60" y="24" text-anchor="middle" font-size="16" font-family="Arial, Helvetica, sans-serif" fill="#ffffff" font-weight="700">orange</text>
+          </svg>
+          <span>Orange</span>
+        </div>
+      </div>
+    </label>
+
+    <!-- M-Pesa -->
+    <label class="account">
+      <input type="radio" name="compte" value="mpesa|M-Pesa|+243 810946352">
+      <div class="info">
+        <div class="title">M-Pesa</div>
+        <div class="sub">Numéro : +243 810946352</div>
+        <div class="badge" aria-label="M-Pesa">
+          <svg viewBox="0 0 120 36" aria-hidden="true">
+            <rect x="0" y="0" width="120" height="36" rx="8" fill="#1FB25A"/>
+            <text x="60" y="24" text-anchor="middle" font-size="16" font-family="Arial, Helvetica, sans-serif" fill="#ffffff" font-weight="700">M-Pesa</text>
+          </svg>
+          <span>M-Pesa</span>
+        </div>
+      </div>
+    </label>
+
+    <!-- Equity Bank -->
+    <label class="account">
+      <input type="radio" name="compte" value="EQUITY BANK|Compte Bancaire|577200212561221">
+      <div class="info">
+        <div class="title">Compte Bancaire</div>
+        <div class="sub">Numéro : 577200212561221</div>
+        <div class="badge" aria-label="Equity Bank">
+          <svg viewBox="0 0 140 36" aria-hidden="true">
+            <rect x="0" y="0" width="140" height="36" rx="8" fill="#101010"/>
+            <text x="70" y="24" text-anchor="middle" font-size="16" font-family="Arial, Helvetica, sans-serif" fill="#F9C900" font-weight="700">EQUITY BANK</text>
+          </svg>
+          <span>Equity bank</span>
+        </div>
+      </div>
+    </label>
+
+    <button class="btn" onclick="allerPaiement()">Suivant</button>
+  </div>
+
+  <script>
+    function allerPaiement(){
+      const radios = document.getElementsByName('compte');
+      let value = null;
+      for(const r of radios){ if(r.checked){ value = r.value; break; } }
+      if(!value){ alert("⚠️ Veuillez sélectionner un compte."); return; }
+      // brand|label|numero
+      location.href = "paiement.html?data="+encodeURIComponent(value);
+    }
+  </script>
+</body>
+</html>

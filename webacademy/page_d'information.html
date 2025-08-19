@@ -22,7 +22,7 @@
 
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-YJ17KCLW8N');
         document.addEventListener("DOMContentLoaded", function () {
@@ -39,7 +39,6 @@
     </script>
 </head>
 
-
 <body>
 
 <header>
@@ -52,7 +51,7 @@
         <ul class="nav-list">
             <li><a href="index.html">Accueil</a></li>
             <li><a href="detail.html">Cours</a></li>
-            <li><a href="inscription.html" class="cta-signin">S'inscrire</a></li>
+            <li><a href="infodecompte.html" class="cta-signin">S'inscrire</a></li>
             <li><a href="detail.html">Explorer</a></li>
             <li><a href="history.html">À propos</a></li>
             <li><a href="#">Forum</a></li>
@@ -104,42 +103,26 @@
             <p>La formation inclut des projets pratiques pour vous aider à appliquer vos nouvelles compétences.</p>
 
             <p><strong>Paiements :</strong> L'inscription ainsi que toute la phase d'introduction sont entièrement gratuites. Aucun paiement ne sera demandé au début de la formation.</p>
-<button id="select-beginner" class="cta-button">Choisir Formation Débutant</button>
-<button id="select-advanced" class="cta-button">Choisir Formation Avancée</button>
 
-<p id="message" style="color: red; font-weight: bold;"></p>
+            <!-- Boutons redirection directe -->
+            <button id="select-beginner" class="cta-button">Choisir Formation Débutant</button>
+            <button id="select-advanced" class="cta-button">Choisir Formation Avancée</button>
 
-<script>
-    const messageEl = document.getElementById("message");
-
+             <script>
+    // Redirige directement vers infodecompte.html sans confirmation
     document.getElementById("select-beginner").addEventListener("click", () => {
-        let accept = confirm("Êtes-vous prêt à payer 50$ pour la formation Débutant après 5 jours ?");
-        if (accept) {
-            sessionStorage.setItem("paidConfirmation", "true");
-            window.location.href = "inscription.html"; // seulement si accepté
-        } else {
-            messageEl.textContent = "Vous avez annulé. Vous ne pouvez pas accéder à l'inscription tant que vous n'acceptez pas le paiement.";
-        }
+      window.location.href = "infodecompte.html";
     });
 
     document.getElementById("select-advanced").addEventListener("click", () => {
-        let accept = confirm("Êtes-vous prêt à payer 70$ pour la formation Avancée après 5 jours d'essaie ?");
-        if (accept) {
-            sessionStorage.setItem("paidConfirmation", "true");
-            window.location.href = "inscription.html"; // seulement si accepté
-        } else {
-            messageEl.textContent = "Vous avez annulé. Vous ne pouvez pas accéder à l'inscription tant que vous n'acceptez pas le paiement.";
-        }
+      window.location.href = "infodecompte.html";
     });
-</script>
-
-
-
-
+  </script>
         </div>
     </section>
+</main>
 
-   <footer>
+<footer>
     <div class="footer-bottom">
         <div class="footer-logo">
             <img src="images/logo.png" alt="Logo Webacademy">
@@ -163,5 +146,4 @@
 </footer>
 
 </body>
-
 </html>
