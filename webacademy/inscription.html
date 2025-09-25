@@ -44,7 +44,7 @@
             <li><a href="index.html">Accueil</a></li>
             <li><a href="detail.html">Cours</a></li>
             <li><a href="history.html">À propos</a></li>
-            <li><a href="page_d'information.html">Explorer</a></li>
+            <li><a href="infodecompte.html">Explorer</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
@@ -52,9 +52,7 @@
 
 <main>
     <h1>Formulaire d'inscription</h1>
-    <p style="color:green; font-weight:bold;">
-        💡 merci pour votre paiement de <strong>5$</strong>. Veuillez remplir correctement vos informations.
-    </p>
+    <p>Veuillez remplir correctement vos informations pour finaliser votre inscription.</p>
 
     <form id="captureForm">
         <div class="row">
@@ -97,92 +95,87 @@
             </div>
         </div>
 
-        <h2>Choisissez vos cours :</h2>
+        <h2>Choisissez votre formation :</h2>
         <div class="cours-container">
             <div class="cours-card">
-                <h3>Débutant</h3>
-                <label><input type="checkbox" name="cours" value="html-css-debutant"> HTML & CSS</label>
-                <label><input type="checkbox" name="cours" value="javascript-debutant"> JavaScript</label>
-                <label><input type="checkbox" name="cours" value="python-debutant"> Python</label>
-                <label><input type="checkbox" name="cours" value="mysql-debutant"> MySQL</label>
+                <h3>Débutant (Gratuit)</h3>
+                <label><input type="checkbox" name="cours" value="html-css-debutant"> HTML</label>
+                <label><input type="checkbox" name="cours" value="css-debutant"> CSS</label>
             </div>
             <div class="cours-card">
-                <h3>Avancé</h3>
-                <label><input type="checkbox" name="cours" value="html-css-avance"> HTML & CSS</label>
-                <label><input type="checkbox" name="cours" value="javascript-avance"> JavaScript</label>
-                <label><input type="checkbox" name="cours" value="python-avance"> Python</label>
-                <label><input type="checkbox" name="cours" value="mysql-avance"> MySQL</label>
-                <label><input type="checkbox" name="cours" value="mongoDB-avance"> mongoDB</label>
-                <label><input type="checkbox" name="cours" value="nodejs-avance"> node.js</label>
-                <label><input type="checkbox" name="cours" value="pgadmin-avance"> pgAdmin</label>
-                <label><input type="checkbox" name="cours" value="git-avance"> Git</label>
-                <label><input type="checkbox" name="cours" value="github-avance"> GitHub</label>
+                <h3>Avancé (10 $ / 10 semaines)</h3>
+                <label><input type="checkbox" name="cours" value="intro-js"> Introduction à JavaScript</label>
+                <label><input type="checkbox" name="cours" value="variables"> Les variables</label>
+                <label><input type="checkbox" name="cours" value="conditions"> La programmation constructive</label>
+                <label><input type="checkbox" name="cours" value="dom"> La manipulation du DOM</label>
+                <label><input type="checkbox" name="cours" value="objets"> Les objets</label>
+                <label><input type="checkbox" name="cours" value="debug"> Le débogage</label>
+                <label><input type="checkbox" name="cours" value="tableaux"> Les tableaux</label>
+                <label><input type="checkbox" name="cours" value="fonctions"> Les fonctions</label>
+                <label><input type="checkbox" name="cours" value="objets-avances"> Les objets avancés</label>
+                <label><input type="checkbox" name="cours" value="callbacks"> Les fonctions de rappel (callbacks)</label>
+                <label><input type="checkbox" name="cours" value="local-storage"> Le stockage local</label>
             </div>
-        </div>
-
-        <div class="cours-card marketing-card">
-            <h3>Marketing</h3>
-            <label><input type="checkbox" name="cours" value="marketing-digital"> Marketing Digital</label>
         </div>
 
         <button type="submit" class="submit-btn">S'inscrire</button>
     </form>
 
-    <!-- Firebase v9+ -->
     <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
-        import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+    import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
 
-        const firebaseConfig = {
-            apiKey: "AIzaSyDzMpVFXdYEQ_4ch3GthMvF52hIRce9qD8",
-            authDomain: "inscriptionapp-ddb3e.firebaseapp.com",
-            projectId: "inscriptionapp-ddb3e",
-            storageBucket: "inscriptionapp-ddb3e.firebasestorage.app",
-            messagingSenderId: "213159898520",
-            appId: "1:213159898520:web:a986ee20ed1762b4e58fed"
-        };
+    const firebaseConfig = {
+        apiKey: "AIzaSyDzMpVFXdYEQ_4ch3GthMvF52hIRce9qD8",
+        authDomain: "inscriptionapp-ddb3e.firebaseapp.com",
+        projectId: "inscriptionapp-ddb3e",
+        storageBucket: "inscriptionapp-ddb3e.firebasestorage.app",
+        messagingSenderId: "213159898520",
+        appId: "1:213159898520:web:a986ee20ed1762b4e58fed"
+    };
 
-        const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
 
-        document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById("captureForm").addEventListener("submit", async function(event) {
-                event.preventDefault();
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("captureForm").addEventListener("submit", async function(event) {
+            event.preventDefault();
 
-                const formData = {};
-                ["nom", "prenom", "pays", "ville", "code_postal", "telephone", "email"].forEach(id => {
-                    formData[id] = document.getElementById(id).value.trim();
-                    if (!formData[id]) throw alert("Veuillez remplir tous les champs !");
+            const formData = {};
+            ["nom", "prenom", "pays", "ville", "code_postal", "telephone", "email"].forEach(id => {
+                formData[id] = document.getElementById(id).value.trim();
+                if (!formData[id]) throw alert("Veuillez remplir tous les champs !");
+            });
+
+            formData.cours = [];
+            document.querySelectorAll('input[name="cours"]:checked').forEach(cb => formData.cours.push(cb.value));
+
+            try {
+                await addDoc(collection(db, "inscriptions"), { ...formData, timestamp: serverTimestamp() });
+
+                // Pixel Facebook
+                fbq('track', 'CompleteRegistration');
+
+                // GA4 event
+                gtag('event', 'complete_registration', {
+                    event_category: 'engagement',
+                    event_label: 'Inscription CréaWeb Academy'
                 });
 
-                formData.cours = [];
-                document.querySelectorAll('input[name="cours"]:checked').forEach(cb => formData.cours.push(cb.value));
-
-                try {
-                    await addDoc(collection(db, "inscriptions"), { ...formData, timestamp: serverTimestamp() });
-
-                    // Pixel Facebook
-                    fbq('track', 'CompleteRegistration');
-
-                    // GA4 event
-                    gtag('event', 'complete_registration', {
-                        event_category: 'engagement',
-                        event_label: 'Inscription CréaWeb Academy'
-                    });
-
-                    alert("Inscription réussie !");
-                    window.location.href = "merci.html";
-                } catch (error) {
-                    console.error("Erreur d'enregistrement :", error);
-                    alert("Une erreur est survenue. Veuillez réessayer plus tard.");
-                }
-            });
+                // ✅ Redirection directe vers infodecompte.html
+                window.location.href = "infodecompte.html";
+            } catch (error) {
+                console.error("Erreur d'enregistrement :", error);
+                alert("Une erreur est survenue. Veuillez réessayer plus tard.");
+            }
         });
+    });
 
-        function toggleMenu() {
-            document.querySelector("nav ul").classList.toggle("active");
-        }
-    </script>
+    function toggleMenu() {
+        document.querySelector("nav ul").classList.toggle("active");
+    }
+</script>
+
 </main>
 
 <footer>

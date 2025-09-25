@@ -47,7 +47,7 @@
 </head>
 <body>
   <div class="container">
-    <a class="back" href="index.html">← Modifier le choix</a>
+    <a class="back" href="infodecompte.html">← Modifier le choix</a>
     <h1>Instructions de paiement</h1>
     <p class="muted">
       Veuillez payer avec les informations ci-dessous, puis captez le nom de ce compte  pour confirmer.
@@ -56,13 +56,22 @@
     <div class="panel" id="details"></div>
 
     <div class="form-group">
-      <label>Nom de compte trouvé lors de paiement :</label>
-      <input id="nomCompte" type="text" placeholder="Ex. Alexandre Mwambe" />
-    </div>
+  <label>Nom de compte trouvé lors de paiement :</label>
+  <input id="nomCompte" type="text" placeholder="Ex. Alexandre Mwambe" />
+</div>
 
-    <button class="btn" onclick="confirmer()">S’inscrire</button>
-    <div id="msg"></div>
-  </div>
+<p style="font-size: 0.9em; font-style: italic; color: #555; margin-top: 8px; margin-bottom: 12px;">
+  Si vous n'arrivez pas à bien vous inscrire, veuillez contacter ce numéro : 
+  <a href="tel:+243995271831" style="color: #0d6efd; text-decoration: underline;">+243 995 271 831</a> 
+  ou envoyez un email à : 
+  <a href="mailto:webacademyinfor@gmail.com" style="color: #0d6efd; text-decoration: underline;">webacademyinfor@gmail.com</a>. Merci !
+</p>
+
+
+
+<button class="btn" onclick="confirmer()">S’inscrire</button>
+<div id="msg"></div>
+
 
   <script>
     const params = new URLSearchParams(location.search);
@@ -71,10 +80,10 @@
 
     // ✅ Noms cachés (jamais affichés à l’utilisateur)
     const validNames = {
-      "airtel": ["KATIYABUSHINDI"],
-      "orange": ["ANASTA KONGOLO"],
+      "airtel": ["JIRESSE LUSA"],
+      "orange": ["ANASTA KONGOLO", "ANASTA-KONGOLO"],
       "mpesa": ["BENEDITTE MAZALA", "BENEDITTE MWANGALA"],
-      "EQUITY BANK": ["BENEDICTE MAZALA"]
+      "EQUITY BANK": ["BENEDICTE MAZALA", "BENEDICTE-MAZALA MWANGALA", "BENEDICTE MWANGALA MAZALA"]
     };
 
     function logo(brandKey){
@@ -111,11 +120,14 @@
       }
 
       if(validNames[brand] && validNames[brand].includes(nom)){
-        msg.innerHTML = `<div class="success">✅ Paiement confirmé via ${label} (${numero}).</div>`;
-        setTimeout(()=>{ window.location.href="confirmation.html"; },2000);
-      } else {
-        msg.innerHTML = `<div class="error">❌ Nom incorrect. Veuillez saisir le nom exact du compte trouvé lors de paiement.</div>`;
-      }
+    msg.innerHTML = `<div class="success">✅ Paiement confirmé via ${label} (${numero}).</div>`;
+    setTimeout(()=>{ 
+        window.location.href="merci.html"; // <-- redirection vers la page des remerciements
+    }, 2000);
+} else {
+    msg.innerHTML = `<div class="error">❌ Nom incorrect. Veuillez saisir le nom exact du compte trouvé lors de paiement.</div>`;
+}
+
     }
   </script>
 </body>
