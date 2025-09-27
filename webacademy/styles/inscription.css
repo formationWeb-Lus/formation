@@ -23,19 +23,22 @@ header {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
 }
 
 header .logo img {
     max-height: 60px;
-    color: #fff;
+}
+
+/* ====== NAVIGATION ====== */
+nav {
+    position: relative;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
-    color: #f3eeee;
 }
 
 nav ul li a {
@@ -49,9 +52,19 @@ nav ul li a:hover {
     color: #f8f6f6;
 }
 
+/* Bouton hamburger (caché sur desktop) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
 /* ====== MAIN ====== */
 main {
-    max-width: 800px; /* réduit largeur générale pour centrer */
+    max-width: 800px;
     margin: 50px auto;
     padding: 0 20px;
 }
@@ -75,7 +88,6 @@ form {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* Champs réduits */
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -84,7 +96,7 @@ form {
 }
 
 .field {
-    flex: 1 1 48%; /* champs plus courts */
+    flex: 1 1 48%;
     display: flex;
     flex-direction: column;
 }
@@ -102,7 +114,6 @@ form {
     outline: none;
 }
 
-/* Champs plein largeur pour mobile */
 .field-full {
     flex: 1 1 100%;
 }
@@ -119,7 +130,7 @@ form {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin: 20px auto 0 auto; /* centré horizontalement */
+    margin: 20px auto 0 auto;
 }
 
 .submit-btn:hover {
@@ -131,13 +142,13 @@ form {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: center; /* centré */
+    justify-content: center;
     margin-bottom: 30px;
 }
 
 .cours-card {
     background-color: #ebe2e7;
-    flex: 1 1 300px; /* carte plus compacte */
+    flex: 1 1 300px;
     max-width: 350px;
     padding: 20px;
     border-radius: 12px;
@@ -163,11 +174,10 @@ form {
     font-weight: 500;
 }
 
-/* Carte marketing centrée */
 .marketing-card {
     flex: 1 1 300px;
     max-width: 350px;
-    margin: 0 auto 20px auto; /* centrée */
+    margin: 0 auto 20px auto;
     text-align: center;
 }
 
@@ -182,7 +192,7 @@ footer {
 }
 
 /* ====== RESPONSIVE ====== */
-@media screen and (max-width: 900px) {
+@media (max-width: 900px) {
     .cours-card, .marketing-card {
         flex: 1 1 80%;
         max-width: none;
@@ -197,15 +207,34 @@ footer {
     }
 }
 
-@media screen and (max-width: 600px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 15px 20px;
+@media (max-width: 768px) {
+    /* Menu devient hamburger */
+    .menu-toggle {
+        display: block;
     }
 
     nav ul {
+        display: none;
         flex-direction: column;
-        gap: 10px;
+        background: #140e0e;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        color: #fff;
     }
 }
