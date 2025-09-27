@@ -55,27 +55,55 @@
     <p>Veuillez remplir correctement vos informations pour finaliser votre inscription.</p>
 
     <form id="captureForm">
-        <div class="row">
-            <div class="field">
-                <label for="prenom">Prénom</label>
-                <input type="text" id="prenom" name="prenom" required>
-            </div>
-            <div class="field">
-                <label for="nom">Nom</label>
-                <input type="text" id="nom" name="nom" required>
-            </div>
-        </div>
+            <div class="row">
+    <div class="field">
+        <label for="prenom">Prénom</label>
+        <input 
+            type="text" 
+            id="prenom" 
+            name="prenom" 
+            required 
+            pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s\-]+$" 
+            title="Le prénom doit contenir uniquement des lettres."
+        >
+    </div>
+    <div class="field">
+        <label for="nom">Nom</label>
+        <input 
+            type="text" 
+            id="nom" 
+            name="nom" 
+            required 
+            pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s\-]+$" 
+            title="Le nom doit contenir uniquement des lettres."
+        >
+    </div>
+</div>
 
-        <div class="row">
-            <div class="field">
-                <label for="pays">Pays</label>
-                <input type="text" id="pays" name="pays" required>
-            </div>
-            <div class="field">
-                <label for="ville">Ville</label>
-                <input type="text" id="ville" name="ville" required>
-            </div>
-        </div>
+<div class="row">
+    <div class="field">
+        <label for="pays">Pays</label>
+        <input 
+            type="text" 
+            id="pays" 
+            name="pays" 
+            required 
+            pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s\-]+$" 
+            title="Le pays doit contenir uniquement des lettres."
+        >
+    </div>
+    <div class="field">
+        <label for="ville">Ville</label>
+        <input 
+            type="text" 
+            id="ville" 
+            name="ville" 
+            required 
+            pattern="^[A-Za-zÀ-ÖØ-öø-ÿ\s\-]+$" 
+            title="La ville doit contenir uniquement des lettres."
+        >
+    </div>
+</div>
 
         <div class="row">
             <div class="field">
@@ -84,38 +112,30 @@
             </div>
             <div class="field">
                 <label for="telephone">Numéro de Téléphone</label>
-                <input type="tel" id="telephone" name="telephone" required>
+                <input 
+                    type="tel" 
+                    id="telephone" 
+                    name="telephone" 
+                    required 
+                    pattern="^\+243[0-9]{9}$" 
+                    title="Le numéro doit commencer par +243 et contenir exactement 9 chiffres après."
+                >
             </div>
         </div>
 
         <div class="row">
             <div class="field">
-                <label for="email">Adresse Email</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-        </div>
+    <label for="email">Adresse Email</label>
+    <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        required 
+        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]{2,}$"
+        title="Veuillez entrer une adresse email valide (ex: exemple@gmail.com)."
+    >
+</div>
 
-        <h2>Choisissez votre formation :</h2>
-        <div class="cours-container">
-            <div class="cours-card">
-                <h3>Débutant (Gratuit)</h3>
-                <label><input type="checkbox" name="cours" value="html-css-debutant"> HTML</label>
-                <label><input type="checkbox" name="cours" value="css-debutant"> CSS</label>
-            </div>
-            <div class="cours-card">
-                <h3>Avancé (10 $ / 10 semaines)</h3>
-                <label><input type="checkbox" name="cours" value="intro-js"> Introduction à JavaScript</label>
-                <label><input type="checkbox" name="cours" value="variables"> Les variables</label>
-                <label><input type="checkbox" name="cours" value="conditions"> La programmation constructive</label>
-                <label><input type="checkbox" name="cours" value="dom"> La manipulation du DOM</label>
-                <label><input type="checkbox" name="cours" value="objets"> Les objets</label>
-                <label><input type="checkbox" name="cours" value="debug"> Le débogage</label>
-                <label><input type="checkbox" name="cours" value="tableaux"> Les tableaux</label>
-                <label><input type="checkbox" name="cours" value="fonctions"> Les fonctions</label>
-                <label><input type="checkbox" name="cours" value="objets-avances"> Les objets avancés</label>
-                <label><input type="checkbox" name="cours" value="callbacks"> Les fonctions de rappel (callbacks)</label>
-                <label><input type="checkbox" name="cours" value="local-storage"> Le stockage local</label>
-            </div>
         </div>
 
         <button type="submit" class="submit-btn">S'inscrire</button>
@@ -147,6 +167,13 @@
                 if (!formData[id]) throw alert("Veuillez remplir tous les champs !");
             });
 
+            // ✅ Vérification stricte du numéro de téléphone
+            const regexTel = /^\+243[0-9]{9}$/;
+            if (!regexTel.test(formData.telephone)) {
+                alert("Le numéro doit commencer par +243 et contenir exactement 9 chiffres après (ex: +243810000000).");
+                return;
+            }
+
             formData.cours = [];
             document.querySelectorAll('input[name="cours"]:checked').forEach(cb => formData.cours.push(cb.value));
 
@@ -162,7 +189,7 @@
                     event_label: 'Inscription CréaWeb Academy'
                 });
 
-                // ✅ Redirection directe vers infodecompte.html
+                // ✅ Redirection directe
                 window.location.href = "infodecompte.html";
             } catch (error) {
                 console.error("Erreur d'enregistrement :", error);
@@ -174,7 +201,7 @@
     function toggleMenu() {
         document.querySelector("nav ul").classList.toggle("active");
     }
-</script>
+    </script>
 
 </main>
 
