@@ -1,0 +1,291 @@
+/* =======================================
+   🌌 CODE RISE AGENCY — SERVICES PAGE
+   Thème : Dark Premium Tech
+   Auteur : CodeRise Agency
+======================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg: #060b1a;
+  --card: #0c1633;
+  --accent-1: #6c5ce7;
+  --accent-2: #14c38e;
+  --text: #eaf0ff;
+  --muted: #9da8c3;
+  --border: rgba(255, 255, 255, 0.06);
+  --glass: rgba(255, 255, 255, 0.04);
+  --radius: 12px;
+  --max: 1120px;
+  --shadow: 0 6px 25px rgba(0, 0, 0, 0.35);
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background: linear-gradient(180deg, #041029 0%, #071428 100%);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* =======================================
+   HEADER
+======================================= */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: rgba(6, 12, 30, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  z-index: 50;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-img {
+  height: 46px;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.main-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.main-nav a:hover {
+  color: var(--text);
+}
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+  transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after {
+  width: 100%;
+}
+
+/* CTA Button */
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-cta {
+  background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(108, 92, 231, 0.3);
+}
+
+.btn-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(108, 92, 231, 0.45);
+}
+
+/* =======================================
+   SECTION PRINCIPALE
+======================================= */
+.section {
+  padding: 80px 0;
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.muted {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* =======================================
+   BLOCS DE SERVICES
+======================================= */
+.service-block {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+  margin-top: 36px;
+  box-shadow: var(--shadow);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
+}
+
+.service-block:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-2);
+  box-shadow: 0 8px 30px rgba(20, 195, 142, 0.25);
+}
+
+.service-block h2 {
+  font-size: 1.6rem;
+  color: var(--accent-2);
+  margin-bottom: 10px;
+}
+
+.service-block p {
+  margin-bottom: 16px;
+}
+
+.service-block ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+.service-block li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 8px;
+}
+
+.service-block li::before {
+  content: "•";
+  color: var(--accent-1);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* =======================================
+   BOUTON FINAL
+======================================= */
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: var(--radius);
+  font-weight: 700;
+  box-shadow: 0 4px 20px rgba(108, 92, 231, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(108, 92, 231, 0.4);
+}
+
+/* =======================================
+   FOOTER
+======================================= */
+.site-footer {
+  border-top: 1px solid var(--border);
+  background: rgba(6, 12, 30, 0.6);
+  backdrop-filter: blur(8px);
+  padding: 28px 0;
+  margin-top: 48px;
+  color: var(--muted);
+}
+
+.footer-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.logo-small {
+  height: 32px;
+  margin-bottom: 8px;
+}
+
+.site-footer a {
+  color: var(--accent-2);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.site-footer a:hover {
+  color: var(--accent-1);
+}
+
+/* =======================================
+   ANIMATIONS
+======================================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.9s cubic-bezier(.2, .9, .3, 1);
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: none;
+}
+
+/* =======================================
+   RESPONSIVE
+======================================= */
+@media (max-width: 860px) {
+  .main-nav {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .service-block {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 560px) {
+  .wrap {
+    padding: 16px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .service-block h2 {
+    font-size: 1.3rem;
+  }
+}

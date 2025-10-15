@@ -1,0 +1,299 @@
+/* ===========================================
+   🌌 CODE RISE AGENCY — DARK ELEGANT THEME
+   Version Pro - UI/UX Premium
+=========================================== */
+
+:root {
+  --bg: #060b1a;
+  --card: #0b1329;
+  --accent-1: #6c5ce7;
+  --accent-2: #14c38e;
+  --muted: #a4acc5;
+  --glass: rgba(255, 255, 255, 0.04);
+  --radius: 12px;
+  --max: 1120px;
+  --text: #eaf0ff;
+  --border: rgba(255, 255, 255, 0.06);
+  --shadow: 0 6px 25px rgba(0, 0, 0, 0.35);
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  background: linear-gradient(180deg, #040c1e 0%, #071428 100%);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* WRAPPER */
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* ===========================================
+   HEADER / NAVIGATION
+=========================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: rgba(4, 8, 20, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  z-index: 50;
+  transition: background 0.4s ease;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-img {
+  height: 46px;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+.main-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+  transition: width 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: var(--text);
+}
+
+.main-nav a:hover::after {
+  width: 100%;
+}
+
+/* ===========================================
+   BUTTONS
+=========================================== */
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+  color: #fff;
+  box-shadow: 0 4px 18px rgba(108, 92, 231, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(108, 92, 231, 0.4);
+}
+
+.btn-outline {
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+}
+
+.btn-outline:hover {
+  background: var(--glass);
+  color: var(--accent-2);
+  border-color: var(--accent-2);
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 1px dashed var(--border);
+  color: var(--muted);
+}
+
+.btn-ghost:hover {
+  border-color: var(--accent-1);
+  color: var(--accent-1);
+}
+
+.btn-cta {
+  background: linear-gradient(90deg, var(--accent-1), #4f46e5);
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.35);
+}
+
+/* ===========================================
+   HERO / HEADERS
+=========================================== */
+.kicker {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 12px;
+  letter-spacing: 0.3px;
+}
+
+.hero {
+  padding: 72px 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 32px;
+  align-items: center;
+}
+
+.hero-copy h1 {
+  font-size: 36px;
+  line-height: 1.1;
+  margin-bottom: 14px;
+}
+
+.hero-copy h1 strong {
+  background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+/* ===========================================
+   CARDS / SECTIONS
+=========================================== */
+.section {
+  padding: 64px 0;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* CONTACT GRID */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 24px;
+}
+
+/* FOOTER */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 28px 0;
+  margin-top: 48px;
+  background: rgba(2, 6, 23, 0.6);
+  backdrop-filter: blur(8px);
+  text-align: center;
+  color: var(--muted);
+}
+
+.site-footer a {
+  color: var(--accent-2);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.site-footer a:hover {
+  color: var(--accent-1);
+}
+
+/* ===========================================
+   ANIMATIONS / EFFECTS
+=========================================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: all 0.8s cubic-bezier(.2, .9, .3, 1);
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: none;
+}
+
+.animated-typing {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid rgba(255, 255, 255, 0.1);
+  animation: typing 3s steps(40, end) 1, blink .8s infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+@media (max-width: 980px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .wrap { padding: 16px; }
+  .hero-copy h1 { font-size: 26px; }
+  .cards { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CodeRise Agency — Accueil</title>
+  <meta name="description" content="CodeRise Agency : création d'applications, sites web, logiciels et formations en développement & marketing digital." />
+  <link rel="icon" href="assets/svg/coderise-icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html">
+        <img src="assets/svg/coderise-logo-horizontal.svg" alt="CodeRise Agency" class="logo-img">
+      </a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="services.html">Services</a>
+        <a href="formations.html">Formations</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">À propos</a>
+        <a href="contact.html" class="btn btn-cta">Contact / Devis</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <div class="kicker">Nouveau — Lancement spécial entreprises</div>
+          <h1 class="animated-typing">Transformez vos idées en produits digitaux performants et fiables.</h1>
+          <p class="muted">
+            Chez CodeRise, nous concevons des applications, sites web et systèmes sur mesure, tout en formant vos équipes pour qu’elles deviennent pleinement autonomes. Nous vous accompagnons du concept à la livraison, avec un suivi continu.
+          </p>
+          <div class="actions">
+            <a href="contact.html" class="btn btn-primary">Créer mon projet</a>
+            <a href="formations.html" class="btn btn-outline">Voir nos formations</a>
+            <button class="btn btn-ghost" onclick="openQuote()">Obtenir un devis</button>
+          </div>
+          <ul class="features">
+            <li>Déploiement rapide et efficace</li>
+            <li>Support technique et maintenance continue</li>
+            <li>Formations certifiantes et adaptées à vos besoins</li>
+          </ul>
+        </div>
+        <div class="hero-visual">
+          <div class="device-card parallax" data-speed="0.18">
+            <div class="device-top">
+              <div class="avatar">CR</div>
+              <div>
+                <strong>Portail client</strong>
+                <div class="micro muted">Suivi en temps réel de vos projets</div>
+              </div>
+              <div class="status micro muted">Online</div>
+            </div>
+            <div class="device-body">
+              <div class="meter"><span style="width:62%"></span></div>
+              <div class="stats">
+                <div><div class="stat-num">1 234</div><div class="micro muted">Utilisateurs</div></div>
+                <div><div class="stat-num">3 min</div><div class="micro muted">Dernière activité</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="badge floating" data-speed="0.35">MVP en 2–6 semaines</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services-preview" class="section">
+      <div class="wrap">
+        <h2>Nos services</h2>
+        <p class="muted">
+          Nous proposons des solutions complètes, adaptées à vos besoins. Que vous soyez une start-up ou une entreprise établie, nous vous aidons à transformer vos idées en produits digitaux performants et sécurisés.
+        </p>
+        <div class="grid cards">
+          <article class="card reveal">
+            <div class="icon">💻</div>
+            <h3>Développement Web & Mobile</h3>
+            <p class="muted">
+              Nous concevons des sites web et applications mobiles adaptés à vos objectifs. 
+              Cela inclut :
+              <ul>
+                <li>Sites vitrines pour présenter votre entreprise.</li>
+                <li>Sites e-commerce performants et sécurisés.</li>
+                <li>Applications natives iOS et Android ainsi que PWA (Progressive Web Apps).</li>
+              </ul>
+              Chaque solution est pensée pour l’expérience utilisateur, la sécurité et la scalabilité, afin de garantir la satisfaction de vos clients.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <div class="icon">⚙️</div>
+            <h3>Logiciels & Systèmes</h3>
+            <p class="muted">
+              Nous développons des logiciels sur mesure pour optimiser vos opérations :
+              <ul>
+                <li>ERP et CRM personnalisés pour la gestion interne.</li>
+                <li>Outils métiers pour automatiser vos processus.</li>
+                <li>APIs sécurisées pour connecter vos systèmes.</li>
+              </ul>
+              Chaque solution est conçue pour être fiable, performante et évolutive, vous permettant de gagner du temps et de réduire les erreurs.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <div class="icon">🎓</div>
+            <h3>Formations & Coaching</h3>
+            <p class="muted">
+              Nous formons vos équipes pour qu’elles maîtrisent pleinement les technologies utilisées :
+              <ul>
+                <li>Bootcamps Full-Stack pour développer des applications complètes.</li>
+                <li>Formation mobile pour créer et maintenir vos applications.</li>
+                <li>Marketing digital pour augmenter la visibilité et les ventes.</li>
+              </ul>
+              Nos programmes sont pratiques, certifiants et adaptés au rythme de vos collaborateurs pour un apprentissage concret et rapide.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <div class="icon">🎯</div>
+            <h3>Growth & Marketing</h3>
+            <p class="muted">
+              Nous vous aidons à augmenter votre visibilité et vos conversions :
+              <ul>
+                <li>Acquisition de clients via campagnes digitales ciblées.</li>
+                <li>Optimisation des funnels de vente pour transformer vos prospects en clients.</li>
+                <li>SEO et analytics pour suivre vos performances et améliorer vos résultats.</li>
+              </ul>
+              Chaque action est mesurable et orientée vers vos objectifs, pour générer une croissance durable et concrète.
+            </p>
+          </article>
+        </div>
+        <div class="center" style="margin-top:18px">
+          <a class="btn btn-outline" href="services.html">Voir tous les services</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-section parallax" data-speed="0.06">
+      <div class="wrap card cta-card reveal">
+        <div>
+          <h2>Prêt à concrétiser votre projet ?</h2>
+          <p class="muted">
+            Nous vous accompagnons de l’idée à la livraison, et même après. Bénéficiez d’un suivi personnalisé, d’un support fiable et de conseils stratégiques pour garantir le succès de votre produit.
+          </p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="contact.html">Demander un devis</a>
+          <a class="btn btn-ghost" href="portfolio.html">Voir le portfolio</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section">
+      <div class="wrap">
+        <h2>Ils nous font confiance</h2>
+        <div class="grid testimonials">
+          <div class="testimonial reveal">
+            <p class="muted">
+              "CodeRise a transformé notre idée en application fonctionnelle en 8 semaines. Équipe professionnelle et toujours disponible pour répondre à nos besoins."
+            </p>
+            <strong>— Marie T., Fondatrice</strong>
+          </div>
+          <div class="testimonial reveal">
+            <p class="muted">
+              "Formation claire et appliquée : nos développeurs sont désormais autonomes et capables de gérer nos projets internes."
+            </p>
+            <strong>— Jean P., Directeur</strong>
+          </div>
+          <div class="testimonial reveal">
+            <p class="muted">
+              "Support après-lancement impeccable — suivi, mises à jour et itérations qui font vraiment la différence."
+            </p>
+            <strong>— Entreprise X</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="wrap footer-grid">
+        <div>
+          <img src="assets/svg/coderise-logo-horizontal.svg" alt="CodeRise Agency" class="logo-small">
+          <div class="micro muted">© <span id="year"></span> CodeRise Agency — Kinshasa, RDC</div>
+        </div>
+        <nav class="micro muted">
+          <a href="about.html">À propos</a> ·
+          <a href="contact.html">Contact</a> ·
+          <a href="services.html">Services</a>
+        </nav>
+      </div>
+    </footer>
+  </main>
+
+  <!-- MODAL DEVIS -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-panel card">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <h3>Demande de devis — maquette</h3>
+      <p class="muted">Ceci est une maquette. Pour intégration réelle, il faudra connecter le formulaire à un backend.</p>
+      <form onsubmit="submitForm(event)">
+        <input placeholder="Nom complet" required>
+        <input type="email" placeholder="Email" required>
+        <select>
+          <option>Site vitrine</option>
+          <option>Application mobile</option>
+          <option>Logiciel / ERP</option>
+          <option>Formation</option>
+        </select>
+        <textarea placeholder="Décrivez brièvement le projet"></textarea>
+        <div style="display:flex;gap:10px;justify-content:flex-end">
+          <button type="button" class="btn btn-outline" onclick="closeModal()">Annuler</button>
+          <button class="btn btn-primary" type="submit">Envoyer (maquette)</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

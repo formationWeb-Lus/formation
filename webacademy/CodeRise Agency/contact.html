@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — CodeRise Agency</title>
+  <meta name="description" content="Contactez CodeRise Agency pour un devis ou pour vous inscrire à une formation." />
+  <link rel="icon" href="assets/svg/coderise-icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/contact.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html"><img src="assets/svg/coderise-logo-horizontal.svg" alt="CodeRise Agency" class="logo-img"></a>
+      <nav class="main-nav">
+        <a href="index.html">Accueil</a>
+        <a href="services.html">Services</a>
+        <a href="formations.html">Formations</a>
+        <a href="about.html">À propos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="wrap">
+      <h1>Contact / Demande de devis</h1>
+      <p class="muted">Remplissez le formulaire ci-dessous — ceci est une maquette visuelle.</p>
+
+      <div class="grid contact-grid">
+        <form class="card reveal" onsubmit="submitForm(event)">
+          <label class="micro muted">Nom complet</label>
+          <input placeholder="Ex: Fabrice" required>
+
+          <label class="micro muted">Email</label>
+          <input type="email" placeholder="exemple@domaine.com" required>
+
+          <label class="micro muted">Type de projet</label>
+          <select>
+            <option>Site vitrine</option>
+            <option>Application mobile</option>
+            <option>Logiciel / ERP</option>
+            <option>Formation</option>
+          </select>
+
+          <label class="micro muted">Message / Brief</label>
+          <textarea placeholder="Décrivez brièvement votre besoin..."></textarea>
+
+          <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:12px">
+            <button class="btn btn-outline" type="reset">Effacer</button>
+            <button class="btn btn-primary" type="submit">Envoyer (maquette)</button>
+          </div>
+        </form>
+
+        <aside class="card reveal">
+          <h3>Coordonnées</h3>
+          <div class="micro muted"><strong>Email</strong><br>contact@coderise.agency</div>
+          <div style="margin-top:8px" class="micro muted"><strong>Téléphone</strong><br>+243 99 123 4567 (WhatsApp)</div>
+          <div style="margin-top:8px" class="micro muted"><strong>Local</strong><br>Kinshasa, RDC</div>
+
+          <hr style="margin:14px 0;border:none;border-top:1px solid rgba(255,255,255,0.04)" />
+          <p class="muted">Besoin d'un diagnostic rapide ? Planifiez un appel de 20 minutes via le bouton ci-dessous (maquette).</p>
+          <a class="btn btn-primary" href="#" onclick="alert('Maquette : appel demandé')">Planifier un appel</a>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div><img src="assets/svg/coderise-logo-horizontal.svg" alt="CodeRise" class="logo-small"><div class="micro muted">© <span id="year6"></span> CodeRise Agency</div></div>
+      <nav class="micro muted"><a href="index.html">Accueil</a> · <a href="services.html">Services</a></nav>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
