@@ -1,102 +1,134 @@
+/* Body avec image de fond */
 body {
-    font-family: 'Roboto', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('/images/site/small_check.jpg') no-repeat center center fixed;  /* Image de fond du site */
+  background-size: cover;  /* L'image couvre toute la page */
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh; /* Assure que le fond couvre toute la hauteur */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
+/* Si tu veux qu'une section (comme hero) ait son propre fond */
+.hero {
+  background: url('/images/site/small_check.jpg') no-repeat center center;  /* Image spécifique pour la section hero */
+  background-size: cover;
+  height: 100vh; /* Occupe toute la hauteur de l'écran */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 1rem;
+  position: relative;
+}
+
+/* Mettre tout le contenu au-dessus de l'image */
+#wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+/* Si tu veux ajouter un overlay sombre sur l'image de fond (pour améliorer la lisibilité) */
+.hero:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Overlay semi-transparent */
+  z-index: -1; /* Place l'overlay derrière le contenu */
+}
+
+/* HEADER */
 header {
-    background-color: #11088f;
-    padding: 15px 0;
+  background-color: #00060c;
+  color: white;
+  padding: 1rem;
+  text-align: center;
 }
 
-.logo img {
-    max-width: 150px;
+/* HERO SECTION */
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
 }
 
-.nav-list {
-    list-style: none;
-    padding: 0;
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
 }
 
-.nav-list li {
-    display: inline;
-    margin: 0 15px;
+/* Section FEATURES */
+.features {
+  margin: 2rem 0;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.nav-list a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+.features article {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  text-align: center;
 }
 
-.thank-you-container {
-    max-width: 800px;
-    margin: 50px auto;
-    background: white;
-    padding: 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+.features article h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
 }
 
-.cta-button {
-    display: inline-block;
-    margin: 15px 10px;
-    padding: 12px 25px;
-    background: #11088f;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: 0.3s;
+.features article p {
+  font-size: 1.1rem;
+  color: #777;
 }
 
-.cta-button.secondary {
-    background: #ddd;
-    color: black;
+/* ARRIERE-PLAN EN DAMIER (uniquement pour les écrans larges) */
+@media (min-width: 768px) {
+  body {
+    background-image: url('/images/site/checkerboard-bg.jpg');
+    background-size: cover;
+    background-position: center;
+  }
 }
 
-.cta-button:hover {
-    background: #0e0675;
+@media (max-width: 768px) {
+  /* Cache l'arrière-plan en damier pour les mobiles */
+  body {
+    background-image: none;
+  }
 }
 
-.image-gallery {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  /* Hero Section (Mobile) */
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  /* Features section (Mobile) */
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .features article {
+    width: 80%; /* Utilisation de la largeur pour mobile */
+    margin-bottom: 1rem;
+  }
 }
 
-.image-gallery figure {
-    background: white;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.image-gallery img {
-    max-width: 100%;
-    border-radius: 5px;
-}
-
-figcaption {
-    margin-top: 8px;
-    font-size: 14px;
-    color: #555;
-}
-
-footer {
-    margin-top: 30px;
-    background-color: #11088f;
-    padding: 20px;
-}
-
-.footer-socials .social-icon img {
-    width: 40px;
-    margin: 0 10px;
-    transition: 0.3s;
-}
-
-.footer-socials .social-icon img:hover {
-    transform: scale(1.1);
-}
